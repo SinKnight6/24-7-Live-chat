@@ -2838,10 +2838,10 @@ message.react('⚙')
 // Break
 
   if (message.content.toLowerCase() === '!pages') {
-  let pages = ['This is page one!', 'Second page', 'Third page', 'So on'];
+  let pages = [`Fist page`, `Second page`, `Third page`, `So on`];
   let page = 1;
   const embed = new Discord.MessageEmbed()
-    .setColor(0xffffff)
+    .setColor(colors.orange)
     .setFooter(`Page ${page} of ${pages.length}`)
     .setDescription(pages[page-1])
 
