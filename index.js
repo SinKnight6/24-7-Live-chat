@@ -97,8 +97,8 @@ if (message.content.toLowerCase() === '!help'){
             .setTitle("Hello there Human you have requested for help, how can i help you today?")
             .setThumbnail('https://cdn.discordapp.com/attachments/696241284352049193/698828564191117312/knight.gif')
             .setAuthor(`${message.guild.name} Live Chat Beta`, message.guild.iconURL)
-            .setDescription(`1. If you need help or have an issue with your purchase please type, 🛍️_``Purchase``_🛍️')
-            2. If you need information, help or have an issue with Impulse mod please type, <:impulse:699823912862744606>\`_Impulse_\`_<:impulse:699823912862744606>
+            .setDescription(`1. If you need help or have an issue with your purchase please type, 🛍️\`_Purchase_\`🛍️')
+            2. If you need information, help or have an issue with Impulse mod please type, <:impulse:699823912862744606>\`_Impulse_\`<:impulse:699823912862744606>
             3. If you need information, help or have an issue with GTA V Game key please type, <:GTAV:701312114853150800>\`_GTA V_\`<:GTAV:701312114853150800>
             4. If you need information, help or have an issue with Spotify Premium Key type, <:spotify:707451943311900773>\`_Spotify_\`<:spotify:707451943311900773>
             5. If you need information, help or have an issue with NordVPN please type, <:nordvpn:695856469316337714>\`_NordVPN_\`<:nordvpn:695856469316337714>`)
