@@ -97,11 +97,11 @@ if (message.content.toLowerCase() === '!help'){
             .setTitle("Hello there Human you have requested for help, how can i help you today?")
             .setThumbnail('https://cdn.discordapp.com/attachments/696241284352049193/698828564191117312/knight.gif')
             .setAuthor(`${message.guild.name} Live Chat Beta`, message.guild.iconURL)
-            .addField('__', '1. If you need help or have an issue with your purchase please type, _``Purchase``_')
-            .addField('__', '2. If you need information, help or have an issue with Impulse mod please type, _``Impulse``_')
-            .addField('__', '3. If you need information, help or have an issue with GTA V Game key please type, _``GTA V``_')
-            .addField('__', '4. If you need information, help or have an issue with Spotify Premium Key type, _``Spotify``_')
-            .addField('__', '5. If you need information, help or have an issue with NordVPN please type, _``NordVPN``_')
+            .setDescription(`1. If you need help or have an issue with your purchase please type, 🛍️_``Purchase``_🛍️')
+            2. If you need information, help or have an issue with Impulse mod please type, <:impulse:699823912862744606>\`_Impulse_\`_<:impulse:699823912862744606>
+            3. If you need information, help or have an issue with GTA V Game key please type, <:GTAV:701312114853150800>\`_GTA V_\`<:GTAV:701312114853150800>
+            4. If you need information, help or have an issue with Spotify Premium Key type, <:spotify:707451943311900773>\`_Spotify_\`<:spotify:707451943311900773>
+            5. If you need information, help or have an issue with NordVPN please type, <:nordvpn:695856469316337714>\`_NordVPN_\`<:nordvpn:695856469316337714>`)
             .setTimestamp()
             .setFooter(`Live chat bot | At your service ${message.author.username}`, 'https://cdn.discordapp.com/attachments/696241284352049193/698835003718762576/livechat.gif')
             message.author.send({embed: uEmbed1});
@@ -156,7 +156,7 @@ if (message.content.toLowerCase() === 'help with purchase') {
       .setColor('#3AFF00')
       .setTimestamp()
       message.channel.send(embed)
-      .then(sentMessage => sentMessage.delete({ timeout: 7200000 })
+      .then(sentMessage => sentMessage.delete({ timeout: 86400000 })
       .catch(error => {
       }));
       openTickets.set(message.author.id, message.guild);
@@ -1311,7 +1311,9 @@ message.react('💸')
     .catch(() => {
       let uEmbed13 = new Discord.MessageEmbed()
       .setTitle('_Impulse Prices_')
-  .setDescription('Here are the prices for all three versions of Impulse plus Impulse upgrades')
+  .setDescription(`Here are the prices for all three versions of Impulse plus Impulse upgrades
+  
+                                  **Prices are not Negotiable**`)
   .setColor(colors.orange)
   .addField('__', 'Impulse Essential<a:dabingdollar:694111180368904293>**22**')
   .addField('__', 'Impulse Standard<a:dabingdollar:694111180368904293>**38**')
@@ -1454,7 +1456,7 @@ if (message.content.toLowerCase() === 'help with gta v') {
       .setColor('#3AFF00')
       .setTimestamp()
       message.channel.send(embed)
-      .then(sentMessage => sentMessage.delete({ timeout: 7200000 })
+      .then(sentMessage => sentMessage.delete({ timeout: 86400000 })
       .catch(error => {
       }));
       openTickets.set(message.author.id, message.guild);
@@ -2386,7 +2388,7 @@ if (message.content.toLowerCase() === 'help with nordvpn') {
       .setColor('#3AFF00')
       .setTimestamp()
       message.channel.send(embed)
-      .then(sentMessage => sentMessage.delete({ timeout: 7200000 })
+      .then(sentMessage => sentMessage.delete({ timeout: 86400000 })
       .catch(error => {
       }));
       openTickets.set(message.author.id, message.guild);
