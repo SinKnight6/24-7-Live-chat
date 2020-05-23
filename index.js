@@ -2837,7 +2837,6 @@ message.react('⚙')
 
 // Break
 
-exports.run = (client, message, args, tools) => {
   if (message.content.toLowerCase() === '!pages') {
   let pages = ['This is page one!', 'Second page', 'Third page', 'So on'];
   let page = 1;
@@ -2875,7 +2874,7 @@ exports.run = (client, message, args, tools) => {
       })
     })
 }
-}
+
 
 // Break
 
