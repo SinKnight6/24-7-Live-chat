@@ -3034,7 +3034,8 @@ __Vision__ :
             Sniper
             Crane cam
             Bikers
-
+`,
+`
 __Particles__ :
 
             Particle man
@@ -3064,9 +3065,6 @@ __Misc__ :
               Forcefield
               Badsport yourself
               Karma
-`,
-`
-yeet
 `];
   let page = 1;
   const embed = new Discord.MessageEmbed()
