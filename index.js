@@ -2852,8 +2852,8 @@ message.react('⚙')
         const backwardsFilter = (reaction, user) => reaction.emoji.name === ('⬅️') && user.id === message.author.id;
         const forwardsFilter = (reaction, user) => reaction.emoji.name === ('➡️') && user.id === message.author.id;
 
-        const backwards = msg.createMessageCollector(backwardsFilter, { time: 60000 });
-        const forwards = msg.createMessageCollector(forwardsFilter, { time: 60000 });
+        const backwards = msg.createReactionCollector(backwardsFilter, { time: 60000 });
+        const forwards = msg.createReactionCollector(forwardsFilter, { time: 60000 });
 
         backwards.on('collect', r => {
           if (page === 1) return;
