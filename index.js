@@ -2846,21 +2846,21 @@ message.react('⚙')
     .setDescription(pages[page-1])
 
     message.channel.send(embed).then(msg => {
-      message.react('⬅️').then( r => {
-        message.react('➡️')
+      msg.react('⬅️').then( r => {
+        msg.react('➡️')
 
         const backwardsFilter = (reaction, user) => reaction.emoji.name === ('⬅️') && user.id === message.author.id;
         const forwardsFilter = (reaction, user) => reaction.emoji.name === ('➡️') && user.id === message.author.id;
 
-        const backwards = message.createMessageCollector(backwardsFilter, { time: 60000 });
-        const forwards = message.createMessageCollector(forwardsFilter, { time: 60000 });
+        const backwards = msg.createMessageCollector(backwardsFilter, { time: 60000 });
+        const forwards = msg.createMessageCollector(forwardsFilter, { time: 60000 });
 
         backwards.on('collect', r => {
           if (page === 1) return;
           page--;
           embed.setDescription(pages[page-1]);
           embed.setFooter(`Page ${page} of ${pages.length}`);
-          message.edit(embed)
+          msg.edit(embed)
         })
 
         forwards.on('collect', r => {
@@ -2868,7 +2868,7 @@ message.react('⚙')
           page++;
           embed.setDescription(pages[page-1]);
           embed.setFooter(`Page ${page} of ${pages.length}`);
-          message.edit(embed)
+          msg.edit(embed)
         })
 
       })
