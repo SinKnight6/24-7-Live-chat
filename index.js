@@ -2837,7 +2837,45 @@ message.react('⚙')
 
 // Break
 
+exports.run = (client, message, args, tools) => {
+  if (message.content.toLowerCase() === '!pages') {
+  let pages = ['This is page one!', 'Second page', 'Third page', 'So on'];
+  let page = 1;
+  const embed = new Discord.MessageEmbed()
+    .setColor(0xffffff)
+    .setFooter(`Page ${page} of ${pages.length}`)
+    .setDescription(pages[page-1])
 
+    message.channel.send(embed).then(msg => {
+      message.react('⬅️').then( r => {
+        message.react('➡️')
+
+        const backwardsFilter = (reaction, user) => reaction.emoji.name === ('⬅️') && user.id === message.author.id;
+        const forwardsFilter = (reaction, user) => reaction.emoji.name === ('➡️') && user.id === message.author.id;
+
+        const backwards = message.createMessageCollector(backwardsFilter, { time: 60000 });
+        const forwards = message.createMessageCollector(forwardsFilter, { time: 60000 });
+
+        backwards.on('collect', r => {
+          if (page === 1) return;
+          page--;
+          embed.setDescription(pages[page-1]);
+          embed.setFooter(`Page ${page} of ${pages.length}`);
+          message.edit(embed)
+        })
+
+        forwards.on('collect', r => {
+          if (page === pages.length) return;
+          page++;
+          embed.setDescription(pages[page-1]);
+          embed.setFooter(`Page ${page} of ${pages.length}`);
+          message.edit(embed)
+        })
+
+      })
+    })
+}
+}
 
 // Break
 
