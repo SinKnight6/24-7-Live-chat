@@ -2837,1284 +2837,240 @@ message.react('⚙')
 
 // Break
 
-  if (message.content.toLowerCase() === '!pages') {
-  let pages = [`Player:
-  Movement:
-            Super Jump
-            Ultra Jump
-            Movement speed multiplier
-            Swim Speed multiplier
-            Flymode
-            Walk on air
-            Vegetable mode
-            Slow motion
-                       No Clip:
-                               Noclip
-                               Noclip speed
-                               Walking noclip
-                               Walking noclip speed
+  if (message.content.toLowerCase() === 'essential features') {
+  let pages = [`
+  Self Options (Godmode, Model Changer, Super Jump, Super Sprint,…)
+  Online Player Options (Money Drops, Weather, Blaming, Fire / Water Loop…)
+  Teleportation
+  Weapon Options (Explosive Ammo, One Shot Kill, Unlimited Ammo…)
+  Recovery Options
+  Vehicle Options (Spawning, Horn Boost, Flying Cars)`];
+  let page = 1;
+  const embed = new Discord.MessageEmbed()
+    .setColor(colors.orange)
+    .setFooter(`Page ${page} of ${pages.length}`)
+    .setDescription(pages[page-1])
 
-                        Super Run:
-                                  Super run
-                                  Super run key
-                        Water:
-                              Walk on water
-                              Walk through water  
-   Owned forcefield:
-                    Toggle On/Off
-   Global:
-          Off the radar
-          Cops turn blind eye
-          Bullshark testosterone
-          Loop bullshark testosterone
-   Model:
+    message.channel.send(embed).then(msg => {
+      msg.react('⬅️').then( r => {
+        msg.react('➡️')
+
+        const backwardsFilter = (reaction, user) => reaction.emoji.name === ('⬅️') && user.id === message.author.id;
+        const forwardsFilter = (reaction, user) => reaction.emoji.name === ('➡️') && user.id === message.author.id;
+
+        const backwards = msg.createReactionCollector(backwardsFilter, { time: 60000 });
+        const forwards = msg.createReactionCollector(forwardsFilter, { time: 60000 });
+
+        backwards.on('collect', r => {
+          if (page === 1) return;
+          page--;
+          embed.setDescription(pages[page-1]);
+          embed.setFooter(`Page ${page} of ${pages.length}`);
+          msg.edit(embed)
+        })
+
+        forwards.on('collect', r => {
+          if (page === pages.length) return;
+          page++;
+          embed.setDescription(pages[page-1]);
+          embed.setFooter(`Page ${page} of ${pages.length}`);
+          msg.edit(embed)
+        })
+
+      })
+    })
+}
+
+// Break
+
+if (message.content.toLowerCase() === 'standard features') {
+  let pages = [`
+  **Player**
+
+__Movement__ :
+
+	Super Jump
+        Ultra Jump
+        Movement speed multiplier
+        Swim Speed multiplier
+        Flymode
+        Walk on air
+        Vegetable mode
+        Slow motion
+
+__No Clip__ :
+
+        Noclip
+        Noclip speed
+        Walking noclip
+        Walking noclip speed
+ 
+__Super Run__ :
+
+        Super run
+        Super run key
+
+__Water__ :
+
+        Walk on water
+        Walk through water  
+        
+__Owned forcefield__ :
+
+        Toggle On/Off
+        
+__Global__ :
+
+         Off the radar
+         Cops turn blind eye
+         Bullshark testosterone
+         Loop bullshark testosterone
+
+__Model__ :
+
          Model width
          Model height
          Model thickness
          Random model outfit
          Rainbow hair
-                     Defaults:
-                              Default online male model
-                              Default online female model
-                              Michael
-                              Franklin
-                              Trevor
-                              Custom model
-                     Models:
-                            Search
-                            (Every model is below this point)
-    Wardrobe:
-             Load outfits
-             Save outfit
-             Random outfit
-             Police Uniform
-             Add Rockstar logo
-             Hair Color
-                       Props:
-                             Face
-                             Face Variation
-                             Glasses
-                             Glasses Variation
-                             Ear pieces
-                             Ears variation
-                             Clear face
-                             Clear glasses
-                             Clear ear pieces
-                                             Components:
-                                                        Face
-                                                        Face variation
-                                                        Masks
-                                                        Masks variation
-                                                        Hair
-                                                        Hair variation
-                                                        Torso
-                                                        Torso variation
-                                                        Legs
-                                                        Legs variation
-                                                        Parachute/Misc
-                                                        Parachute/Misc variation
-                                                        Shoes
-                                                        Shoes variation
-                                                        Extra 1
-                                                        Extra 1 variation
-                                                        Tops 1
-                                                        Tops 1 variation
-                                                        Body Armor
-                                                        Body Armor variation
-                                                        Crew Emblem
-                                                        Crew Emblem variation
-                                                        Tops 2
-                                                        Tops 2 variation
-     Animation:
-               Stop all animations
-               Controllable
-               Contort
-               Animations
-               Walkstyles
-               Scenarios
-      Vision:
-             Default
-             Damage
-             Vagos
-             Cops
-             White screen
-             Water lab
-             MP spectator cam
-             Cops
-             Spectator 1
-             Sunglasses
-             Dying
-             Orange
-             Vagos
-             Blurry
-             Stoned
-             Prologue Shootout
-             Secret Camera
-             UFO
-             UFO Deathray
-             Wobbly
-             Killstreak
-             Hint cam
-             Black and White
-             Sniper
-             Crane cam
-             Bikers
-      Particles:
-                Particle man
-                Dragon Breath
-      General:
-              God mode
-              Regenerate health
-              Invisibility
-              Opacity
-              Never wanted
-              No ragdoll
-      Modify Ped:
-                 Clone
-                 Midget mode
-                 Reduced Collision
-                 Clean ped
-                 Peds ignore player
-                 Suicide
-                 Remove all attachments                              
-      Misc:
-           Forcefield
-           Badsport yourself
-           Karma
-Weapon:
-  Weapons:
-          Get all weapons
-          Get all weapons every session
-          Clear all weapons
-                           Upgrades:
-                                    Upgrades(current weapon)
-                                    Upgrades(all weapons)
-                           Color Edits:
-                                       Camo(current weapon)
-                                       Camo(all weapons)
-                                       Rainbow camo(current weapon)
-   Visuals:
-           Weapon width
-           Weapon height
-           Overall weapon scale
-           Weapon invisibility
-           Cross hair
-           Aiming laser
-           Cartoon effects
-           Aimed information
-   Ammo modifiers:
-                  Impact ammo
-                  Particle ammo
-                  Modify ammo
-                             Shoot Options:
-                                           Explosive whale gun
-                                           Missile gun
-                                           Paint vehicle gun
-                                           Explosive bullets
-                                           Fire bullets
-                                           Delete gun
-                                           Drive it gun
-                                           Shrink ray
-                                           Ped defibrillator
-                                           Force gun
-                                           Model change gun
-    Shoot entities:
-                   Entity Type
-                   Enable entity shooting
-                   Enable gravity vehicle shooting
-                   Gravity vehicle distance
-                   Vehicle
-    General:
-            No reload
-            Infinite ammo
-            Rapid fire
-            One shot one kill
-    Entity movement:
-                    Gravity gun
-                    Pickup gun
-                    Pickup range
-                    Distance from gun
-                    
-     Misc:
-          Dead eye
-          Weapons in interiors and passive mode
-Vehicle:
-   Save json vehicle
-   Los Santos Customs:
-                      Loop fully tune
-                      Loop randamize vehicle look
-                      Apply all vehicle extras
-                      Remove all vehicle extras
-    Cargobob:
-            Spawn cargobob
-            Spawn magent
-            Remove magnet
-     Attach ramps:
-                  Type
-                  Front
-                  Rear
-                  Right
-                  Left
-                  Attach
-                  Delete
-    Vehicle weapons:
-                    Bullet type
-                    Bullet speed
-                    Guided
-                    Take responsibility
-                    Vehicle weapons key
-                    Enabled
-     Vehicle movement:
-                      Vehicle jump
-                      Basic fly vehicle
-                      Basic fly speed
-                      Precise fly vehicle
-                                          Vehicle speed:
-                                                        Speed vehicle
-                                                        Speed (Number)
-                                           Boosting:
-                                                    Horn boost
-                                                    Horn boost speed
-                                                    Infinite boost
-                                            Force:
-                                                  Brake force
-                                                  Downforce
-                                                  Lower ride height
-                                             Autodrive:
-                                                       Auto drive
-                                                       Autodrive speed
-                                             Drifting:
-                                                      Drift
-                                                      Drift amount
-                                                      Drift key
-                                              Limits:
-                                                     Bypass max speed
-                                                     Limit vehicle speed
-                                               Misc:
-                                                    Bike crate rider
-                                                    Wheelie
-                                                    Drive on walls
-                                                    Drive on water
-         Vehicle acrobatics:
-                            Front flip
-                            Back flip
-                            Kick flip
-                            Heel flip
-                            Bunny hop
-                            Slingshot
-          Vehicle Particles:
-                            Particle type
-                            Particle size
-                            Front left wheel
-                            Front right wheel
-                            Rear left wheel
-                            Rear right wheel
-                            Exhaust
-                            Enable vehicle particles
-           Vehicle doors:
-                         Open door
-                         Close door
-                         Delete door
-                         Lock doors
-                         Unlock doors
-            Vehicle multipliers:
-                                RPM
-                                Light
-                                Torque
-                                Acceleration
-                                Brake
-                                Suspension
-             General:
-                     Vehicle Godmode
-                     Auto repair
-                     Vehicle Invisibility
-                     Keep engine on
-                     Seatbelt
-                     Fix vehicle
-                     Delete vehicle
-              Modify Vehicle:
-                             Auto flip
-                             Vehicle no collisions
-                             Phase through vehicles
-                             Ground to earth
-               Misc:
-                    Clone vehicle
-               Visuals:
-                       FIB numberplate
-                       Onscreen speedometer
-                       Numberplate speedometer
-                       Rainbow paint
-                       Wheel smoke cycle
-                       Wash
-                       Dirty
-                       Burn Vehicle shell
-                       Opacity
-Spawn:
- Vehicle:
-         Spawner settings:
-                          Spawn with blip
-                          Spawn with particles
-                          Spawn with information
-                          Spawn inside vehicle
-                          Spawn invincible
-                          Spawn fully tuned
-                          Delete old vehicle
-                          Spawn planes and helicopters in the air
-                          Spawn speed
-                          Spawn height
-                                      Color:
-                                            Do not spawn with custom colors
-                                            Default primary vehicle color
-                                            Default secondary vehicle color
-            Manage spawned vehicles:
-                                    (vehicles listed here)
-            Input Vehicle name:
-                               (Name goes here to spawn)
-            Vehicles:
-                     DLC vehicles only(DLCs listed)
-                     Super
-                     Sport
-                     Sports classic
-                     Off road
-                     Sedan
-                     SUV
-                     Coupe
-                     Muscle
-                     Compact
-                     Van
-                     Commercial
-                     Industrial
-                     Military
-                     Service
-                     Emergency
-                              Bikes:
-                                    Motorcycle
-                                    Cycle
-                               Flying:
-                                      Planes
-                                      Helicopters
-                                Misc:
-                                     Trains
-                                     Trailer
-                                     Utility
-                Ped:
-                    Spawner settings:
-                                     Spawn invincible
-                                     Spawn with blip
-                                     Spawn with particles
-                                     Spawn with information
-                     Manage spawned peds:
-                                         (Spawned peds here)
-                     Input ped name:
-                                    (name of ped to be spawned)
-                     Peds:
-                          (All peds in GTA listed here)
-                 Object:
-                        Spawner Settings:
-                                         Spawn object with blip
-                                         Spawn with particles
-                                         Spawn with information
-                         Manage spawned objects:
-                                                (Spawned objects go here)
-                         Input object name:
-                                           (Name of object to be spawned)
-                         Objects:
-                                 (All object in GTA listed here)
-                  Saved vehicle loading:
-                                        Load XML vehicles:
-                                                          Delete last creation
-                                                          Spawn objects with collision
-                                         Load json vehicles:
-                                                            (json vehicles listed here)
-                                         Load INI vehicles:
-                                                            Delete last creation
-                   Map mods:
-                            Unload map mods
-                            (map mods listed here)
-                  
-                   Spawn Editor:
-                                Save current creation
-                                Clear spawned objects
-                                Spawner mode
-Teleport:
-    Teleport to waypoint
-    Waypoint hotkey
-                   Custom saved locations:
-                                          Save current location
-                                          Load custom locations:
-                                                                (Saved locations are here)
-                    Locations:
-                              Teleport transition
-                              Online:
-                                     Casino
-                                     Mors Mutual Insurance
-                                     Mask Shop
-                                     Tattoo shop
-                                     Ammunation
-                                     Clothes Store
-                                     LS Customs
-                                     Benny's vehicles
-                                     Ammunation Gun Range
-                                     Ammunation office
-                                     LS Airport Customs
-                                     La Mesa Customs
-                                     Senora Desert customs
-                                     Beek Customs
-                                     Eclipse Towers
-                                     Eclipse Towers Roof
-                                     Impound Lot
-                                     Eclipse Towers Inside
-                                     Online hidden race area
-                                     Airport Tower
-                                     Maze Bank CEO Office Entrance
-                                     Helipad
-                                     King Of The Hill
-                                 Landmarks:
-                                           Aiport
-                                           Prison
-                                           Prison Gym
-                                           Prison Tower
-                                           Lighthouse
-                                           Cannibal Camp
-                                           Mount Josiah
-                                           Maze Bank Helipad
-                                           Fort Zancudo
-                                           Calafia Bridge
-                                           Pier
-                                           Mount Chilliad
-                                           Mount Chilliad (Jump)
-                                           Elysian Island base
-                                           Ontop of Vinewood Logo
-                                           Trevor's Air Field
-                                           Mount Gordo
-                                   Inside:
-                                          Strip Club DJ Booth
-                                          Humane Labs Tunnel
-                                          Police Station
-                                          FIB Top Floor
-                                          IAA Office
-                                          Torture Room
-                                          Ammuniation Gun Range
-                                          Ammunation Office
-                                          Blaine County Savings Bank
-                                          Fort Zancudo ATC Top Floor
-                                     Story mode locations:
-                                                          Franklin's New House
-                                                          Franklin's Old House
-                                                          Michael's House
-                                                          Lester's House
-                                                          Wayne's Cousin's House
-                                                          Trevor's House
-                                                          Trevor's Meth Lab
-                                                          Trevor's Office
-                                                          Floyd's Apartment
-                                                          Lester's House
-                                     Glitched locations:
-                                                        Race Underground Bunker
-                                                        FIB Roof Glitch
-                                                        Police Station Glitch
-                                                        Behind Bar In Strip Club
-                                                        Building Glitch
-                                                        Inside Store
-                                                        City Wall Glitch
-                                                        Inside Casino
-                                                        Beach House
-                                                        Under The Bridge Glitch
-                                     IPL Locations:
-                                                   Unload all IPL's
-                                                   Porn Yacht
-                                                   Desert UFO
-                                                   Carrier
-                                                   Cargo Ship
-                                                   North Yankton
-                                                   Plane Crash
-                                                   Train Crash
-                                                   Morgue
-                                                   Destroyed Hospital
-                                                   Fort Zancudo UFO
-                                                   Heist Yacht
-                          Blips:
-                                Teleport to objective
-                                Teleport to apartment
-                                Teleport to yacht
-                                Teleport to office
-                                Teleport to clubhouse
-                                Teleport to weed farm
-                                Teleport to counterfeit cash
-                                Teleport to meth lab
-                                Teleport to cocaine factory
-                                Teleport to own package
-                                Teleport to enemy package
-                                Teleport to own crate
-                                Teleport to enemy crate
-                          Vehicle:
-                                  Nearest car(become driver)
-                                  Nearest car(any free seat)
-                                  Teleport to last driven vehicle
-                                  Teleport to personal vehicle
-                          Directional:
-                                      Teleport forward
-                                      Teleport up
-World:
- VFX engine:
-            Reset VFX settings
-            Load VFX settings
-            Save VFX settings
-  Traffic light VFX:
-                    Reset traffic lights VFX
-                    Load traffic lights VFX settings
-                    Save traffic lights VFX settings    
-                    Traffic light red (Can change color here)
-                    Traffic light orange (Can change color here)
-                    Traffic light red (Can change color here)
-                    Traffic pedestrian red
-                    Traffic pedestrian green
-   Vehicle VFX:
-               Reset VFX
-               Load VFX Settings
-               Save VFX Settings
-               Fade distance
-               Headlight angle
-               Headlight split
-               Headlight distance
-               Headlight intensity
-               Player headlight distance
-               Player headlight intensity
-                                         Neon:
-                                              Neon intensity
-                                              Neon radius
-                                              Neon extended sides
-                                              Neon extended front
-                                              Neon falloff exponenet
-                                              Neon clipping pane height
-     Train VFX:
-               Reset trains VFX
-               Load trains VFX Settings
-               Save trains VFX settings
-               Trains color intensity
-               Trains color
-     Tone mapping VFX:
-                      Reset tone mapping VFX
-                      Load tone mapping VFX settings
-                      Save tone mapping VFX Settings
-                                                     Equation:
-                                                              Day:
-                                                              Night:
-                                                     Day:
-                                                         Day filmic A
-                                                         Day filmic B
-                                                         Day filmic C
-                                                         Day filmic D
-                                                         Day filmic E
-                                                         Day filmic F
-                                                         Day filmic W
-                                                         Day exposure
-                                                      Night:
-                                                            Night filmic A
-                                                            Night filmic B
-                                                            Night filmic C
-                                                            Night filmic D
-                                                            Night filmic E
-                                                            Night filmic F
-                                                            Night filmic W
-                                                            Night exposure
-        Corona VFX:
-                   Reset coronas VFX
-                   Load coronas VFX settings
-                   Save coronas VFX settings
-                   Coronas global intensity
-                   Coronas water intensity
-                   Coronas global size
-                   Coronas global size
-                   Coronas global screen space expansion
-                   Coronas water screen space expansion
-                   Coronas rotation speed
-                   Coronas size scale paraboloid
-                   Coronas Z bias multiplier
-                   Coronas color
-          Distant lights VFX:
-                             Reset distant lights VFX
-                             Load distant lights VFX settings
-                             Save distant lights VFX settings
-                             Distant lights start hour
-                             Distant lights end hour
-                             Distant lights street light start hour
-                             Distant lights street light end hour
-                             Distant lights flicker
-                             Distant lights twinkle speed
-                             Distant lights twinkle amount
-                             Distant lights size
-                             Distant lights min size
-                             Distant lights reflection size
-                             Distant lights size upscale
-                             Distant lights size upscale reflections
-                             Distant lights speed 1
-                             Distant lights speed 2
-                             Distant lights speed 3
-                             Distant lights vehicle light z offset
-                             Distant lights street light intensity
-                             Distant lights vehicle light intensity
-                             Vehicle color 1
-                             Vehicle color 2
-            Rain puddles VFX:
-                             Reset rain puddles VFX
-                             Load rain puddles VFX Settings
-                             Save rain puddles VFX Settings
-                             Puddles depth
-                             Puddles range
-                             Puddles scale
-                             Puddles drop factor
-                             Puddles min duration
-                             Puddles max duration
-                             Puddles min size
-                             Puddles max size
-                             Puddles ripple strength
-                             Puddles ripple speed              
-             Sky VFX:
-                     Reset Sky FVX
-                     Load Sky VFX Settings
-                     Save Sky VFX Settings
-                     Small cloud speed
-                     Large cloud speed
-                     Overall cloud speed
-                     Cloud edge detail scale
-                     Cloud overlay detail scale
-                     Cloud hat speed
-                     Cloud edge speed
-    Traffic Manager:
-                    Use vehicle pools(bigger range)
-                    Vehicle ESP
-                    Vehicle chaos
-                    Explode vehicles
-                    Kill driver
-                    Launch vehicles
-                    Boost Vehicles
-                    Kickflip vehicles
-                    Delete vehicles
-                    Fix vehicles
-                    Scorch vehicles
-                    Drive vehicles to me
-                    No gravity
-                    Normal gravity
-     Pedestrian manager:
-                        Use ped pools(bigger range)
-                        Ped ESP
-                        Kill peds
-                        Clone peds
-                        Delete peds
-                        Shrink peds
-                        Enlarge peds
-                        Enlarge peds
-                        Launch peds
-                                   Tasks:
-                                         Clear ped tasks
-                                         Peds jump
-                                         Peds cower
-                                         Peds hands up
-                                         Peds wander
-                                         Peds come to me
-      Weather:
-              Clouds (Type)
-              Lightning storm
-              Meteor shower
-              Rain intensity
-                             Weather types:
-                                           Clear
-                                           Clearing
-                                           Neutral
-                                           Extra Sunny
-                                           Rain
-                                           Smog
-                                           Snow
-                                           Xmas
-                                           Halloween
-                                           Snowlight
-                                           Blizzard
-                                           Thunder
-                                           Overcast
-      Waypoint:
-               Explode
-               Money drop
-               Send police
-               Auto drive to waypoint
-               Stop auto drive
-      Time:
-           Add hour
-           Remove hour
-           Freeze time
-           Sync with system time
-      Water:
-            Turn off ocean
-            Clear water
-            Wave intensity
-      Water tune:
-                 Ripple scale
-                 Ocean Foam scale
-                 Specular Falloff
-      Density:
-              Ped density
-              Traffic density
-      Clear Area
-                Clear radius
-                Clear area of everything
-                Clear area of police
-                Clear area of objects
-                Clear area of vehicles
-                Clear area of peds
-      Misc:
-           Kick all nearby from vehicles
-           Teleport all nearby vehicles to sea
-           Timescale
-           Road slipperiness
-           Gravity
-           Blackout
-           Ground snow
-           Wind speed
-Session:
-   Players:
-           Sort player list(sort)    
-           Show marker on selected players
-                                          Players:
-                                                  Player options:
-                                                                 Spectate player
-                                                                 Spectate distance
-                                                                 Quick actions:
-                                                                               Teleport to player
-                                                                               Teleport in players vehicle
-                                                                               Non host kick & Kick to singleplayer
-                                                                               Host kick
-                                                                               Give all weapons
-                                                                               Kick from Vehicle
-                                                                               Repair vehicle
-                                                                               Fully tune vehicle
-                                                                               Launch vehicle
-                                                                               Standard money drop
-                                                                               Freeze in place
-                                                                               Give never wanted
-                                                                               Give off the radar
-                                                                               Crash Player  
-                                                                   Teleport:
-                                                                            Teleport to player
-                                                                            Teleport in players vehicle
-                                                                            Teleport players vehicle to me
-                                                                            Teleport within range (1-100)
-                                                                                                         Apartments:
-                                                                                                                    (All apartments listed)
-                                                                    Peaceful:
-                                                                             Attachment:
-                                                                                        You to them:
-                                                                                                    Attach
-                                                                                                    Detach
-                                                                                        You to their vehicle:
-                                                                                                             Attach
-                                                                                                             Detach
-                                                                                        Your vehicle to their vehicle:
-                                                                                                                       Relative postion (Front, Back, etc)
-                                                                                                                       Attach
-                                                                                                                       Detach
-                                                                                        Their vehicle to your vehicle:
-                                                                                                                      Relative postion (Front, Back, etc)
-                                                                                                                       Attach
-                                                                                                                       Detach
-                                                                              General:
-                                                                                      Give all weapons
-                                                                                      Spawn clone bodyguard
-                                                                                      Clear area
-                                                                                      Rain weapons
-                                                                                      Remove attachments
-                                                                                      Particles
-                                                                               Edit Bullets:
-                                                                                            Give player impact bullets (Money bags, Explosions, etc)
-                                                                               Godmode options:
-                                                                                               Demi godmode
-                                                                                               Bullet godmode
-                                                                                Outfit copying:
-                                                                                               Copy outfit
-                                                                                               Copy outfit & character model
-                                                                     Griefing:
-                                                                              Attachments:
-                                                                                          Presets (Includes sub category)
-                                                                                          Flags (Includes sub category)
-                                                                                          Vehicles (Includes sub category)
-                                                                                          Peds (Includes sub category)
-                                                                                          Objects (Includes sub category)
-                                                                               Sounds:
-                                                                                      Stop sounds
-                                                                                      Sound rape
-                                                                                      (28 Various sounds also listed)
-                                                                               Troll:
-                                                                                     Clone
-                                                                                     Freeze in place
-                                                                                     Give wanted level
-                                                                                     Electrocute player
-                                                                                     Lag area
-                                                                                     Lag player
-                                                                                     Make traffic hostile
-                                                                                     Make pedestrians hostile
-                                                                                     Fake money
-                                                                               Affect Ped Vision and Movement:
-                                                                                                              Trap in cage
-                                                                                                              Trap in cable cars
-                                                                                                              Glitch ped
-                                                                                                              Shake camera
-                                                                                                              Smoke player
-                                                                                                              Spray with water
-                                                                                                              Spray with fire
-                                                                               Deadly Force:
-                                                                                            Host kick
-                                                                                            Crash player
-                                                                                            Kill
-                                                                                            Blame kill everyone
-                                                                                            Silent kill
-                                                                                            Clone spam
-                                                                                            Set on fire
-                                                                                            Ram with vehicle
-                                                                                            Explode
-                                                                                            Explode loop
-                                                                                            Rain rockets
-                                                                                            Forcefield
-                                                                               Attackers:
-                                                                                         Send attackers
-                                                                                         Hostile clone
-                                                                                         Attack with SWAT
-                                                                                         Attack with jet
-                                                                                         Attack with vehicle
-                                                                               Misc:
-                                                                                    Airstrike
-                                                                                    Ragdoll player
-                                                                                    Attach campfire
-                                                                                    Karma
-                                                                     Vehicle:
-                                                                             Godmode vehicle
-                                                                             Kick from vehicle
-                                                                                              Movement Modifications:
-                                                                                                                     Horn boost:
-                                                                                                                     Launch vehicle
-                                                                                                                     Slingshot vehicle
-                                                                                                                     Boost vehicle
-                                                                                                                     Stop vehicle
-                                                                                                                     Freeze vehicle
-                                                                                                                     Rotate vehicle
-                                                                                               Trolling:
-                                                                                                        Kill engine
-                                                                                                        Revive engine
-                                                                                                        Kick from vehicle loop
-                                                                                                        Delete vehicle loop
-                                                                                                        Burst tires
-                                                                                                        Lock doors
-                                                                                                        Unlock doors
-                                                                                                Vehicle Modifications:
-                                                                                                                      Repair Vehicle
-                                                                                                                      Fully Tune vehicle
-                                                                                                Vehicle Acrobatics:
-                                                                                                                   Front flip
-                                                                                                                   Back flip
-                                                                                                                   Kick flip
-                                                                                                                   Heel flip
-                                                                                                                   Bunny hop
-                                                                                                                   Slingshot
-                                                                          Spawn:
-                                                                                (DLC vehicles Listed)
-                                                                                (Other vehicles by category listed)
-                                                                          Remote:
-                                                                                 Non host kick
-                                                                                 Kick to single player
-                                                                                 CEO Kick
-                                                                                 CEO Ban
-                                                                                         Troll:
-                                                                                               Infinite loading screen
-                                                                                               Sound spam
-                                                                                               Transaction error
-                                                                                               Face players camera forward
-                                                                                               Force players camera forward
-                                                                                               Gentle kick from vehicle
-                                                                                               Fore into mission (Missions listed)
-                                                                                          Notifications:
-                                                                                                        Display spectating message
-                                                                                                        Display insurance message
-                                                                                                        Invite notifs
-                                                                                                        Send message notifs
-                                                                                                        Send notif banner
-                                                                                                        Send money notif amount
-                                                                                                        Send money notifs
-                                                                                           Give Globals:
-                                                                                                        Give never wanted
-                                                                                                        Give off the radar
-                                                                                                        Give cops turn blind eye
-                                                                                           Drops:
-                                                                                                 Standard drop delay (ms)
-                                                                                                 Standard money drop
-                                                                                                 Standard circle drop
-                                                                                                                     Editable Drops:
-                                                                                                                                    Drop type
-                                                                                                                                    Drop model
-                                                                                                                                    Drop amount
-                                                                                                                                    Drop height
-                                                                                                                                    Drop radius
-                                                                                                                                    Drop delay(ms)
-                                                                                                                                    Enable drop
-                                                                                          Extra sensor perception:
-                                                                                                                  ESP Color
-                                                                                                                  ESP name
-                                                                                                                  ESP box
-                                                                                                                  ESP line
-                                                                                                                  ESP head marker
-                                                                                                                  ESP foot marker
-                                                                                                                  ESP info
-                                                                                                                  ESP skel
-                                                                                                                  ESP sky line
-                                                                                           Open player log window
-                                                                                           Open player info window
-                                                                                           Show profile
-      All players:
-                  Excludes:
-                           Exclude friends
-                           Exclude modders
-                           Exclude team
-                           Exclude host
-                           Exclude self
-                           Exclude Impulse users
-                  Teleport:
-                           Teleport all players vehicle to me
-                           Teleport nearest vehicle to all players
-                                                                  Apartments:
-                                                                             (All apartments are listed)
-                  Peaceful:
-                           Give all weapons
-                           Spawn clone bodyguard
-                           Clear area
-                           Give players impact bullets
-                           Remove all players attachments
-                                                         Money:
-                                                               Nearby drop delay(ms)
-                                                               Nearby money drop
-                                                               Nearby circle money drop
-                                                               Money rain on self
-                                                         Money Location:
-                                                                        Location drop delay(ms)
-                                                                        Drop at (1-3 locations)
-                                                                        Preset Locations
-                                                                        Set to my location
-                                                                        Show marker/s
-                                                                        Money drop at set location/s
-                  Griefing:
-                           Clone
-                           Freeze in place
-                           Give wanted level
-                           Electrocute session
-                           Make traffic hostile
-                           Make pedestrians hostile
-                           Fake money
-                                     Affect Ped Vision and Movement:
-                                                                    Trap in cage
-                                                                    Trap in cable cars
-                                                                    Glitch ped
-                                                                    Shake camera
-                                                                    Smoke session
-                                                                    Spray with water
-                                                                    Spray with fire
-                                     Deadly Force:
-                                                  Host kick
-                                                  Kill
-                                                  Silent Kill
-                                                  Set on fire
-                                                  Ram with vehicle
-                                                  Explode
-                                                  Explode loop
-                                                  Rain rockets
-                                                  Forcefield
-                                      Attackers:
-                                                Send attackers
-                                                Hostile clone
-                                                Attack with SWAT
-                                                Attack with jet
-                                      Misc:
-                                           Airstrike
-                                           Ragdoll session
-                                           Attach campfire
-                                           Karma
-                     Talking:
-                             Show list
-                             Explode
-                             Add wanted level
-                     Remote:
-                            Non host kick
-                            Kick to single player
-                            CEO Kick
-                            CEO ban
-                                   Troll:
-                                         Infinite loading screen
-                                         Sound spam
-                                         Lock lobbies view to face forward
-                                         Gentle kick from vehicle
-                                         Force into mission (Missions listed)
-                                    Notifications:
-                                                  Display spectating message
-                                                  Display insurance message
-                                                  Invite notifs
-                                                  Send message notifs
-                                                  Send notif banner
-                                                  Send money notif amount
-                                                  Send money notifs
-                                    Give Globals:
-                                                 Give never wanted
-                                                 Give cops turn blind eye
-                                                 Give off the radar
-                      Vehicle:
-                              Godmode vehicle
-                              Kick from vehicle
-                                               Movement Modifications:
-                                                                      Horn boost:
-                                                                      Launch vehicle
-                                                                      Launch vehicle
-                                                                      Boost vehicle
-                                                                      Stop vehicle
-                                                                      Freeze vehicle
-                                                                      Rotate vehicle
-                                               Trolling:
-                                                        Kill engine
-                                                        Revive engine
-                                                        Kick from vehicle loop
-                                                        Delete vehicle loop
-                                                        Burst tires
-                                                        Lock doors
-                                                        Unlock doors
-                                                Vehicle Modifications:
-                                                                      Repair Vehicle
-                                                                      Fully Tune vehicle
-                                                Spawn vehicle:
-                                                      (All vehicles by category listed)                                                                                                                        
-                                                Extra sensor perception:
-                                                                        ESP Color
-                                                                        ESP name
-                                                                        ESP box
-                                                                        ESP line
-                                                                        ESP head marker
-                                                                        ESP foot marker
-                                                                        ESP info
-                                                                        ESP skel
-                                                                        ESP sky line
-                                                 Crash Session with entities
-         Session overseer:
-                          Enable overseer
-                          Rockstar staff
-                          Show if R* ID is Online
-          Info Spoofer:
-                       Info Spoofer Profiles
-                       Rank input
-                       Set rank
-                       Wallet input
-                       Kills input
-                       Set kills
-                       Deaths input
-                       Set deaths
-                       K/D input
-                       Set K/D
-                       Enter profile name:
-                       Save profile!
-                                    Random choice spoofs:
-                                                         Random rank spooft spam
-                                                         Random wallet spoof spam
-                                                         Random K/D ratio spoof spam
-           Data management:
-                           Dump players data
-                           Log player data constantly
-                           Dump chat messages
-                           Log chat messages constantly
-           Name:
-                Auto change name on next load
-                Save name:
-                Preset names
-                Reset changed name
-                Custom name input
-                Name color
-                Name setting
-                Set:
-           Notify on cash drops in session
-           Notify on player joins in session
-           Show session info
-           Show talking players
-           Reveal players
-           Show as Impulse
-Protection:
-      Attachment:
-                 Delete nearby peds and vehicles
-                 Detach attached objects
-                 Delete attached objects
-      Network events:
-                     Clear tasks
-                     Take weapons
-                     Give weapons
-                     Particle effects
-                     Wanted level
-                     Weather
-                     Time
-                     Explosions
-                     Control
-                     Sound
-                     Vote kick notification
-       Script events:
-                     Script events
-                     Smart script event protection
-                     Block all script events
-       Spoofing:
-                R*ID Spoof:
-                           Selected id for spoof:
-                           Enable R* ID Spoof
-                           Set random R* ID
-                           Reset Spoofed R* ID
-                R* ID Preset Profile Sets:
-                                          MrBossFTW
-                                          NoughtPointFourLIVE
-                                          Kwebbelkop
-                R* ID Custome Profile Sets:
-                                           Name for spoof:
-                                           ID for spoof
-                                           Enter profile name
-                                           Save profile
-        Misc:
-             Safe space
-             Clone
-             Vehicle network mitigate
-             Blame
-             Aiming protection
-        Impulse user block
-Recovery:
-    Money:
-          Current Bank balance:
-          Current wallet balance:
-                                 Add:
-                                     Give money
-                                     Loop give money
-                                 Remove:
-                                        Remove Money
-                                        Loop remove money
-                                        Remove all of wallet
-                                 ATM:
-                                     Deposit all of wallet to bank
-                                     Withdraw all of bank to wallet
-                                     Amount
-                                     Deposit
-                                     Withdraw
-     Unlocks:
-             Unlock tattoos
-             Unlock clothing
-             Unlock exclusive t-shirts
-             Unlock hairstyles
-                              Vehicles:
-                                       Unlock vehicle mods
-                                       Unlock heists                    
-                              Inventory:
-                                        Max snacks
-                                        Max armor
-                                        Max fireworks
-                              Misc:
-                                   Unlock weapon skins
-                                   Unlock camos and parachutes
-                                   Unlock achievements and stats
-                                   Unlock office money clutter
-                                   Unlock biker stuff clutter
-                                   Unlock high club popularity
-                                   Unlock all casino t-shirts
-      Stat editor:
-                  Max all stats
-                  Max stamina
-                  Max strength
-                  Max lung capacity
-                  Max driving
-                  Max flying
-                  Max shooting
-                  Max stealth
-       Playtime:
-                Days
-                Hours
-                Minutes
-                Seconds
-       Misc stats:
-                  Race wins
-                  Race losses
-                  Team deathmatch wins
-                  Team deathmatch losses
-                  Deathmatch wins
-                  Deathmatch losses
-       KD editor:
-                 Set kills
-                 Set deaths
-                 Set online kills
-                 Set online deaths
-                 Set shots
-                 Set headshots
-                 Set hits
-       Level:
-             Set custom level
-             Set custom crew level
-             RP increaser(wanted level)
-       Misc:
-            Bypass tutorial
-            Redesign character
-            Change character gender
-            Clear mental state
-            Modded rolls + more ammo (Shooting ability)  
-Miscellaneous:
-         Report stats:
-                      (Report stats displayed here)
-         Mobile TV:
-                   Toggle TV
-                   Change channel
-                   (X,Y,W,H) Postion
-                   Roation
-         Disables:
-                  Disable idle kick
-                  Disable stunt jump cutscenes
-                  Disable phone
-                  Disable notifications
-                  Disable game recordings
-                  Disable HUD
-         External links:
-                        Open Impulse site
-                        Open Impulse youtube
-                        Open Impulse header creation tutorial
-                        Open Impulse header scripthook tutorial
-                        Open Impulse r* id spoofer tutorial
-         Hud editor:
-                    Edit your HUDs color (Various color options)
-         Train options:
-                       Drive nearest train
-                       Spawn train
-                       Quit train ride
-                       Delete spawned train
-                       Keyboard controls
-                       Chrome train
-                       Derail train
-                       Speed up train
-                       Slow down train
-         Camera:
-                Freecam
-                Freecam speed
-                Freecam teleport
-                Freecam controller toggle
-                GTA 1 camera
-                Camera zoom
-         HUD/Display Options:
-                             FPS display
-                             Coords display
-                             Remove transaction loading
-                             Decreased graphics mode
-                             Reset graphics in your area
-          Other:
-                Dev mode
-                Mobile radio
-                Skip radio track
-                See through walls
-                Enable snow trails & footsteps
-                Bail to singleplayer
-Settings:
-    Language:
-             Generate empty language file
-             Reset language
-             Load languages(Import to select one)
-     Menu theme:
-                (various options to customize menu)`, `Second page`, `Third page`, `So on`];
+
+__Defaults__ :
+
+         Default online male model
+         Default online female model
+         Michael
+         Franklin
+         Trevor
+         Custom model
+
+__Models__ :
+
+         Search
+         (Every model is below this point)
+         
+__Wardrobe__ :
+
+          Load outfits
+          Save outfit
+          Random outfit
+          Police Uniform
+          Add Rockstar logo
+          Hair Color
+
+__Props__ :
+                                  
+	  Face
+          Face Variation
+          Glasses
+          Glasses Variation
+          Ear pieces
+          Ears variation
+          Clear face
+          Clear glasses
+          Clear ear pieces
+
+__Components__ :
+
+          Face
+          Face variation
+          Masks
+          Masks variation
+          Hair
+          Hair variation
+          Torso
+          Torso variation
+          Legs
+          Legs variation
+          Parachute/Misc
+          Parachute/Misc variation
+          Shoes
+          Shoes variation
+          Extra 1
+          Extra 1 variation
+          Tops 1
+          Tops 1 variation
+          Body Armor
+          Body Armor variation
+          Crew Emblem
+          Crew Emblem variation
+          Tops 2
+          Tops 2 variation
+
+__Animation__ :
+
+	   Stop all animations
+           Controllable
+           Contort
+           Animations
+           Walkstyles
+           Scenarios
+
+__Vision__ :
+
+            Default
+            Damage
+            Vagos
+            Cops
+            White screen
+            Water lab
+            MP spectator cam
+            Cops
+            Spectator 1
+            Sunglasses
+            Dying
+            Orange
+            Vagos
+            Blurry
+            Stoned
+            Prologue Shootout
+            Secret Camera
+            UFO
+            UFO Deathray
+            Wobbly
+            Killstreak
+            Hint cam
+            Black and White
+            Sniper
+            Crane cam
+            Bikers
+
+__Particles__ :
+
+            Particle man
+            Dragon Breath
+
+__General__ :
+
+             God mode
+             Regenerate health
+             Invisibility
+             Opacity
+             Never wanted
+             No ragdoll
+
+__Modify Ped__ :
+
+              Clone
+              Midget mode
+              Reduced Collision
+              Clean ped
+              Peds ignore player
+              Suicide
+              Remove all attachments
+                              
+__Misc__ :
+
+              Forcefield
+              Badsport yourself
+              Karma
+
+  `, 
+`
+yeet
+`,
+`
+yeet
+`];
   let page = 1;
   const embed = new Discord.MessageEmbed()
     .setColor(colors.orange)
