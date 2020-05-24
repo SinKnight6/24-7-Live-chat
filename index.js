@@ -3556,6 +3556,32 @@ __Story mode locations__ :
                 Lester's House
 `,
 `
+__Inside__ :
+
+                Strip Club DJ Booth
+                Humane Labs Tunnel
+                Police Station
+                FIB Top Floor
+                IAA Office
+                Torture Room
+                Ammuniation Gun Range
+                Ammunation Office
+                Blaine County Savings Bank
+                Fort Zancudo ATC Top Floor
+
+__Story mode locations__ :
+
+                Franklin's New House
+                Franklin's Old House
+                Michael's House
+                Lester's House
+                Wayne's Cousin's House
+                Trevor's House
+                Trevor's Meth Lab
+                Trevor's Office
+                Floyd's Apartment
+                Lester's House
+                
 __Glitched locations__ :
 
                 Race Underground Bunker
@@ -3568,7 +3594,7 @@ __Glitched locations__ :
                 Inside Casino
                 Beach House
                 Under The Bridge Glitch
-                
+
 __IPL Locations__ :
 
                 Unload all IPL's
