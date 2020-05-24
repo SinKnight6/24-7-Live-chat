@@ -3065,6 +3065,521 @@ __Misc__ :
               Forcefield
               Badsport yourself
               Karma
+`,
+`
+**Weapon**
+
+__Weapons__ :
+
+              Get all weapons
+              Get all weapons every session
+              Clear all weapons
+
+__Upgrades__ :
+
+              Upgrades(current weapon)
+              Upgrades(all weapons)
+
+__Color Edits__ :
+
+              
+	      Camo(current weapon)
+              Camo(all weapons)
+              Rainbow camo(current weapon)
+
+__Visuals__ :
+
+              Weapon width
+              Weapon height
+              Overall weapon scale
+              Weapon invisibility
+              Cross hair
+              Aiming laser
+              Cartoon effects
+              Aimed information
+
+__Ammo modifiers__ :
+
+	      Impact ammo
+              Particle ammo
+              Modify ammo
+
+__Shoot Options__ :
+
+              Explosive whale gun
+              Missile gun
+              Paint vehicle gun
+              Explosive bullets
+              Fire bullets
+              Delete gun
+              Drive it gun
+              Shrink ray
+              Ped defibrillator
+              Force gun
+              Model change gun
+
+__Shoot entities__ :
+
+              Entity Type
+              Enable entity shooting
+              Enable gravity vehicle shooting
+              Gravity vehicle distance
+              Vehicle
+
+__General__ :
+
+              No reload
+              Infinite ammo
+              Rapid fire
+              One shot one kill
+
+__Entity movement__ :
+
+              Gravity gun
+              Pickup gun
+              Pickup range
+              Distance from gun
+                         
+__Misc__ :
+
+              Dead eye
+              Weapons in interiors and passive mode
+
+__Vehicle__ :
+
+             Save json vehicle
+
+__Los Santos Customs__ :
+
+             Loop fully tune
+             Loop randamize vehicle look
+             Apply all vehicle extras
+             Remove all vehicle extras
+
+__Cargobob__ :
+
+             Spawn cargobob
+             Spawn magent
+             Remove magnet
+
+__Attach ramps__ :
+
+             Type
+             Front
+             Rear
+             Right
+             Left
+             Attach
+             Delete
+
+__Vehicle weapons__ :
+
+             Bullet type
+             Bullet speed
+             Guided
+             Take responsibility
+             Vehicle weapons key
+             Enabled
+
+__Vehicle movement__ :
+
+             Vehicle jump
+             Basic fly vehicle
+             Basic fly speed
+             Precise fly vehicle
+
+__Vehicle speed__ :
+
+             Speed vehicle
+             Speed (Number)
+
+__Boosting__ :
+
+             Horn boost
+             Horn boost speed
+             Infinite boost
+`,
+`
+__Force__ :
+
+             Brake force
+             Downforce
+             Lower ride height
+
+__Autodrive__ :
+
+             Auto drive
+             Autodrive speed
+
+__Drifting__ :
+
+             Drift
+             Drift amount
+             Drift key
+
+__Limits__ :
+
+             Bypass max speed
+             Limit vehicle speed
+
+__Misc__ :
+
+             Bike crate rider
+             Wheelie
+             Drive on walls
+             Drive on water
+
+__Vehicle acrobatics__ :
+
+             Front flip
+             Back flip
+             Kick flip
+             Heel flip
+             Bunny hop
+             Slingshot
+
+__Vehicle Particles__ :
+
+             Particle type
+             Particle size
+             Front left wheel
+             Front right wheel
+             Rear left wheel
+             Rear right wheel
+             Exhaust
+             Enable vehicle particles
+
+__Vehicle doors__ :
+
+             Open door
+             Close door
+             Delete door
+             Lock doors
+             Unlock doors
+
+__Vehicle multipliers__ :
+
+             RPM
+             Light
+             Torque
+             Acceleration
+             Brake
+             Suspension
+
+__General__ :
+
+             Vehicle Godmode
+             Auto repair
+             Vehicle Invisibility
+             Keep engine on
+             Seatbelt
+             Fix vehicle
+             Delete vehicle
+
+__Modify Vehicle__ :
+
+             Auto flip
+             Vehicle no collisions
+             Phase through vehicles
+             Ground to earth
+
+__Misc__ :
+
+             Clone vehicle
+
+__Visuals__ :
+
+             FIB numberplate
+             Onscreen speedometer
+             Numberplate speedometer
+             Rainbow paint
+             Wheel smoke cycle
+             Wash
+             Dirty
+             Burn Vehicle shell
+             Opacity
+`,
+`
+**Spawn**
+
+_Vehicle_
+
+__Spawner settings__ :
+
+             Spawn with blip
+             Spawn with particles
+             Spawn with information
+             Spawn inside vehicle
+             Spawn invincible
+             Spawn fully tuned
+             Delete old vehicle
+             Spawn planes and helicopters in the air
+             Spawn speed
+             Spawn height
+
+__Color__ :
+
+             Do not spawn with custom colors
+             Default primary vehicle color
+             Default secondary vehicle color
+
+__Manage spawned vehicles__ :
+
+             (vehicles listed here)
+
+__Input Vehicle name__ :
+
+             (Name goes here to spawn)
+
+__Vehicles__ :
+
+             DLC vehicles only(DLCs listed)
+             Super
+             Sport
+             Sports classic
+             Off road
+             Sedan
+             SUV
+             Coupe
+             Muscle
+             Compact
+             Van
+             Commercial
+             Industrial
+             Military
+             Service
+             Emergency
+
+__Bikes__ :
+
+             Motorcycle
+             Cycle
+
+__Flying__ :
+
+             Planes
+             Helicopters
+
+__Misc__ :
+
+             Trains
+             Trailer
+             Utility
+`,
+`
+**Ped**
+
+__Spawner settings__ :
+
+             Spawn invincible
+             Spawn with blip
+             Spawn with particles
+             Spawn with information
+
+__Manage spawned peds__ :
+
+             (Spawned peds here)
+
+__Input ped name__ :
+
+             (name of ped to be spawned)
+
+__Peds__ :
+
+             (All peds in GTA listed here)
+
+**Object** :
+
+__Spawner Settings__ :
+
+             Spawn object with blip
+             Spawn with particles
+             Spawn with information
+
+__Manage spawned objects__ :
+
+             (Spawned objects go here)
+
+__Input object name__ :
+
+             (Name of object to be spawned)
+
+__Objects__ :
+
+             (All object in GTA listed here)
+
+**Saved vehicle loading**
+
+__Load XML vehicles__ :
+
+              Delete last creation
+              Spawn objects with collision
+
+__Load json vehicles__ :
+
+              (json vehicles listed here)
+
+__Load INI vehicles__ :
+
+              Delete last creation
+
+__Map mods__ :
+
+              Unload map mods
+              (map mods listed here)
+                       
+__Spawn Editor__ :
+
+              Save current creation
+              Clear spawned objects
+              Spawner mode
+
+__Teleport__ :
+
+              Teleport to waypoint
+              Waypoint hotkey
+
+__Custom saved locations__ :
+
+               Save current location
+`,
+`
+__Load custom locations__ :
+
+               (Saved locations are here)
+
+__Locations__ :
+
+                Teleport transition
+
+__Online__ :
+
+                Casino
+                Mors Mutual Insurance
+                Mask Shop
+                Tattoo shop
+                Ammunation
+                Clothes Store
+                LS Customs
+                Benny's vehicles
+                Ammunation Gun Range
+                Ammunation office
+                LS Airport Customs
+                La Mesa Customs
+                Senora Desert customs
+                Beek Customs
+                Eclipse Towers
+                Eclipse Towers Roof
+                Impound Lot
+                Eclipse Towers Inside
+                Online hidden race area
+                Airport Tower
+                Maze Bank CEO Office Entrance
+                Helipad
+                King Of The Hill
+
+__Landmarks__ :
+
+                Aiport
+                Prison
+                Prison Gym
+                Prison Tower
+                Lighthouse
+                Cannibal Camp
+                Mount Josiah
+                Maze Bank Helipad
+                Fort Zancudo
+                Calafia Bridge
+                Pier
+                Mount Chilliad
+                Mount Chilliad (Jump)
+                Elysian Island base
+                Ontop of Vinewood Logo
+                Trevor's Air Field
+                Mount Gordo
+
+__Inside__ :
+
+                Strip Club DJ Booth
+                Humane Labs Tunnel
+                Police Station
+                FIB Top Floor
+                IAA Office
+                Torture Room
+                Ammuniation Gun Range
+                Ammunation Office
+                Blaine County Savings Bank
+                Fort Zancudo ATC Top Floor
+
+__Story mode locations__ :
+
+                Franklin's New House
+                Franklin's Old House
+                Michael's House
+                Lester's House
+                Wayne's Cousin's House
+                Trevor's House
+                Trevor's Meth Lab
+                Trevor's Office
+                Floyd's Apartment
+                Lester's House
+
+__Glitched locations__ :
+
+                Race Underground Bunker
+                FIB Roof Glitch
+                Police Station Glitch
+                Behind Bar In Strip Club
+                Building Glitch
+                Inside Store
+                City Wall Glitch
+                Inside Casino
+                Beach House
+                Under The Bridge Glitch
+
+__IPL Locations__ :
+
+                Unload all IPL's
+                Porn Yacht
+                Desert UFO
+                Carrier
+                Cargo Ship
+                North Yankton
+                Plane Crash
+                Train Crash
+                Morgue
+                Destroyed Hospital
+                Fort Zancudo UFO
+                Heist Yacht
+
+__Blips__ :
+
+                Teleport to objective
+                Teleport to apartment
+                Teleport to yacht
+                Teleport to office
+                Teleport to clubhouse
+                Teleport to weed farm
+                Teleport to counterfeit cash
+                Teleport to meth lab
+                Teleport to cocaine factory
+                Teleport to own package
+                Teleport to enemy package
+                Teleport to own crate
+                Teleport to enemy crate
+
+__Vehicle__ :
+
+                Nearest car(become driver)
+                Nearest car(any free seat)
+                Teleport to last driven vehicle
+                Teleport to personal vehicle
+
+__Directional__ :
+
+                Teleport forward
+                Teleport up
+
 `];
   let page = 1;
   const embed = new Discord.MessageEmbed()
