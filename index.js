@@ -3794,7 +3794,8 @@ __Sky VFX__ :
        Cloud overlay detail scale
        Cloud hat speed
        Cloud edge speed
-
+`,
+`
 __Traffic Manager__ :
 
        Use vehicle pools(bigger range)
@@ -3823,8 +3824,7 @@ __Pedestrian manager__ :
        Enlarge peds
        Enlarge peds
        Launch peds
-`,
-`
+       
 __Tasks__ :
 
        Clear ped tasks
@@ -3864,7 +3864,7 @@ __Waypoint__ :
        Send police
        Auto drive to waypoint
        Stop auto drive
-       
+
 __Time__ :
 
        Add hour
