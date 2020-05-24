@@ -3722,6 +3722,191 @@ __Night__ :
        Night filmic F
        Night filmic W
        Night exposure
+`,
+`
+__Corona VFX__ :
+
+       Reset coronas VFX
+       Load coronas VFX settings
+       Save coronas VFX settings
+       Coronas global intensity
+       Coronas water intensity
+       Coronas global size
+       Coronas global size
+       Coronas global screen space expansion
+       Coronas water screen space expansion
+       Coronas rotation speed
+       Coronas size scale paraboloid
+       Coronas Z bias multiplier
+       Coronas color
+
+__Distant lights VFX__ :
+
+       Reset distant lights VFX
+       Load distant lights VFX settings
+       Save distant lights VFX settings
+       Distant lights start hour
+       Distant lights end hour
+       Distant lights street light start hour
+       Distant lights street light end hour
+       Distant lights flicker
+       Distant lights twinkle speed
+       Distant lights twinkle amount
+       Distant lights size
+       Distant lights min size
+       Distant lights reflection size
+       Distant lights size upscale
+       Distant lights size upscale reflections
+       Distant lights speed 1
+       Distant lights speed 2
+       Distant lights speed 3
+       Distant lights vehicle light z offset
+       Distant lights street light intensity
+       Distant lights vehicle light intensity
+       Vehicle color 1
+       Vehicle color 2
+
+__Rain puddles VFX__ :
+
+       Reset rain puddles VFX
+       Load rain puddles VFX Settings
+       Save rain puddles VFX Settings
+       Puddles depth
+       Puddles range
+       Puddles scale
+       Puddles drop factor
+       Puddles min duration
+       Puddles max duration
+       Puddles min size
+       Puddles max size
+       Puddles ripple strength
+       Puddles ripple speed  
+            
+__Sky VFX__ :
+
+       Reset Sky FVX
+       Load Sky VFX Settings
+       Save Sky VFX Settings
+       Small cloud speed
+       Large cloud speed
+       Overall cloud speed
+       Cloud edge detail scale
+       Cloud overlay detail scale
+       Cloud hat speed
+       Cloud edge speed
+
+__Traffic Manager__ :
+
+       Use vehicle pools(bigger range)
+       Vehicle ESP
+       Vehicle chaos
+       Explode vehicles
+       Kill driver
+       Launch vehicles
+       Boost Vehicles
+       Kickflip vehicles
+       Delete vehicles
+       Fix vehicles
+       Scorch vehicles
+       Drive vehicles to me
+       No gravity
+       Normal gravity
+
+__Pedestrian manager__ :
+
+       Use ped pools(bigger range)
+       Ped ESP
+       Kill peds
+       Clone peds
+       Delete peds
+       Shrink peds
+       Enlarge peds
+       Enlarge peds
+       Launch peds
+
+__Tasks__ :
+
+       Clear ped tasks
+       Peds jump
+       Peds cower
+       Peds hands up
+       Peds wander
+       Peds come to me
+
+__Weather__ :
+
+       Clouds (Type)
+       Lightning storm
+       Meteor shower
+       Rain intensity
+
+__Weather types__ :
+
+       Clear
+       Clearing
+       Neutral
+       Extra Sunny
+       Rain
+       Smog
+       Snow
+       Xmas
+       Halloween
+       Snowlight
+       Blizzard
+       Thunder
+       Overcast
+
+__Waypoint__ :
+
+       Explode
+       Money drop
+       Send police
+       Auto drive to waypoint
+       Stop auto drive
+
+__Time__ :
+
+       Add hour
+       Remove hour
+       Freeze time
+       Sync with system time
+
+__Water__ :
+
+       Turn off ocean
+       Clear water
+       Wave intensity
+
+__Water tune__ :
+
+       Ripple scale
+       Ocean Foam scale
+       Specular Falloff
+
+__Density__:
+
+       Ped density
+       Traffic density
+
+       _Clear Area_
+
+       Clear radius
+       Clear area of everything
+       Clear area of police
+       Clear area of objects
+       Clear area of vehicles
+       Clear area of peds
+
+__Misc__ :
+
+       Kick all nearby from vehicles
+       Teleport all nearby vehicles to sea
+       Timescale
+       Road slipperiness
+       Gravity
+       Blackout
+       Ground snow
+       Wind speed
 `];
   let page = 1;
   const embed = new Discord.MessageEmbed()
