@@ -3255,7 +3255,7 @@ __Vehicle doors__ :
              Delete door
              Lock doors
              Unlock doors
-             
+
 __Vehicle multipliers__ :
 
              RPM
@@ -3567,7 +3567,8 @@ __Glitched locations__ :
                 Inside Casino
                 Beach House
                 Under The Bridge Glitch
-
+`,
+`
 __IPL Locations__ :
 
                 Unload all IPL's
@@ -3610,7 +3611,90 @@ __Directional__ :
 
                 Teleport forward
                 Teleport up
+`,
+`
+**World**
 
+__VFX engine__ :
+
+                Reset VFX settings
+                Load VFX settings
+                Save VFX settings
+
+__Traffic light VFX__ :
+
+                Reset traffic lights VFX
+                Load traffic lights VFX settings
+                Save traffic lights VFX settings    
+                Traffic light red (Can change color here)
+                Traffic light orange (Can change color here)
+                Traffic light red (Can change color here)
+                Traffic pedestrian red
+                Traffic pedestrian green
+
+__Vehicle VFX__:
+
+                Reset VFX
+                Load VFX Settings
+                Save VFX Settings
+                Fade distance
+                Headlight angle
+                Headlight split
+                Headlight distance
+                Headlight intensity
+                Player headlight distance
+                Player headlight intensity
+
+__Neon__ :
+
+
+                Neon intensity
+                Neon radius
+                Neon extended sides
+                Neon extended front
+                Neon falloff exponenet
+                Neon clipping pane height
+
+__Train VFX__ :
+
+                Reset trains VFX
+                Load trains VFX Settings
+                Save trains VFX settings
+                Trains color intensity
+                Trains color
+
+__Tone mapping VFX__ :
+
+                Reset tone mapping VFX
+                Load tone mapping VFX settings
+                Save tone mapping VFX Settings
+
+__Equation__:
+
+               Day
+               Night
+
+__Day__ :
+
+               Day filmic A
+               Day filmic B
+               Day filmic C
+               Day filmic D
+               Day filmic E
+               Day filmic F
+               Day filmic W
+               Day exposure
+
+__Night__ :
+
+               Night filmic A
+               Night filmic B
+               Night filmic C
+               Night filmic D
+               Night filmic E
+               Night filmic F
+               Night filmic W
+               Night exposure
 `];
   let page = 1;
   const embed = new Discord.MessageEmbed()
