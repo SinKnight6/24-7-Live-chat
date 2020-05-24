@@ -3823,7 +3823,8 @@ __Pedestrian manager__ :
        Enlarge peds
        Enlarge peds
        Launch peds
-
+`,
+`
 __Tasks__ :
 
        Clear ped tasks
@@ -3863,8 +3864,7 @@ __Waypoint__ :
        Send police
        Auto drive to waypoint
        Stop auto drive
-`,
-`
+       
 __Time__ :
 
        Add hour
