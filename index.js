@@ -3554,7 +3554,8 @@ __Story mode locations__ :
                 Trevor's Office
                 Floyd's Apartment
                 Lester's House
-
+`,
+`
 __Glitched locations__ :
 
                 Race Underground Bunker
@@ -3567,8 +3568,7 @@ __Glitched locations__ :
                 Inside Casino
                 Beach House
                 Under The Bridge Glitch
-`,
-`
+                
 __IPL Locations__ :
 
                 Unload all IPL's
