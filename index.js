@@ -3171,7 +3171,8 @@ __Attach ramps__ :
              Left
              Attach
              Delete
-
+`,
+`
 __Vehicle weapons__ :
 
              Bullet type
@@ -3198,8 +3199,6 @@ __Boosting__ :
              Horn boost
              Horn boost speed
              Infinite boost
-`,
-`
 __Force__ :
 
              Brake force
