@@ -2917,418 +2917,419 @@ __Water__ :
         
 __Owned forcefield__ :
 
-        Toggle On/Off
+       Toggle On/Off
         
 __Global__ :
 
-         Off the radar
-         Cops turn blind eye
-         Bullshark testosterone
-         Loop bullshark testosterone
+       Off the radar
+       Cops turn blind eye
+       Bullshark testosterone
+       Loop bullshark testosterone
 
 __Model__ :
 
-         Model width
-         Model height
-         Model thickness
-         Random model outfit
-         Rainbow hair
+       Model width
+       Model height
+       Model thickness
+       Random model outfit
+       Rainbow hair
 
 __Defaults__ :
 
-         Default online male model
-         Default online female model
-         Michael
-         Franklin
-         Trevor
-         Custom model
+       Default online male model
+       Default online female model
+       Michael
+       Franklin
+       Trevor
+       Custom model
   `, 
 `
 __Models__ :
 
-         Search
-         (Every model is below this point)
+       Search
+       (Every model is below this point)
          
 __Wardrobe__ :
 
-          Load outfits
-          Save outfit
-          Random outfit
-          Police Uniform
-          Add Rockstar logo
-          Hair Color
+       Load outfits
+       Save outfit
+       Random outfit
+       Police Uniform
+       Add Rockstar logo
+       Hair Color
 
 __Props__ :
                                   
-	  Face
-          Face Variation
-          Glasses
-          Glasses Variation
-          Ear pieces
-          Ears variation
-          Clear face
-          Clear glasses
-          Clear ear pieces
+	      Face
+        Face Variation
+        Glasses
+        Glasses Variation
+        Ear pieces
+        Ears variation
+        Clear face
+        Clear glasses
+        Clear ear pieces
 
 __Components__ :
 
-          Face
-          Face variation
-          Masks
-          Masks variation
-          Hair
-          Hair variation
-          Torso
-          Torso variation
-          Legs
-          Legs variation
-          Parachute/Misc
-          Parachute/Misc variation
-          Shoes
-          Shoes variation
-          Extra 1
-          Extra 1 variation
-          Tops 1
-          Tops 1 variation
-          Body Armor
-          Body Armor variation
-          Crew Emblem
-          Crew Emblem variation
-          Tops 2
-          Tops 2 variation
+        Face
+        Face variation
+        Masks
+        Masks variation
+        Hair
+        Hair variation
+        Torso
+        Torso variation
+        Legs
+        Legs variation
+        Parachute/Misc
+        Parachute/Misc variation
+        Shoes
+        Shoes variation
+        Extra 1
+        Extra 1 variation
+        Tops 1
+        Tops 1 variation
+        Body Armor
+        Body Armor variation
+        Crew Emblem
+        Crew Emblem variation
+        Tops 2
+        Tops 2 variation
 
 __Animation__ :
 
-	   Stop all animations
-           Controllable
-           Contort
-           Animations
-           Walkstyles
-           Scenarios
+	     Stop all animations
+       Controllable
+       Contort
+       Animations
+       Walkstyles
+       Scenarios
 
 __Vision__ :
 
-            Default
-            Damage
-            Vagos
-            Cops
-            White screen
-            Water lab
-            MP spectator cam
-            Cops
-            Spectator 1
-            Sunglasses
-            Dying
-            Orange
-            Vagos
-            Blurry
-            Stoned
-            Prologue Shootout
-            Secret Camera
-            UFO
-            UFO Deathray
-            Wobbly
-            Killstreak
-            Hint cam
-            Black and White
-            Sniper
-            Crane cam
-            Bikers
+        Default
+        Damage
+        Vagos
+        Cops
+        White screen
+        Water lab
+        MP spectator cam
+        Cops
+        Spectator 1
+        Sunglasses
+        Dying
+        Orange
+        Vagos
+        Blurry
+        Stoned
+        Prologue Shootout
+        Secret Camera
+        UFO
+        UFO Deathray
+        Wobbly
+        Killstreak
+        Hint cam
+        Black and White
+        Sniper
+        Crane cam
+        Bikers
 `,
 `
 __Particles__ :
 
-            Particle man
-            Dragon Breath
+        Particle man
+        Dragon Breath
 
 __General__ :
 
-             God mode
-             Regenerate health
-             Invisibility
-             Opacity
-             Never wanted
-             No ragdoll
+       God mode
+       Regenerate health
+       Invisibility
+       Opacity
+       Never wanted
+       No ragdoll
 
 __Modify Ped__ :
 
-              Clone
-              Midget mode
-              Reduced Collision
-              Clean ped
-              Peds ignore player
-              Suicide
-              Remove all attachments
+        Clone
+        Midget mode
+        Reduced Collision
+        Clean ped
+        Peds ignore player
+        Suicide
+        Remove all attachments
                               
 __Misc__ :
 
-              Forcefield
-              Badsport yourself
-              Karma
+        Forcefield
+        Badsport yourself
+        Karma
 `,
 `
 **Weapon**
 
 __Weapons__ :
 
-              Get all weapons
-              Get all weapons every session
-              Clear all weapons
+        Get all weapons
+        Get all weapons every session
+        Clear all weapons
 
 __Upgrades__ :
 
-              Upgrades(current weapon)
-              Upgrades(all weapons)
+        Upgrades(current weapon)
+        Upgrades(all weapons)
 
 __Color Edits__ :
 
               
 	      Camo(current weapon)
-              Camo(all weapons)
-              Rainbow camo(current weapon)
+        Camo(all weapons)
+        Rainbow camo(current weapon)
 
 __Visuals__ :
 
-              Weapon width
-              Weapon height
-              Overall weapon scale
-              Weapon invisibility
-              Cross hair
-              Aiming laser
-              Cartoon effects
-              Aimed information
+        Weapon width
+        Weapon height
+        Overall weapon scale
+        Weapon invisibility
+        Cross hair
+        Aiming laser
+        Cartoon effects
+        Aimed information
 
 __Ammo modifiers__ :
 
 	      Impact ammo
-              Particle ammo
-              Modify ammo
+        Particle ammo
+        Modify ammo
 
 __Shoot Options__ :
 
-              Explosive whale gun
-              Missile gun
-              Paint vehicle gun
-              Explosive bullets
-              Fire bullets
-              Delete gun
-              Drive it gun
-              Shrink ray
-              Ped defibrillator
-              Force gun
-              Model change gun
+        Explosive whale gun
+        Missile gun
+        Paint vehicle gun
+        Explosive bullets
+        Fire bullets
+        Delete gun
+        Drive it gun
+        Shrink ray
+        Ped defibrillator
+        Force gun
+        Model change gun
 
 __Shoot entities__ :
 
-              Entity Type
-              Enable entity shooting
-              Enable gravity vehicle shooting
-              Gravity vehicle distance
-              Vehicle
+        Entity Type
+        Enable entity shooting
+        Enable gravity vehicle shooting
+        Gravity vehicle distance
+        Vehicle
 
 __General__ :
 
-              No reload
-              Infinite ammo
-              Rapid fire
-              One shot one kill
+        No reload
+        Infinite ammo
+        Rapid fire
+        One shot one kill
 
 __Entity movement__ :
 
-              Gravity gun
-              Pickup gun
-              Pickup range
-              Distance from gun
+        Gravity gun
+        Pickup gun
+        Pickup range
+        Distance from gun
                          
 __Misc__ :
 
-              Dead eye
-              Weapons in interiors and passive mode
+        Dead eye
+        Weapons in interiors and passive mode
 
 __Vehicle__ :
 
-             Save json vehicle
+        Save json vehicle
 `,
 `
 __Los Santos Customs__ :
 
-             Loop fully tune
-             Loop randamize vehicle look
-             Apply all vehicle extras
-             Remove all vehicle extras
+       Loop fully tune
+       Loop randamize vehicle look
+       Apply all vehicle extras
+       Remove all vehicle extras
 
 __Cargobob__ :
 
-             Spawn cargobob
-             Spawn magent
-             Remove magnet
+       Spawn cargobob
+       Spawn magent
+       Remove magnet
 
 __Attach ramps__ :
 
-             Type
-             Front
-             Rear
-             Right
-             Left
-             Attach
-             Delete
+       Type
+       Front
+       Rear
+       Right
+       Left
+       Attach
+       Delete
 __Vehicle weapons__ :
 
-             Bullet type
-             Bullet speed
-             Guided
-             Take responsibility
-             Vehicle weapons key
-             Enabled
+       Bullet type
+       Bullet speed
+       Guided
+       Take responsibility
+       Vehicle weapons key
+       Enabled
 
 __Vehicle movement__ :
 
-             Vehicle jump
-             Basic fly vehicle
-             Basic fly speed
-             Precise fly vehicle
+       Vehicle jump
+       Basic fly vehicle
+       Basic fly speed
+       Precise fly vehicle
 
 __Vehicle speed__ :
 
-             Speed vehicle
-             Speed (Number)
+       Speed vehicle
+        Speed (Number)
 
 __Boosting__ :
 
-             Horn boost
-             Horn boost speed
-             Infinite boost
+       Horn boost
+       Horn boost speed
+       Infinite boost
 __Force__ :
 
-             Brake force
-             Downforce
-             Lower ride height
+       Brake force
+       Downforce
+       Lower ride height
 
 __Autodrive__ :
 
-             Auto drive
-             Autodrive speed
+       Auto drive
+       Autodrive speed
 
 __Drifting__ :
 
-             Drift
-             Drift amount
-             Drift key
+       Drift
+       Drift amount
+       Drift key
 
 __Limits__ :
 
-             Bypass max speed
-             Limit vehicle speed
+       Bypass max speed
+       Limit vehicle speed
 
 __Misc__ :
 
-             Bike crate rider
-             Wheelie
-             Drive on walls
-             Drive on water
+       Bike crate rider
+       Wheelie
+       Drive on walls
+       Drive on water
 
 __Vehicle acrobatics__ :
 
-             Front flip
-             Back flip
-             Kick flip
-             Heel flip
-             Bunny hop
-             Slingshot
+       Front flip
+       Back flip
+       Kick flip
+       Heel flip
+       Bunny hop
+       Slingshot
 
 __Vehicle Particles__ :
 
-             Particle type
-             Particle size
-             Front left wheel
-             Front right wheel
-             Rear left wheel
-             Rear right wheel
-             Exhaust
-             Enable vehicle particles
+       Particle type
+       Particle size
+       Front left wheel
+       Front right wheel
+       Rear left wheel
+       Rear right wheel
+       Exhaust
+       Enable vehicle particles
 `,
 `
 __Vehicle doors__ :
 
-             Open door
-             Close door
-             Delete door
-             Lock doors
-             Unlock doors
+       Open door
+       Close door
+       Delete door
+       Lock doors
+       Unlock doors
 
 __Vehicle multipliers__ :
 
-             RPM
-             Light
-             Torque
-             Acceleration
-             Brake
-             Suspension
+       RPM
+       Light
+       Torque
+       Acceleration
+       Brake
+       Suspension
 
 __General__ :
 
-             Vehicle Godmode
-             Auto repair
-             Vehicle Invisibility
-             Keep engine on
-             Seatbelt
-             Fix vehicle
-             Delete vehicle
+       Vehicle Godmode
+       Auto repair
+       Vehicle Invisibility
+       Keep engine on
+       Seatbelt
+       Fix vehicle
+       Delete vehicle
 
 __Modify Vehicle__ :
 
-             Auto flip
-             Vehicle no collisions
-             Phase through vehicles
-             Ground to earth
+       Auto flip
+       Vehicle no collisions
+       Phase through vehicles
+       Ground to earth
 
 __Misc__ :
 
-             Clone vehicle
+       Clone vehicle
 
 __Visuals__ :
 
-             FIB numberplate
-             Onscreen speedometer
-             Numberplate speedometer
-             Rainbow paint
-             Wheel smoke cycle
-             Wash
-             Dirty
-             Burn Vehicle shell
-             Opacity
+       FIB numberplate
+       Onscreen speedometer
+       Numberplate speedometer
+       Rainbow paint
+       Wheel smoke cycle
+       Wash
+       Dirty
+       Burn Vehicle shell
+       Opacity
+
 __General__ :
 
-             Vehicle Godmode
-             Auto repair
-             Vehicle Invisibility
-             Keep engine on
-             Seatbelt
-             Fix vehicle
-             Delete vehicle
+       Vehicle Godmode
+       Auto repair
+       Vehicle Invisibility
+       Keep engine on
+       Seatbelt
+       Fix vehicle
+       Delete vehicle
 
 __Modify Vehicle__ :
 
-             Auto flip
-             Vehicle no collisions
-             Phase through vehicles
-             Ground to earth
+       Auto flip
+       Vehicle no collisions
+       Phase through vehicles
+       Ground to earth
 
 __Misc__ :
 
-             Clone vehicle
+       Clone vehicle
 
 __Visuals__ :
 
-             FIB numberplate
-             Onscreen speedometer
-             Numberplate speedometer
-             Rainbow paint
-             Wheel smoke cycle
-             Wash
-             Dirty
-             Burn Vehicle shell
-             Opacity
+       FIB numberplate
+       Onscreen speedometer
+       Numberplate speedometer
+       Rainbow paint
+       Wheel smoke cycle
+       Wash
+       Dirty
+       Burn Vehicle shell
+       Opacity
 `,
 `
 **Spawn**
@@ -3337,390 +3338,390 @@ _Vehicle_
 
 __Spawner settings__ :
 
-             Spawn with blip
-             Spawn with particles
-             Spawn with information
-             Spawn inside vehicle
-             Spawn invincible
-             Spawn fully tuned
-             Delete old vehicle
-             Spawn planes and helicopters in the air
-             Spawn speed
-             Spawn height
+        Spawn with blip
+        Spawn with particles
+        Spawn with information
+        Spawn inside vehicle
+        Spawn invincible
+        Spawn fully tuned
+        Delete old vehicle
+        Spawn planes and helicopters in the air
+        Spawn speed
+        Spawn height
 
 __Color__ :
 
-             Do not spawn with custom colors
-             Default primary vehicle color
-             Default secondary vehicle color
+        Do not spawn with custom colors
+        Default primary vehicle color
+        Default secondary vehicle color
 
 __Manage spawned vehicles__ :
 
-             (vehicles listed here)
+       (vehicles listed here)
 
 __Input Vehicle name__ :
 
-             (Name goes here to spawn)
+        (Name goes here to spawn)
 
 __Vehicles__ :
 
-             DLC vehicles only(DLCs listed)
-             Super
-             Sport
-             Sports classic
-             Off road
-             Sedan
-             SUV
-             Coupe
-             Muscle
-             Compact
-             Van
-             Commercial
-             Industrial
-             Military
-             Service
-             Emergency
+       DLC vehicles only(DLCs listed)
+       Super
+       Sport
+       Sports classic
+       Off road
+       Sedan
+       SUV
+       Coupe
+       Muscle
+       Compact
+       Van
+       Commercial
+       Industrial
+       Military
+       Service
+       Emergency
 
 __Bikes__ :
 
-             Motorcycle
-             Cycle
+       Motorcycle
+       Cycle
 
 __Flying__ :
 
-             Planes
-             Helicopters
+       Planes
+       Helicopters
 
 __Misc__ :
 
-             Trains
-             Trailer
-             Utility
+       Trains
+       Trailer
+       Utility
 `,
 `
 **Ped**
 
 __Spawner settings__ :
 
-             Spawn invincible
-             Spawn with blip
-             Spawn with particles
-             Spawn with information
+        Spawn invincible
+        Spawn with blip
+        Spawn with particles
+        Spawn with information
 
 __Manage spawned peds__ :
 
-             (Spawned peds here)
+       (Spawned peds here)
 
 __Input ped name__ :
 
-             (name of ped to be spawned)
+       (name of ped to be spawned)
 
 __Peds__ :
 
-             (All peds in GTA listed here)
+       (All peds in GTA listed here)
 
 **Object** :
 
 __Spawner Settings__ :
 
-             Spawn object with blip
-             Spawn with particles
-             Spawn with information
+       Spawn object with blip
+       Spawn with particles
+       Spawn with information
 
 __Manage spawned objects__ :
 
-             (Spawned objects go here)
+       (Spawned objects go here)
 
 __Input object name__ :
 
-             (Name of object to be spawned)
+       (Name of object to be spawned)
 
 __Objects__ :
 
-             (All object in GTA listed here)
+       (All object in GTA listed here)
 
 **Saved vehicle loading**
 
 __Load XML vehicles__ :
 
-              Delete last creation
-              Spawn objects with collision
+       Delete last creation
+        Spawn objects with collision
 
 __Load json vehicles__ :
 
-              (json vehicles listed here)
+        (json vehicles listed here)
 
 __Load INI vehicles__ :
 
-              Delete last creation
+        Delete last creation
 
 __Map mods__ :
 
-              Unload map mods
-              (map mods listed here)
+        Unload map mods
+        (map mods listed here)
                        
 __Spawn Editor__ :
 
-              Save current creation
-              Clear spawned objects
-              Spawner mode
+        Save current creation
+        Clear spawned objects
+        Spawner mode
 
 __Teleport__ :
 
-              Teleport to waypoint
-              Waypoint hotkey
+        Teleport to waypoint
+        Waypoint hotkey
 
 __Custom saved locations__ :
 
-               Save current location
+       Save current location
 `,
 `
 __Load custom locations__ :
 
-               (Saved locations are here)
+       (Saved locations are here)
 
 __Locations__ :
 
-                Teleport transition
+        Teleport transition
 
 __Online__ :
 
-                Casino
-                Mors Mutual Insurance
-                Mask Shop
-                Tattoo shop
-                Ammunation
-                Clothes Store
-                LS Customs
-                Benny's vehicles
-                Ammunation Gun Range
-                Ammunation office
-                LS Airport Customs
-                La Mesa Customs
-                Senora Desert customs
-                Beek Customs
-                Eclipse Towers
-                Eclipse Towers Roof
-                Impound Lot
-                Eclipse Towers Inside
-                Online hidden race area
-                Airport Tower
-                Maze Bank CEO Office Entrance
-                Helipad
-                King Of The Hill
+        Casino
+        Mors Mutual Insurance
+        Mask Shop
+        Tattoo shop
+        Ammunation
+        Clothes Store
+        LS Customs
+        Benny's vehicles
+        Ammunation Gun Range
+        Ammunation office
+        LS Airport Customs
+        La Mesa Customs
+        Senora Desert customs
+        Beek Customs
+        Eclipse Towers
+        Eclipse Towers Roof
+        Impound Lot
+        Eclipse Towers Inside
+        Online hidden race area
+        Airport Tower
+        Maze Bank CEO Office Entrance
+        Helipad
+        King Of The Hill
 
 __Landmarks__ :
 
-                Aiport
-                Prison
-                Prison Gym
-                Prison Tower
-                Lighthouse
-                Cannibal Camp
-                Mount Josiah
-                Maze Bank Helipad
-                Fort Zancudo
-                Calafia Bridge
-                Pier
-                Mount Chilliad
-                Mount Chilliad (Jump)
-                Elysian Island base
-                Ontop of Vinewood Logo
-                Trevor's Air Field
-                Mount Gordo
+        Aiport
+        Prison
+        Prison Gym
+        Prison Tower
+        Lighthouse
+        Cannibal Camp
+        Mount Josiah
+        Maze Bank Helipad
+        Fort Zancudo
+        Calafia Bridge
+        Pier
+        Mount Chilliad
+        Mount Chilliad (Jump)
+        Elysian Island base
+        Ontop of Vinewood Logo
+        Trevor's Air Field
+        Mount Gordo
 
 __Inside__ :
 
-                Strip Club DJ Booth
-                Humane Labs Tunnel
-                Police Station
-                FIB Top Floor
-                IAA Office
-                Torture Room
-                Ammuniation Gun Range
-                Ammunation Office
-                Blaine County Savings Bank
-                Fort Zancudo ATC Top Floor
+        Strip Club DJ Booth
+        Humane Labs Tunnel
+        Police Station
+        FIB Top Floor
+        IAA Office
+        Torture Room
+        Ammuniation Gun Range
+        Ammunation Office
+        Blaine County Savings Bank
+        Fort Zancudo ATC Top Floor
 
 __Story mode locations__ :
 
-                Franklin's New House
-                Franklin's Old House
-                Michael's House
-                Lester's House
-                Wayne's Cousin's House
-                Trevor's House
-                Trevor's Meth Lab
-                Trevor's Office
-                Floyd's Apartment
-                Lester's House
+        Franklin's New House
+        Franklin's Old House
+        Michael's House
+        Lester's House
+        Wayne's Cousin's House
+        Trevor's House
+        Trevor's Meth Lab
+        Trevor's Office
+        Floyd's Apartment
+        Lester's House
 `,
 `
 __Inside__ :
 
-                Strip Club DJ Booth
-                Humane Labs Tunnel
-                Police Station
-                FIB Top Floor
-                IAA Office
-                Torture Room
-                Ammuniation Gun Range
-                Ammunation Office
-                Blaine County Savings Bank
-                Fort Zancudo ATC Top Floor
+        Strip Club DJ Booth
+        Humane Labs Tunnel
+        Police Station
+        FIB Top Floor
+        IAA Office
+        Torture Room
+        Ammuniation Gun Range
+        Ammunation Office
+        Blaine County Savings Bank
+        Fort Zancudo ATC Top Floor
 
 __Story mode locations__ :
 
-                Franklin's New House
-                Franklin's Old House
-                Michael's House
-                Lester's House
-                Wayne's Cousin's House
-                Trevor's House
-                Trevor's Meth Lab
-                Trevor's Office
-                Floyd's Apartment
-                Lester's House
-                
+        Franklin's New House
+        Franklin's Old House
+        Michael's House
+        Lester's House
+        Wayne's Cousin's House
+        Trevor's House
+        Trevor's Meth Lab
+        Trevor's Office
+        Floyd's Apartment
+        Lester's House
+
 __Glitched locations__ :
 
-                Race Underground Bunker
-                FIB Roof Glitch
-                Police Station Glitch
-                Behind Bar In Strip Club
-                Building Glitch
-                Inside Store
-                City Wall Glitch
-                Inside Casino
-                Beach House
-                Under The Bridge Glitch
+        Race Underground Bunker
+        FIB Roof Glitch
+        Police Station Glitch
+        Behind Bar In Strip Club
+        Building Glitch
+        Inside Store
+        City Wall Glitch
+        Inside Casino
+        Beach House
+        Under The Bridge Glitch
 
 __IPL Locations__ :
 
-                Unload all IPL's
-                Porn Yacht
-                Desert UFO
-                Carrier
-                Cargo Ship
-                North Yankton
-                Plane Crash
-                Train Crash
-                Morgue
-                Destroyed Hospital
-                Fort Zancudo UFO
-                Heist Yacht
+        Unload all IPL's
+        Porn Yacht
+        Desert UFO
+        Carrier
+        Cargo Ship
+        North Yankton
+        Plane Crash
+        Train Crash
+        Morgue
+        Destroyed Hospital
+        Fort Zancudo UFO
+        Heist Yacht
 
 __Blips__ :
 
-                Teleport to objective
-                Teleport to apartment
-                Teleport to yacht
-                Teleport to office
-                Teleport to clubhouse
-                Teleport to weed farm
-                Teleport to counterfeit cash
-                Teleport to meth lab
-                Teleport to cocaine factory
-                Teleport to own package
-                Teleport to enemy package
-                Teleport to own crate
-                Teleport to enemy crate
+        Teleport to objective
+        Teleport to apartment
+        Teleport to yacht
+        Teleport to office
+        Teleport to clubhouse
+        Teleport to weed farm
+        Teleport to counterfeit cash
+        Teleport to meth lab
+        Teleport to cocaine factory
+        Teleport to own package
+        Teleport to enemy package
+        Teleport to own crate
+        Teleport to enemy crate
 
 __Vehicle__ :
 
-                Nearest car(become driver)
-                Nearest car(any free seat)
-                Teleport to last driven vehicle
-                Teleport to personal vehicle
+        Nearest car(become driver)
+        Nearest car(any free seat)
+        Teleport to last driven vehicle
+        Teleport to personal vehicle
 
 __Directional__ :
 
-                Teleport forward
-                Teleport up
+        Teleport forward
+        Teleport up
 `,
 `
 **World**
 
 __VFX engine__ :
 
-                Reset VFX settings
-                Load VFX settings
-                Save VFX settings
+        Reset VFX settings
+        Load VFX settings
+        Save VFX settings
 
 __Traffic light VFX__ :
 
-                Reset traffic lights VFX
-                Load traffic lights VFX settings
-                Save traffic lights VFX settings    
-                Traffic light red (Can change color here)
-                Traffic light orange (Can change color here)
-                Traffic light red (Can change color here)
-                Traffic pedestrian red
-                Traffic pedestrian green
+        Reset traffic lights VFX
+        Load traffic lights VFX settings
+        Save traffic lights VFX settings    
+        Traffic light red (Can change color here)
+        Traffic light orange (Can change color here)
+        Traffic light red (Can change color here)
+        Traffic pedestrian red
+        Traffic pedestrian green
 
 __Vehicle VFX__:
 
-                Reset VFX
-                Load VFX Settings
-                Save VFX Settings
-                Fade distance
-                Headlight angle
-                Headlight split
-                Headlight distance
-                Headlight intensity
-                Player headlight distance
-                Player headlight intensity
+        Reset VFX
+        Load VFX Settings
+        Save VFX Settings
+        Fade distance
+        Headlight angle
+        Headlight split
+        Headlight distance
+        Headlight intensity
+        Player headlight distance
+        Player headlight intensity
 
 __Neon__ :
 
 
-                Neon intensity
-                Neon radius
-                Neon extended sides
-                Neon extended front
-                Neon falloff exponenet
-                Neon clipping pane height
+        Neon intensity
+        Neon radius
+        Neon extended sides
+        Neon extended front
+        Neon falloff exponenet
+        Neon clipping pane height
 
 __Train VFX__ :
 
-                Reset trains VFX
-                Load trains VFX Settings
-                Save trains VFX settings
-                Trains color intensity
-                Trains color
+        Reset trains VFX
+        Load trains VFX Settings
+        Save trains VFX settings
+        Trains color intensity
+        Trains color
 
 __Tone mapping VFX__ :
 
-                Reset tone mapping VFX
-                Load tone mapping VFX settings
-                Save tone mapping VFX Settings
+        Reset tone mapping VFX
+        Load tone mapping VFX settings
+        Save tone mapping VFX Settings
 
 __Equation__:
 
-               Day
-               Night
+       Day
+       Night
 
 __Day__ :
 
-               Day filmic A
-               Day filmic B
-               Day filmic C
-               Day filmic D
-               Day filmic E
-               Day filmic F
-               Day filmic W
-               Day exposure
+       Day filmic A
+       Day filmic B
+       Day filmic C
+       Day filmic D
+       Day filmic E
+       Day filmic F
+       Day filmic W
+       Day exposure
 
 __Night__ :
 
-               Night filmic A
-               Night filmic B
-               Night filmic C
-               Night filmic D
-               Night filmic E
-               Night filmic F
-               Night filmic W
-               Night exposure
+       Night filmic A
+       Night filmic B
+       Night filmic C
+       Night filmic D
+       Night filmic E
+       Night filmic F
+       Night filmic W
+       Night exposure
 `];
   let page = 1;
   const embed = new Discord.MessageEmbed()
