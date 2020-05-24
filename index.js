@@ -3148,7 +3148,8 @@ __Misc__ :
 __Vehicle__ :
 
              Save json vehicle
-
+`,
+`
 __Los Santos Customs__ :
 
              Loop fully tune
@@ -3171,8 +3172,6 @@ __Attach ramps__ :
              Left
              Attach
              Delete
-`,
-`
 __Vehicle weapons__ :
 
              Bullet type
@@ -3247,7 +3246,8 @@ __Vehicle Particles__ :
              Rear right wheel
              Exhaust
              Enable vehicle particles
-
+`,
+`
 __Vehicle doors__ :
 
              Open door
@@ -3255,7 +3255,7 @@ __Vehicle doors__ :
              Delete door
              Lock doors
              Unlock doors
-
+             
 __Vehicle multipliers__ :
 
              RPM
@@ -3265,6 +3265,38 @@ __Vehicle multipliers__ :
              Brake
              Suspension
 
+__General__ :
+
+             Vehicle Godmode
+             Auto repair
+             Vehicle Invisibility
+             Keep engine on
+             Seatbelt
+             Fix vehicle
+             Delete vehicle
+
+__Modify Vehicle__ :
+
+             Auto flip
+             Vehicle no collisions
+             Phase through vehicles
+             Ground to earth
+
+__Misc__ :
+
+             Clone vehicle
+
+__Visuals__ :
+
+             FIB numberplate
+             Onscreen speedometer
+             Numberplate speedometer
+             Rainbow paint
+             Wheel smoke cycle
+             Wash
+             Dirty
+             Burn Vehicle shell
+             Opacity
 __General__ :
 
              Vehicle Godmode
