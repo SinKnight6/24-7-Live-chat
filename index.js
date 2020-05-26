@@ -1505,8 +1505,8 @@ if (message.content.toLowerCase() === 'help with gta v') {
       const channel = bot.channels.cache.get(DESTINATION);
       if (channel) {
           const embed = new MessageEmbed()
-          .setAuthor(message.author ,message.author.displayAvatarURL())
-          .setDescription(`[${message.author}] needs help with Gta V`)
+          .setAuthor(`${message.author} ,${message.author.displayAvatarURL()}`)
+          .setDescription(`:${message.author}: needs help with Gta V`)
           .setColor('#0070FF')
           .setTimestamp();
           const msg = await channel.send(embed);
@@ -1750,7 +1750,8 @@ function handleCollectors(channeL, message) {
           const files = getAttachmentLinks(m.attachments);
           const embed = new MessageEmbed()
             .setAuthor(`User: ${m.author.tag}, ${m.author.id}`)
-            .setDescription(`${m.author} **${m.content}** `)
+            .setDescription(`${m.author}: 
+             **${m.content}** `)
             .setColor('#0093FF')
             .setTimestamp()
             .setImage(`${files}`)
@@ -1766,7 +1767,8 @@ function handleCollectors(channeL, message) {
               const files = getAttachmentLinks(m.attachments);
               const embed = new MessageEmbed()
               .setAuthor(`Staff member: ${m.author.tag}`)
-              .setDescription(`${m.author} **${m.content}** `)
+              .setDescription(`${m.author}:
+               **${m.content}** `)
               .setImage(`${files}`)
               .setTimestamp()
               .setFooter('Live chat with agent', 'https://cdn.discordapp.com/attachments/696241284352049193/698835003718762576/livechat.gif');
