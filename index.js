@@ -1506,7 +1506,7 @@ if (message.content.toLowerCase() === 'help with gta v') {
       if (channel) {
           const embed = new MessageEmbed()
           .setAuthor(message.author ,message.author.displayAvatarURL())
-          .setDescription(`[${message.author.tag}] needs help with Gta V`)
+          .setDescription(`[${message.author}] needs help with Gta V`)
           .setColor('#0070FF')
           .setTimestamp();
           const msg = await channel.send(embed);
