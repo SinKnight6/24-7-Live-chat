@@ -1749,7 +1749,7 @@ function handleCollectors(channeL, message) {
       dmCollector.on('collect', m => {
           const files = getAttachmentLinks(m.attachments);
           const embed = new MessageEmbed()
-            .setAuthor(`User: ${m.author}, ${m.author.id}`)
+            .setAuthor(`User: ${m.author.tag}, ${m.author.id}`)
             .setDescription(`\`Users Message:\` **${m.content}** `)
             .setColor('#0093FF')
             .setTimestamp()
@@ -1765,7 +1765,7 @@ function handleCollectors(channeL, message) {
           } else {
               const files = getAttachmentLinks(m.attachments);
               const embed = new MessageEmbed()
-              .setAuthor(`Staff member: ${m.author}`)
+              .setAuthor(`Staff member: ${m.author.tag}`)
               .setDescription(`\`Staff Message:\` **${m.content}** `)
               .setImage(`${files}`)
               .setTimestamp()
