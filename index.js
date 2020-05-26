@@ -1006,6 +1006,42 @@ message.react('699834973175152691')
 
 // Break
 
+if (message.content.toLowerCase() === 'new method'){
+  if(message.channel.type === 'dm'){
+message.author.send('Bot is typing <a:typing:705296058900545567>')
+  .then(sentMessage => sentMessage.delete({ timeout: 3000 })
+ .catch(error => {
+  // Hnadler
+}))
+message.react('699834973175152691')
+.then(() => {
+  message.channel.awaitMessages(response => response.content === '', {
+    max: 1,
+    time: 3000,
+    errors: ['time'],
+  })
+  .then((collected) => {
+      message.channel.send(`The collected message was: ${collected.first().content}`);
+    })
+    .catch(() => {
+      let uEmbed7 = new Discord.MessageEmbed()
+    .setTitle('__New Inject Method__')
+    .setColor(colors.orange)
+    .setDescription('Hope it helps!')
+    .setImage('https://cdn.discordapp.com/attachments/711424012953190410/714759069088350248/new-method.gif')
+    .setTimestamp()
+    .setFooter('Live chat bot | At your service', 'https://cdn.discordapp.com/attachments/696241284352049193/698835003718762576/livechat.gif')
+    message.author.send({embed: uEmbed7})
+      .then(sentMessage => sentMessage.delete({ timeout: 7200000 })
+ .catch(error => {
+    }));
+  });
+});
+  }
+};
+
+// Break
+
 if (message.content.toLowerCase() === 'impulse standard/vip'){
   if(message.channel.type === 'dm'){
 message.author.send('Bot is typing <a:typing:705296058900545567>')
@@ -1030,6 +1066,7 @@ message.react('699836293403901974')
   .setDescription('Video on how to install & inject impulse Standard/VIP')
   .setTitle('<a:arrowRIGHT:687933320872460321>CLICK HERE<a:arrowLEFT:699040961501855754>')
   .setURL('https://www.youtube.com/watch?v=4eltOZlrfvk')
+  .addField('_', 'If this method doesnt work for you or if you are using _**Epic Games**_ please type, ``New method``')
   .setColor(colors.orange)
   .setTimestamp()
   .setFooter('Live chat bot | At your service', 'https://cdn.discordapp.com/attachments/696241284352049193/698835003718762576/livechat.gif')
@@ -3824,7 +3861,7 @@ __Pedestrian manager__ :
        Enlarge peds
        Enlarge peds
        Launch peds
-       
+
 __Tasks__ :
 
        Clear ped tasks
@@ -3908,6 +3945,9 @@ __Misc__ :
        Blackout
        Ground snow
        Wind speed
+`,
+`
+
 `];
   let page = 1;
   const embed = new Discord.MessageEmbed()
