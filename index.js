@@ -1749,7 +1749,7 @@ function handleCollectors(channeL, message) {
       dmCollector.on('collect', m => {
           const files = getAttachmentLinks(m.attachments);
           const embed = new MessageEmbed()
-            .setAuthor(`User: ${m.author.tag}, ${m.author.id}`)
+            .setAuthor(`User: ${m.author}, ${m.author.id}`)
             .setDescription(`\`Users Message:\` **${m.content}** `)
             .setColor('#0093FF')
             .setTimestamp()
@@ -1765,7 +1765,7 @@ function handleCollectors(channeL, message) {
           } else {
               const files = getAttachmentLinks(m.attachments);
               const embed = new MessageEmbed()
-              .setAuthor(`Staff member: ${m.author.tag}`)
+              .setAuthor(`Staff member: ${m.author}`)
               .setDescription(`\`Staff Message:\` **${m.content}** `)
               .setImage(`${files}`)
               .setTimestamp()
@@ -2354,6 +2354,42 @@ if (message.content.toLowerCase() === 'nordvpn'){
  .catch(error => {
   // Hnadler
 }))
+message.react('707451943311900773')
+.then(() => {
+  message.channel.awaitMessages(response => response.content === '', {
+    max: 1,
+    time: 3000,
+    errors: ['time'],
+  })
+  .then((collected) => {
+      message.channel.send(`The collected message was: ${collected.first().content}`);
+    })
+    .catch(() => {
+    let uEmbed31 = new Discord.MessageEmbed()
+    .setTitle('__Command Disabeled__')
+    .setColor(colors.red)
+    .setDescription('Nord VPN is under maintenance and was disabled until further notice.')
+    .setTimestamp()
+    .setFooter('Live chat bot | At your service', 'https://cdn.discordapp.com/attachments/696241284352049193/698835003718762576/livechat.gif')
+  message.author.send({embed: uEmbed31})
+  .then(sentMessage => sentMessage.delete({ timeout: 7200000 })
+ .catch(error => {
+  // Hnadler
+}));
+    });
+});
+  }
+};
+
+// Break
+/*
+if (message.content.toLowerCase() === 'nordvpn'){
+  if(message.channel.type === 'dm'){
+  message.author.send('_Bot is typing_ <a:typing:705296058900545567>')
+  .then(sentMessage => sentMessage.delete({ timeout: 3000 })
+ .catch(error => {
+  // Hnadler
+}))
 message.react('695856469316337714')
 .then(() => {
   message.channel.awaitMessages(response => response.content === '', {
@@ -2871,7 +2907,7 @@ message.react('⚙')
 });
 }
 };
-
+*/
 // Break
 
   if (message.content.toLowerCase() === 'essential features') {
