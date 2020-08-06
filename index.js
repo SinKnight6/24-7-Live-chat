@@ -101,15 +101,11 @@ if (message.content.toLowerCase() === '!help'){
 
             2. If you have purchased something from Knight-Shop or Shoppy please type, _\`Purchase\`_ .
 
-            3. If you had an issue with your puchase or need help purchasing please type, _\'Purchase issue\'_.
+            3. If you had an issue with your puchase or need help purchasing please type, _\`Purchase issue\`_.
 
             4. If you need information, help or have an issue with Impulse mod please type, _\`Impulse\`_ .
 
-            5. If you need information, help or have an issue with GTA V Game key please type, _\`GTA V\`_ .
-
-            6. If you need information, help or have an issue with Spotify Premium Key type,  _\`Spotify\`_ .
-
-            7. If you need information, help or have an issue with NordVPN please type,  _\`NordVPN\`_ .`)
+            5. If you need information, help or have an issue with GTA V Game key please type, _\`GTA V\`_ .`)
             .setTimestamp()
             .setFooter(`Live chat bot | At your service ${message.author.username}`, 'https://cdn.discordapp.com/attachments/696241284352049193/698835003718762576/livechat.gif')
             message.author.send({embed: uEmbed1});
