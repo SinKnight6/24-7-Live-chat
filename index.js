@@ -99,7 +99,7 @@ if (message.content.toLowerCase() === '!help'){
             .setAuthor(`${message.guild.name} Live Chat Beta`, message.guild.iconURL)
             .setDescription(`
 
-            2. If you have purchased something please type, _\`Purchase\`_ .
+            2. If you have purchased something from Knight-Shop or Shoppy please type, _\`Purchase\`_ .
 
             3. If you had an issue with your puchase or need help purchasing please type, _\'Purchase issue\'_.
 
@@ -174,7 +174,7 @@ if (message.content.toLowerCase() === 'purchase') {
       if (channel) {
           const embed = new MessageEmbed()
           .setAuthor(message.author ,message.author.displayAvatarURL())
-          .setDescription(`[${message.author}] wants to Buy something **PLEASE DO NOT REJECT OR ACCEPT LET <@594785101926105089> ANSWER IT**. `)
+          .setDescription(`[${message.author}] Has bought something, please let <@594785101926105089> ANSWER IT**. `)
           .setColor('#0070FF')
           .setTimestamp();
           const msg = await channel.send(embed);
@@ -201,7 +201,7 @@ if (message.content.toLowerCase() === 'purchase') {
                 })
                 .catch(() => {
                 const embed3 = new MessageEmbed()
-                  .setDescription(`Staff has accepted your query, Please type what product you have purchased (Be specific if you need to).`)
+                  .setDescription(`Staff has accepted your query, Please type what product you have purchased (Be specific if you need to) and a Screenshot/file of the invoice.`)
                   .setColor('#3AFF00')
                   .setTimestamp()
                   message.author.send(embed3)
@@ -425,7 +425,7 @@ function handleCollectors(channeL, message) {
             channeL.send(embed);
         });
       guildChannelCollector.on('collect', m => {
-          if (m.content.toLowerCase() === '--stop') {
+          if (m.content.toLowerCase() === 'endchat') {
               guildChannelCollector.stop();
               dmCollector.stop();
               resoLve();
@@ -455,6 +455,7 @@ function getAttachmentLinks(attachments) {
 
 // Break 
 
+/*
 if (message.content.toLowerCase() === 'purchase issue'){
     if(message.channel.type === 'dm'){
   message.author.send('Bot is typing <a:typing:705296058900545567>')
@@ -487,10 +488,10 @@ if (message.content.toLowerCase() === 'purchase issue'){
   });
     }
   };
-
+*/
 // Break
 
-if (message.content.toLowerCase() === 'help with purchase') {
+if (message.content.toLowerCase() === 'purchase issue') {
   if (message.author.bot) return;
   if (message.channel.type === 'dm') {
     if (!openTickets.has(message.author.id)) {
@@ -534,7 +535,7 @@ if (message.content.toLowerCase() === 'help with purchase') {
                 })
                 .catch(() => {
                 const embed3 = new MessageEmbed()
-                  .setDescription(`Staff has accepted your query.`)
+                  .setDescription(`Staff has accepted your query. Please type what problem you are having with your purchase.`)
                   .setColor('#3AFF00')
                   .setTimestamp()
                   message.author.send(embed3)
@@ -1292,8 +1293,8 @@ message.react('💉')
     .setTitle('__Impulse Inject__')
     .setColor(colors.orange)
     .setDescription('Choose what veresion you have')
-    .addField('__', 'For Essential/Standard type, _``Impulse Essential``_')
-    .addField('__', 'For Impulse VIP type, _``Impulse Standard/VIP``_')
+    .addField('__', 'For Essential type, _``Inject Impulse Essential``_')
+    .addField('__', 'For Impulse Standard and VIP type, _``Inject Impulse Standard/VIP``_')
     .setTimestamp()
     .setFooter('Live chat bot | At your service', 'https://cdn.discordapp.com/attachments/696241284352049193/698835003718762576/livechat.gif')
     message.author.send({embed: uEmbed6})
@@ -1307,7 +1308,7 @@ message.react('💉')
 
 // Break
 
-if (message.content.toLowerCase() === 'impulse essential'){
+if (message.content.toLowerCase() === 'inject impulse essential'){
   if(message.channel.type === 'dm'){
 message.author.send('Bot is typing <a:typing:705296058900545567>')
   .then(sentMessage => sentMessage.delete({ timeout: 3000 })
@@ -1380,7 +1381,7 @@ message.react('699834973175152691')
 
 // Break
 
-if (message.content.toLowerCase() === 'impulse standard/vip'){
+if (message.content.toLowerCase() === 'inject impulse standard/vip'){
   if(message.channel.type === 'dm'){
 message.author.send('Bot is typing <a:typing:705296058900545567>')
   .then(sentMessage => sentMessage.delete({ timeout: 3000 })
@@ -1656,7 +1657,7 @@ message.react('🤔')
     .catch(() => {
       let uEmbed12 = new Discord.MessageEmbed()
       .setTitle('_Where to Buy Impulse?_')
-  .setDescription('Please visit our Shoppy site https://shoppy.gg/@7TH_SIN, if there are no more Impulse mod menus in stock Just conatact us through the site or send a PM(private message) to Admin')
+  .setDescription('Please visit our website https://knight-shop0.webnode.com/ or https://shoppy.gg/@7TH_SIN.')
   .setColor(colors.orange)
   .setTimestamp()
   .setFooter('Live chat bot | At your service', 'https://cdn.discordapp.com/attachments/696241284352049193/698835003718762576/livechat.gif')
@@ -1695,11 +1696,11 @@ message.react('💸')
   
                                   **Prices are not Negotiable**`)
   .setColor(colors.orange)
-  .addField('__', 'Impulse Essential<a:dabingdollar:694111180368904293>**22**')
-  .addField('__', 'Impulse Standard<a:dabingdollar:694111180368904293>**38**')
-  .addField('__', 'Impulse VIP<a:dabingdollar:694111180368904293>**70**')
-  .addField('__', 'Impulse Essential to Standard Upgrade<a:dabingdollar:694111180368904293>**27**')
-  .addField('__', 'Impulse Standard to VIP Upgrade<a:dabingdollar:694111180368904293>**38**')
+  .addField('__', 'Impulse Essential<a:dabingdollar:694111180368904293>**17**')
+  .addField('__', 'Impulse Standard<a:dabingdollar:694111180368904293>**36**')
+  .addField('__', 'Impulse VIP<a:dabingdollar:694111180368904293>**63**')
+  .addField('__', 'Impulse Essential to Standard Upgrade<a:dabingdollar:694111180368904293>**22**')
+  .addField('__', 'Impulse Standard to VIP Upgrade<a:dabingdollar:694111180368904293>**35**')
   .addField('__', 'if you want to see information about what each version includes type, _``Impulse info``_')
   .addField('__', 'If you want to check out what type of payment methods we have available please type, _``Payment method``_')
   .setTimestamp()
@@ -1740,7 +1741,7 @@ message.react('💳')
 .addField('__', '<:anotherpaydigital:694342853278695494> (PayPal)')
 .addField('__', '<:paymentcard:691789716781006947> (Venmo)')
 .addField('__', '<:Visadebit:695851905104216075> (Visa, USA ONLY)')
-.addField('__', '<:coin:691786593673150505> (Bitcoin coming soon)')
+.addField('__', '<:coin:691786593673150505> (Bitcoin)')
 .setTimestamp()
 .setFooter('Live chat bot | At your service', 'https://cdn.discordapp.com/attachments/696241284352049193/698835003718762576/livechat.gif')
 message.author.send({embed: uEmbed14})
@@ -2151,7 +2152,7 @@ message.react('692526188542951515')
       .setDescription('If you need to know how to redeem or need help redeeming follow steps.')
       .addField('__', 'If you have not downloaded the **Rocstar Game Launcher** head over to **https://socialclub.rockstargames.com/rockstar-games-launcher** to download, Make sure you creat an account or Sign in then click on the top right corner on the account icon, then you will see a redeem option from there just redeem your code.')
       .setImage('https://media.discordapp.net/attachments/688889167291089025/695843127927373946/redeemcode.gif')
-      .addField('__', 'if you get a text saying **"Switch your Social Club account"** Please type, _``Troubleshoot``_')
+      .addField('__', 'if you get a text saying **"Switch your Social Club account"** Please type, _``GTA Troubleshoot``_')
       .setTimestamp()
       .setFooter('Live chat bot | At your service', 'https://cdn.discordapp.com/attachments/696241284352049193/698835003718762576/livechat.gif')
       message.author.send({embed: uEmbed17})
@@ -2165,7 +2166,7 @@ message.react('692526188542951515')
 
 // Break
 
-if (message.content.toLowerCase() === 'troubleshoot'){
+if (message.content.toLowerCase() === 'gta troubleshoot'){
   if(message.channel.type === 'dm'){
 message.author.send('Bot is typing <a:typing:705296058900545567>')
   .then(sentMessage => sentMessage.delete({ timeout: 3000 })
@@ -3250,12 +3251,1000 @@ message.react('⚙')
 
   if (message.content.toLowerCase() === 'essential features') {
   let pages = [`
-  Self Options (Godmode, Model Changer, Super Jump, Super Sprint,…)
-  Online Player Options (Money Drops, Weather, Blaming, Fire / Water Loop…)
-  Teleportation
-  Weapon Options (Explosive Ammo, One Shot Kill, Unlimited Ammo…)
-  Recovery Options
-  Vehicle Options (Spawning, Horn Boost, Flying Cars)`];
+  **__Player__**
+[_Globals_]
+
+* Off the radar
+* Cops turn blind eye   
+* Bullshark testosterone
+* Loop bullshark testosterone 
+* No orbital cannon cooldown    
+
+[_Model_]
+
+* Random model outfit 
+* Rainbow Hair 
+
+-Defaults-
+
+* Default online male model 
+* Default online female model
+* Custome model 
+
+-Model- 
+
+* 684 outfits available
+
+[_Wardrobe_] 1/38
+
+* Random outfit
+* Add Rockstar logo
+* Hair color
+
+-Props-
+
+* Face 
+* Face variation
+* Glasses
+* Glasses variation
+* Ear pieces
+* Ear Variation
+* Clear face
+* Clear glasses
+* Clear ear pieces
+
+-Components-
+
+* Face
+* Face variation
+* Masks
+* Masks variation
+* Hair
+* Hair variation 
+* Torso
+* Torso variation
+* Legs
+* Legs variation
+* Parachute / Misc
+* Parachute / Misc variation
+* Shoes
+* Shoes variation 
+* Extra 1 
+* Extra variation 
+* Tops 1
+* Tops 1 variation
+* Body Armor 
+* Body Armor variation
+* Crew Emblem
+* Crew Emblem variation 
+* Tops 2 
+* Tops 2 variation
+
+[_Animation_] 1/6
+
+* Stop all animations
+* Controllable
+* Contort
+* Animations
+* Walkstyles
+* Scenarios
+
+[_Vison_] 1/26
+
+* Deafult
+* Damage 
+* Vagos
+* Cops
+* White screen
+* Water lab
+* MP spectator cam 
+* Cops
+* Spectator 1
+* Sunglasses
+* Dying
+* Orange
+* Vagos
+* Blurry
+* Stoned
+* Prologue shootout
+* Secret camera
+* UFO 
+* UFO deathray
+* Wobbly 
+* Killstreak
+* Hint cam
+* Black and white
+* Sniper
+* Crane cam 
+* Bikers
+
+-General-
+
+* God mode   
+* Invisibility   
+* Wanted Level  
+* No ragdoll   
+* Alpha   
+* Clean ped  
+* Remove all attachments`,
+`
+-Movement-
+
+* Super run  
+* Super jump  
+* No clip  
+* Slow motion   
+* Fly mode   
+
+-Misc-
+
+* Peds ignore Player  
+* Forcefield   
+* Suicide
+* Clone
+* Karma   
+* Badsport yourself  
+
+
+**__Weapon__** 2/11
+[_Weapons_] 1/5
+
+* Camo (current weapon)
+* Rainbow Camo (current weapon)
+* Upgrade (current weapon)
+* Get all weapons 
+* Clear all weapons
+
+[_Shoot entities_] 1/3
+
+* Entity type
+* Enable entity shooting 
+* Vehicle
+
+[_Modify ammo_] 1/12
+
+* Impact
+* Particle FX 
+* Modifier
+
+-Shoot Options-
+
+* Explosive whale gun
+* Missile gun 
+* Paint vehicle gun
+* Explosive bullets
+* Fire Bullets 
+* Delete gun
+* Drive it gun 
+* Force gun
+______________________
+
+* One shot one kill 
+* Infinity ammo
+* No reload 
+* Dead eye 
+* Gravity gun 
+* Rapid fire`,
+`
+**__Vehicle__** 1/28
+[_Los snatos customs_] 1/18
+
+* Fully tune
+* Loop fully tune
+* Downgrade
+* Randomize vehicle look
+* Loop Randomize vehicle look
+* Apply all vehicle extras 
+* Remove all vehicles extras
+
+-Los Santos Custome-
+
+[_Lights_] 1/8
+
+* Xenon lights
+* Xenon color
+* Rainbow xenon lights
+
+-Nenon-
+
+* Rainbow neon lights
+* Left 
+* Right 
+* Front 
+* Back
+
+[_Plates_] 1/2
+
+* License plate
+* Set license plate text
+
+[_Respray_] 1/5
+
+- Primary- 
+ 
+* Classic
+* Metallic
+* Matte
+* Metal
+* Utility
+* Worn
+* Chrome
+
+- Secondary- 1/7
+
+* Classic
+* Metallic
+* Matte
+* Metal
+* Utility
+* Worn
+* Chrome
+
+- Pearlescent- 1/7
+
+* Classic
+* Metallic
+* Matte
+* Metal
+* Utility
+* Worn
+* Chrome
+
+- Wheel- 1/7
+
+* Classic 
+* Metallic 
+* Matte 
+* Metal 
+* Utility 
+* Worn 
+* Chrome
+
+_______________
+
+* Eveff scale
+
+[_Wheels_] 1/7
+
+* Tire smoke
+* Red 
+* Green
+* Blue
+* Bulletfroof wheels 
+* Wheel type 
+* Wheels`,
+`
+[_Performace_] 1/7
+
+* Fully tune performance 
+* Turbo
+* Engine 
+* Brakes 
+* Transmission 
+* Suspension 
+* Armor 
+______________
+
+*Window tint
+
+[_Cargobob mods_] 1/2
+
+* Spawn magnet
+* Remove magnet
+
+[_Attach ramps_] 1/9
+
+* Type 
+* Invisible to others 
+* Local Opacity 
+* Front
+* Rear
+* Right
+* Left 
+* Attach
+* Delete
+
+[_Vehicle acrobatics_] 1/5
+
+* Front flip
+* Back flip 
+* Kick flip 
+* Heel flip
+* Bunny hop
+
+[_Vehicle particles_] 1/8
+
+* Type 
+* Size 
+* Front left wheel 
+* Front right wheel 
+* Reare left wheel 
+* Rare right wheel 
+* Exhuast
+* Enable vehicle particles 
+
+-General-
+
+* Godmode 
+* Vehicle 
+* Horn boost 
+* Seatbelt
+* Keep engine on
+* Invisibility
+* Fix
+* Delete vehicle 
+* Vehicle weapons 
+
+-Visual-
+
+* Alpha 
+* Burn vehicle shell
+* Rainbow paint 
+* Onscreen speedometer
+
+-Misc- 
+
+* Clone vehicle 
+* Wash 
+* Bypass max speed
+* Drive on water
+* Instant enter vehicle 
+* Lock doors
+* Unlock doors`,
+`
+**__Spawn__** 1/4
+[_Vehicle_] 1/28
+
+-Sawn settings- 1/6
+
+* Spawn with blip
+* Spawn inside vehicle
+* Spawn invincible
+* Spawn fully tuned 
+* Delete old vehicle
+* Spawn planes and helicopters in air 
+
+______________
+
+* Custome Input
+
+-Vehicles- 
+
+* DLC vehicles only  
+* Super (47 Super)
+* Sport (72 Sport)
+* Sport classic (44 Sport classic)
+* Open wheel (2 Open wheel)
+* Off road (56 Off Road)
+* Sedan (32 Sedan)
+* SUV (31 SUV)
+* Coupe (14 Coupe
+* Muscle (67 Muscle)
+* Compact (14 Compact
+* Van (32 Van)
+* Commercial (20 Commercial)
+* Industrial (11 Indusrial) 
+* Military (14 Military)
+* Service (12 Service) 
+* Emergency (19 Emergency)
+* Motorcycle (53 Motorcycle)
+* Cycle (7 Cycle)
+* Planes (36 Planes)
+* Helicopters (24 Helicopters)
+* Boats (19 Boats)
+* Trains (8 Trains) 
+* Trailer (25 Trailer) 
+* Utility (19 Utility)
+
+[_Ped_] 1/685
+
+* Input ped name
+
+-Peds-
+
+* 683 Peds Available
+
+[_Object_] 1/9467
+
+* Input object name
+
+-Objects- 
+
+* 9465 Objects Availabl
+
+[_Spooner_] 1/2
+
+* Delete last creation
+* Spawn objects with collision 
+
+**__Teleport__** 1/22
+
+* Teleport to waypoint
+
+-Locatons- 
+
+[_Online_] 1/23
+
+* Casino
+* Morse Mutual Insurance
+* Mask Shop
+* Tattoo Shop
+* Ammunation
+* Clothes Store 
+* LS Customs
+* Benny's vehicles 
+* Ammunition Gun Range 
+* Ammunition Office 
+* LS Airport Customs 
+* La Mesa Customs 
+* Senora Desert Customs 
+* Beek Customs 
+* Eclipse Towers 
+* Eclipse Towers Roof 
+* Impound Lot 
+* Eclipse Tower Inside 
+* Online Hidden Race Area 
+* Airport Tower 
+* Maze Bank CEO Office Entrance 
+* Helipad 
+* King Of Thw Hill
+
+[_Landmarks_] 1/17
+
+* Airport 
+* Prison 
+* Prison Gym 
+* Prison Tower 
+* Lighthouse 
+* Cannibal Camp 
+* Mount Josiah 
+* Maze Bank Helipad 
+* Fort Zancudo 
+* Calafia Bridge 
+* Pier 
+* Mount Chiliad 
+* Mount Chiliad (Jump)
+* Elysian Island Base
+* Ontop of Vinewood Logo 
+* Trevor's Air Field 
+* Mount Gordo 
+
+[_Inside_] 1/10
+
+* Strip Club DJ Booth
+* Humane Labs Tunnel 
+* Police Station
+* FIB Top Floor 
+* IAA Office 
+* Torture Room 
+* Ammunation Gun Rnage 
+* Ammunation Office 
+* Blaine County Saving Bank 
+* Fort Zancudo ATC Top Floor
+
+[_Story mode locations_] 1/10 
+
+* Franklin's New House 
+* Franklin's Old House 
+* Michael's House 
+* Lester's House 
+* Wayne's Cousin's House 
+* Trevor's House 
+* Trevor's Office 
+* Floyd's Apartment 
+* Lester's House 
+
+[_Glithed locations_] 1/10
+
+* Race Underground Bunker 
+* FIB Roof Glitch 
+* Police Station Glitch 
+* Behind Bar In Strip Club 
+* Building Glitch 
+* Inside Store 
+* City Wall Clitch 
+* Beach House 
+* Under The Bridge Glitch`,
+`
+[_IPL Locations_] 1/12
+
+* Unload all IPL's 
+* Porn Yacht 
+* Desert UFO 
+* Carrier 
+* Cargoship
+* North Yankton
+* Plane Crash 
+* Train Crash 
+* Morgue 
+* Destroyed Hospital 
+* Fort Zancudo UNFO 
+* Heist Yacht 
+
+-Blips-
+
+* Teleport to objective 
+* Teleport to apartment 
+* Teleport to yacht 
+* Teleport to office 
+
+-Vehicle-
+
+* Nearest car (become driver)
+* Nearest car (any free seat)
+* Teleport to last driven vehicle
+* Teleport last driven vehicle to me 
+* Teleport into personal vehicle 
+
+-Directional-
+
+* Teleport forward 
+* Teleport up
+
+
+**__World__** 1/31
+
+[_Weather_] 1/17
+
+* Clouds
+* Lightning storm
+* Rain intensity
+
+-Weather types-
+
+* Clear
+* Clearing
+* Neutral
+* Extra Sunny
+* Rain
+* Smog
+* Snow
+* Xmas
+* Halloween 
+* Snowlight 
+* Blizzard
+* Thunder
+* Overcast
+
+[_Waypoint_] 1/3
+
+* Send police
+* Auto drive to waypoint
+* Stop auto drive
+
+-Time- 
+
+* Add hour
+* Remove hour 
+* Set hour 
+* Set minutes
+* Freeze time 
+* Sync with system time
+
+-Density- 
+
+* Ped density 
+* Traffic desity 
+
+-Clean Area- 
+
+* Clear radius
+* Clear area of everything 
+* Clear area of police 
+* Clear area of objects 
+* Clear area of vehicles 
+* Clear area of peds 
+
+-Kill Nearby-
+
+* Kill nearby peds 
+* Kill nearby enemies
+
+-Delete Nearby-
+
+* Delete nearby peds 
+* Delete nearby enemies 
+* Delete nearby vehicles
+
+-Misc-
+
+* Timescale
+* Gravity 
+* Blackout 
+* Ground snow 
+`,
+`
+**__Network__** 1/7
+
+[_All players_] 1/6
+
+-Excludes- 
+
+* Exclude friends
+* Exclude host
+* Exclude self
+
+-Teleport-
+
+* Teleport players vehicle to me
+
+-Peaceful-
+
+* Drop delay (ms)
+* Money drop
+* Give all weapons 
+* Spawn clone bodyguard
+* Clear area
+* Rain weapons 
+
+-Griefing-
+
+* Send attackers
+* Kick from vehicle 
+* Ragdoll player
+* Give wanted level 
+* Kill
+* host kick
+* Explode
+* Set on fire
+* Clone 
+* Hostile clone 
+* Airstrike
+* Glitch ped
+* Trap in cage 
+* Crash session with models
+* Crash session without entities
+
+-Remote-
+
+* Non host kick
+* Kick to single player
+* infinite loading screen 
+* Ban From CEO
+* Give never wanted 
+* Give off the radar
+* Give cops turn blind eye
+
+-Extra sensory perception-
+
+* ESP name 
+* ESP line
+* ESP head marker
+* ESP foot marker
+* ESP info `,
+`
+[_Lobby modifications_] 1/18
+
+* Lock lobby to friends
+* Notify on non-friend player kicks
+* Star empty public session 
+
+- Weather & Time - 
+
+* Lobby weater
+* Set lobby time to noon
+* Set lobby time to midnight 
+* Set lobby time to morning 
+* Set lobby time to evening 
+* Set lobby time to hour 
+* Icrease lobby hour 
+* Lower lobby hour
+
+- Loops - 
+
+* Lock lobby time to day
+* Lock lobby time to midnight
+* Spam day & midnight
+* Slow transition day to midnight 
+* Fast transition day to midnight 
+* Fast day to midnight 
+
+[_Player history_] 1/--
+
+* Store count
+* Store list
+
+- Players -
+
+(All pakyers that are in lobby will be listed here)
+
+
+[_Info spoofing_] 1/15
+
+-Change name-
+
+* Preset names (All Preset names will be listed here)
+* Custom name input
+* Reset changed name
+* Name setting
+* Set: (Name that is being used at the time)
+
+-R*ID spoofer-
+
+* Spoof R*ID: 0000000 (Random Numbers)
+* Enable R*ID spoof
+* Set random R*ID
+* Preset Spoofed R*ID
+
+-Streamer mode-
+
+* Stream mode
+* Change lobby r* ids
+* Change own name
+* Prefix name: Player
+______________
+
+* Ped location ghost mode
+
+-My Player Data-
+
+* Rank input
+* Set rank
+* Wallet input
+* Kills input
+* Set kills
+* Deaths input
+* Set deaths
+* K/D input
+* Set K/D
+______________
+
+* Join by R*ID
+* Move to 
+
+-Players- 
+
+(All Players that are in the lobby will show here)`,
+`
+**__Recovery__** 1/13
+[_Money_] 1/16
+
+* Current bank: $0 (Ammount of money on your bank will appear here)
+* Current wallet: $1 (Ammount of money on your waller will appear here)
+
+-Add-
+
+* Give money 
+* Loop delay
+* Loop give money 
+
+-Remove-
+
+* Remove Money
+* Loop remove money 
+* Remove all of wallet
+
+-ATM-
+
+* Deposit all of wallet to bank
+* Withdraw all of bank to wallet
+* Amount`,
+`
+[_Unlocks_] 1/20
+
+* Unlock tattoos 
+* Unlock clothing
+* Unlock exclusive t-shirts
+* Unlock hairstyles
+
+-Vehicles-
+
+* Unlock vehicle mods
+* Unlock heists
+
+-Inventory-
+
+* Max snacks 
+* Max armor
+* Max fireworks
+
+-Misc-
+
+* Unlock weapon skins 
+* Unlock camos and parachutes
+* Unlock achievements and stats
+* Unlock office money clutter
+* Unlock biker stuff clutter
+* Unlock high club popularity
+* Unlock all casino t-shirts
+* Unlock all bunker research
+
+[_Stat editor_] 1/29
+
+* Max all stats
+* Max stamina 
+* Max strength
+* Max lung capacity
+* Max driving
+* Max flying
+* Max shooting 
+* Max stealth
+* Stamina
+* Strength 
+* Lung capacity
+* Driving
+* Flying 
+* Shoothing 
+* Stealth
+
+-Playtime-
+
+* Days 
+* Hours
+* Minutes 
+* Seconds
+
+-Misc Stats-
+
+* Race wins 
+* Race losses 
+* Team deathmatch wins
+* Team deathmatch losses
+* Deathmatch wins
+* Deathmatch losses
+
+-Casino Heist Sats- 
+
+* Set casino heist target to dimonds
+
+[_KD editor_] 1/7
+
+* Set kills
+* Set deaths
+* Set online kills 
+* Set online deaths
+* Set shots
+* Set headshots
+* Set hits
+
+- Level -
+
+* Set custom level
+* RP increase (wanted level)
+
+- Misc - 
+
+* Bypass tutorial
+* Redesign character
+* Change character gender
+* Clear mental state 
+* Modded rolls + more ammo`,
+`
+**__Protection__** 1/36
+
+* Impulse user block
+* Detach attached objects
+* Delete objects
+* Delete vehicles
+* Delete peds
+* Safe space 
+
+-Notifications-
+
+* Notify attacks
+
+-Script Events-
+
+* Block all
+* Kick
+* Send to mission
+* Face camera forward
+* Ban from CEO
+* Kick from CEO 
+* Remote teleport
+* Infinity load screen
+* Gentle kick from vehicle
+* Invite notifications
+* Notifications
+
+-Net Event-
+
+* Vote kicks
+* Give control
+* Wanted level
+* Freeze
+* Remove weapons
+* Give weapons
+* Particle Effects 
+* Explosions
+* Sounds
+* Reports
+* Weather 
+* Time
+
+-Redirect Events-
+
+* Redirect malicious script events
+* Redirect malicious network events
+
+
+**__Miscellaneous__** 1/15
+[_Disables_] 1/8
+
+* Disable idle kick 
+* Disable cinamatic button
+* Disable stunt jump cutscenes
+* Disable phone
+* Disable notifications
+* Disable game recordings
+* Disable HUD
+* Disable cutscenes
+
+-Camera-
+
+* Freecam
+* GTA 1 camera
+* Camera zoom
+
+-Other-
+
+* Remove chat censor
+* FPS display
+* Remove transaction loading
+* Reset graphics in your area
+* Mobile radio
+* Skip radio track
+* See through walls
+* Potato pc mode
+* Enable snow trails & footstep`,
+`
+**__Settings__** 1/8
+[_Colors_] 1/26
+
+* Save option to save value
+
+-Title text-
+
+* Red title text
+* Green title text
+* Blue title text
+* Alpha title text
+
+-Submenu header-
+
+* Red submenu header
+* Green submenu header
+* Blue submenu header
+* Alpha submenu header
+
+-Background-
+
+* Red background
+* Green background
+* Blue background
+* Alpha background
+
+-Scroller-
+
+* Red scroller
+* Green scroller
+* Blue scroller
+* Alpha scroller
+
+-Options-
+
+* Red options 
+* Green options
+* Blue options 
+* Alpha options
+
+[_Language_] 1/3
+
+* Generate empty language file
+* Reset language
+* Load languages
+
+______________
+
+* Font 
+* Auto disable spectate on death
+* Add comma separator for money
+
+- Menu Positioning -
+
+* Horizontal Axis
+* Vertical Axis
+`];
   let page = 1;
   const embed = new Discord.MessageEmbed()
     .setColor(colors.orange)
@@ -3297,7 +4286,7 @@ message.react('⚙')
 if (message.content.toLowerCase() === 'standard features') {
   let pages = [`
   **Player**
-
+  
 __Movement__ :
 
 	Super Jump
@@ -3492,8 +4481,7 @@ __Upgrades__ :
         Upgrades(all weapons)
 
 __Color Edits__ :
-
-              
+      
 	      Camo(current weapon)
         Camo(all weapons)
         Rainbow camo(current weapon)
@@ -4336,8 +5324,8 @@ __Misc__ :
         const backwardsFilter = (reaction, user) => reaction.emoji.name === ('⬅️') && user.id === message.author.id;
         const forwardsFilter = (reaction, user) => reaction.emoji.name === ('➡️') && user.id === message.author.id;
 
-        const backwards = msg.createReactionCollector(backwardsFilter, { time: 60000 });
-        const forwards = msg.createReactionCollector(forwardsFilter, { time: 60000 });
+        const backwards = msg.createReactionCollector(backwardsFilter, { time: 5400000 });
+        const forwards = msg.createReactionCollector(forwardsFilter, { time: 5400000 });
 
         backwards.on('collect', r => {
           if (page === 1) return;
@@ -4357,8 +5345,104 @@ __Misc__ :
 
       })
     })
-}
+    
+};
+  
 
+if (message.content.toLowerCase() === 'impulse troubleshoot') {
+  let pages = [`**__If you find yourself with an Infinite Loading Screen while trying to load into online, try the following steps__** :
+
+\`Step 1: Load into story mode and inject the menu.
+Step 2: Join a solo online session
+Step 3: Use the session starter to find a public lobby
+Step 4: Script host kick anyone in that lobby whilst in the clouds\``,
+`
+**__If you want to change session__**
+
+\`use Impulse's Session Starter!\``,
+`
+**__failed to find OEURI__** :
+
+\`Issue on steam version only that can be ignored(its RID related and can intefer with rid spoofing)\``,
+`
+**__If you can't receive CEO Invites__**
+
+\`disable your "Kick" Protection under Protection --> Script Events --> Kicks\``,
+`
+**__Gifting Vehicles__** :
+
+\`Target must have a full garage, spawn the car with "Gift Vehicle" enabled, then let the player swap one car of the full garage with the gifted car. Beware that those cars cannot be sold.\``,
+`
+**__Crash Troubleshooting__** :
+
+\`1. Check if you have the newest Impulse Version. If you aren't sure, redownload the files on www.impulse.one/
+
+2. Check your Graphics Card Driver as those are a common reason for crashing.
+
+3. Try deleting your Impulse Folder (Documents/Impulse). An alternative is just to rename your existing Impulse Folder.
+
+4. Make sure that you have a clean GTA Install, delete every file that isnt from GTA V.
+
+5. Close Overlays for example Discord, see if that changes anything.
+
+6. Make sure you have your Window Settings on "Borderless" or "Windowed"
+
+7. Make sure you inject in Singleplayer when using Xenos!\``,
+`
+**__For auth errors, saying something along the lines of 'failed to connect to auth server', please try the following solutions__** ;
+
+\`- Check you are downloading/using newest versions 1.0.5 (Essential) or 1.1.5 (Standard/VIP) You may need to clear the cache/history in 
+ browser, to remove old version, as they can remain in your system memory.
+
+- If you use a VPN, try to change servers and login again.
+
+- Restart your router, PC, and/or release your current IP using CMD. (https://www.tp-link.com/us/support/faq/840/)\``,
+`
+**__Manual Troubleshooting__** :
+
+\`1. Make sure that you use the latest version of Impulse! Redownload files if necessary on https://impulse.one/download.php
+2. Try both ways of injecting (Auto-Injector & Xenos)
+3. If you have trouble gameplay-wise, try to disable some Script Protections that suit your problem!
+For example: I can't receive any Invites to other players' CEO --> Disable the "Invites" Protection under Protection --> Script Protection\``,
+`
+\`Steam verify integrity of game files tutorial 
+https://support.steampowered.com/kb_article.php?ref=2037-QEUH-3335\`
+`];
+let page = 1;
+const embed = new Discord.MessageEmbed()
+  .setColor(colors.orange)
+  .setFooter(`Page ${page} of ${pages.length}`)
+  .setDescription(pages[page-1])
+
+  message.channel.send(embed).then(msg => {
+    msg.react('⬅️').then( r => {
+      msg.react('➡️')
+
+      const backwardsFilter = (reaction, user) => reaction.emoji.name === ('⬅️') && user.id === message.author.id;
+      const forwardsFilter = (reaction, user) => reaction.emoji.name === ('➡️') && user.id === message.author.id;
+
+      const backwards = msg.createReactionCollector(backwardsFilter, { time: 5400000 });
+      const forwards = msg.createReactionCollector(forwardsFilter, { time: 5400000 });
+
+      backwards.on('collect', r => {
+        if (page === 1) return;
+        page--;
+        embed.setDescription(pages[page-1]);
+        embed.setFooter(`Page ${page} of ${pages.length}`);
+        msg.edit(embed)
+      })
+
+      forwards.on('collect', r => {
+        if (page === pages.length) return;
+        page++;
+        embed.setDescription(pages[page-1]);
+        embed.setFooter(`Page ${page} of ${pages.length}`);
+        msg.edit(embed)
+      })
+
+    })
+  })
+}
 
 // Break
 
