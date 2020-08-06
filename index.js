@@ -3651,13 +3651,13 @@ ______________
 [_Spooner_] 1/2
 
 * Delete last creation
-* Spawn objects with collision 
-
+* Spawn objects with collision`,
+`
 **__Teleport__** 1/22
 
 * Teleport to waypoint
 
--Locatons- 
+-Locatons-
 
 [_Online_] 1/23
 
