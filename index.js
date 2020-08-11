@@ -5347,8 +5347,9 @@ __Misc__ :
 // Break
 
 if (message.content.toLowerCase() === 'impulse troubleshoot'){
+  message.delete()
   message.channel.send(`Looking for ways to troubleshoot <a:Loading:705280596217430019>,
-  ${message.author} Please stand by <a:Loading:705280596217430019>`)
+${message.author} Please stand by`)
     .then(sentMessage => sentMessage.delete({ timeout: 8000 })
    .catch(error => {
     // Hnadler
