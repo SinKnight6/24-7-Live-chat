@@ -5523,7 +5523,7 @@ const embed = new Discord.MessageEmbed()
   .setFooter(`Page ${page} of ${pages.length}`)
   .setDescription(pages[page-1])
 
-  message.channel.send(embed).then(msg => {
+  message.author.send(embed).then(msg => {
     msg.react('⬅️').then( r => {
       msg.react('➡️')
 
