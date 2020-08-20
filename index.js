@@ -5,8 +5,8 @@ const talkedRecently = new Set();
 const { MessageEmbed } = require('discord.js')
 const DESTINATION = '712527883129716757';
 const openTickets = new Map();
-const ACCEPT = '708923041928839169';
-const REJECT = '708923028846805073';
+const ACCEPT = '711139565569572885';
+const REJECT = '711139517876273224';
 
 
 const swearWords = ["Nigga", "nigga", "shit", "Shit", "Fuck", "fuck", "Stupid", "stupid", "Dick", "dick", "Dipship", "dipshit", "Asshole", "asshole", "STFU", "Stfu", "stfu", "Bitch", "bitch", "hoe", "Hoe", "HOE", "Dumb", "DUMB", "Dumass", "DUMASS", "Dumfuck", "DUMFUCK"];
