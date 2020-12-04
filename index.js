@@ -241,7 +241,7 @@ message.react('🤔')
 
 if (message.content.toLowerCase() === 'buy recovery' && message.channel.id === '784215389583573003'){
   if (message.author.bot) return;
-  
+  if(message.channel.type === 'dm'){
     if (!openTickets.has(message.author.id)) {
       const embed = new MessageEmbed()
       .setDescription(`Hello! ${message.author} We have received your message, Please be patient while we get someone from our team to get to you`)
@@ -531,6 +531,7 @@ if (message.content.toLowerCase() === 'buy recovery' && message.channel.id === '
           openTickets.delete(message.author.id);
       }
   }
+}
 }
 
 function handleCollectors(channeL, message) {
