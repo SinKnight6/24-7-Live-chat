@@ -593,7 +593,7 @@ if (message.content.toLowerCase() === 'paypal'){
      .catch(error => {
       // Hnadler
     }))
-    message.react('🤔')
+    message.react('694342853278695494')
     .then(() => {
       message.channel.awaitMessages(response => response.content === '', {
         max: 1,
@@ -607,7 +607,7 @@ if (message.content.toLowerCase() === 'paypal'){
           let uEmbed1 = new Discord.MessageEmbed()
             .setColor(colors.blue)
             .setTitle('PayPal Payment')
-            .addField(`Please make suure to send the right amount of money otherwise we will not be able to process with your request`, `https://paypal.me/KnightShopTeam?locale.x=en_US`)
+            .addField(`Please make sure to send the right amount of money otherwise we will not be able to process with your request.`, `https://paypal.me/KnightShopTeam?locale.x=en_US`)
             .setThumbnail('https://cdn.discordapp.com/attachments/704209584071508079/784517982851301416/Paypal_NNN.png')
             .setTimestamp()
             .setFooter(`Live chat bot | At your service ${message.author.username}`, 'https://cdn.discordapp.com/attachments/696241284352049193/698835003718762576/livechat.gif')
@@ -630,7 +630,7 @@ if (message.content.toLowerCase() === 'credit or debit'){
      .catch(error => {
       // Hnadler
     }))
-    message.react('🤔')
+    message.react('784277985922514945')
     .then(() => {
       message.channel.awaitMessages(response => response.content === '', {
         max: 1,
@@ -644,7 +644,7 @@ if (message.content.toLowerCase() === 'credit or debit'){
           let uEmbed1 = new Discord.MessageEmbed()
             .setColor(colors.blue)
             .setTitle(`Please go to the page to choose which Recovery Pack you want and you can pay afterwards by pressing on the "BUY NOW" Blue button `)
-            .setThumbnail('https://cdn.discordapp.com/attachments/696241284352049193/698828564191117312/knight.gif')
+            .setThumbnail('https://cdn.discordapp.com/attachments/704209584071508079/784519798007529472/JD-11-512.png')
             .setAuthor(`${message.guild.name} Live Chat Beta`, message.guild.iconURL)
             .setDescription(`https://knight-shop.webnode.com/`)
             .setTimestamp()
