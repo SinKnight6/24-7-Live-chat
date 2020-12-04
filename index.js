@@ -608,7 +608,7 @@ if (message.content.toLowerCase() === 'paypal'){
             .setColor(colors.blue)
             .setTitle('PayPal Payment')
             .addField(`Please make suure to send the right amount of money otherwise we will not be able to process with your request`, `https://paypal.me/KnightShopTeam?locale.x=en_US`)
-            .setThumbnail('file:///C:/Users/sinne/Downloads/Paypal%20NNN.png')
+            .setThumbnail('https://cdn.discordapp.com/attachments/704209584071508079/784517982851301416/Paypal_NNN.png')
             .setTimestamp()
             .setFooter(`Live chat bot | At your service ${message.author.username}`, 'https://cdn.discordapp.com/attachments/696241284352049193/698835003718762576/livechat.gif')
             message.author.send({embed: uEmbed1})
