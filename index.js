@@ -285,53 +285,53 @@ if (message.content.toLowerCase() === 'buy recovery'){
                 const embed3 = new MessageEmbed()
     .setDescription(`Staff has accepted your query, Please type what recovery you will be buying here are some otions bellow`)
     .addField(`STARTER RECOVERY PACK
-    •$300 Million GTA Online Money
-    •1-120 Levels
-    •All Available Unlocks  (Including Ones Below)
-    •Unlock All Hairstyles
-    •Unlock All Tattoos
-    •Unlock All LSC Mods/Upgrades
-    •Unlock All Weapon Tints
-    •Unlock All Trophies/Heists/Heist Rewards`,
-    `Price: $5.00`)
+•$300 Million GTA Online Money
+•1-120 Levels
+•All Available Unlocks  (Including Ones Below)
+•Unlock All Hairstyles
+•Unlock All Tattoos
+•Unlock All LSC Mods/Upgrades
+•Unlock All Weapon Tints
+•Unlock All Trophies/Heists/Heist Rewards`,
+`Price: $5.00`)
    .addField(`BRONZE RECOVERY
-   •$600 Million GTA Online Money
-   •1-250 Levels
-   •All Available Unlocks  (Including Ones Below)
-   •Unlock All Hairstyles
-   •Unlock All Tattoos
-   •Unlock All LSC Mods/Upgrades
-   •Unlock All Weapon Tints
-   •Unlock All Trophies/Heists/Heist Rewards`,
-   `Price: $7.50`)
+•$600 Million GTA Online Money
+•1-250 Levels
+•All Available Unlocks  (Including Ones Below)
+•Unlock All Hairstyles
+•Unlock All Tattoos
+•Unlock All LSC Mods/Upgrades
+•Unlock All Weapon Tints
+•Unlock All Trophies/Heists/Heist Rewards`,
+`Price: $7.50`)
   .addField(`SILVER RECOVERY(50% OFF)
-  •$1 Billion GTA Online Money
-  •1-420 Levels
-  •All Available Unlocks  (Including Ones Below)
-  •Unlock All Hairstyles
-  •Unlock All Tattoos
-  •Unlock All LSC Mods/Upgrades
-  •Unlock All Weapon Tints
-  •Unlock All Trophies/Heists/Heist Rewards`,
-  `Price: $10.00`)
+•$1 Billion GTA Online Money
+•1-420 Levels
+•All Available Unlocks  (Including Ones Below)
+•Unlock All Hairstyles
+•Unlock All Tattoos
+•Unlock All LSC Mods/Upgrades
+•Unlock All Weapon Tints
+•Unlock All Trophies/Heists/Heist Rewards`,
+`Price: $10.00`)
   .addField(`GOLD RECOVERY
-  •$1.5 Billion GTA Online Money
-  •1-750 Levels
-  •All Available Unlocks  (Including Ones Below)
-  •Unlock All Hairstyles
-  •Unlock All Tattoos
-  •Unlock All LSC Mods/Upgrades
-  •Unlock All Weapon Tints
-  •Unlock All Trophies/Heists/Heist Rewards`,
-  `Price: $12.50`)
+•$1.5 Billion GTA Online Money
+•1-750 Levels
+•All Available Unlocks  (Including Ones Below)
+•Unlock All Hairstyles
+•Unlock All Tattoos
+•Unlock All LSC Mods/Upgrades
+•Unlock All Weapon Tints
+•Unlock All Trophies/Heists/Heist Rewards`,
+`Price: $12.50`)
   .addField(`GTA 5 CASH UP (MONEY ONLY)
 
-  Need more CASH but not levels or RP?
-  Get your  Cash up now!`, 
-  `Price Options: 
-   $5.00 USD  for 400 MILLION MEGA Cash!
-   $7.50 USD  for  700 MILLION ULTRA Cash!
-   $10.00 USD  for  1.2   BILLION INSANE Cash!`)
+*Need more CASH but not levels or RP?
+Get your  Cash up now!`, 
+`Price Options: 
+$5.00 USD  for 400 MILLION MEGA Cash!
+$7.50 USD  for  700 MILLION ULTRA Cash!
+$10.00 USD  for  1.2   BILLION INSANE Cash!`)
                   .setColor('#3AFF00')
                   .setTimestamp()
                   message.author.send(embed3)
