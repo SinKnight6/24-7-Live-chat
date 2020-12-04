@@ -203,7 +203,7 @@ message.author.send('Bot is typing <a:typing:705296058900545567>')
  .catch(error => {
   // Hnadler
 }))
-message.react('699823912862744606')
+message.react('🤔')
 .then(() => {
   message.channel.awaitMessages(response => response.content === '', {
     max: 1,
@@ -214,10 +214,10 @@ message.react('699823912862744606')
       message.channel.send(`The collected message was: ${collected.first().content}`);
     })
     .catch(() => {
-      let uEmbed3 = new Discord.MessageEmbed()
-      uEmbed3.setTitle('**__How does It work?__**')
-      uEmbed3.setColor(colors.orange)
-      uEmbed3.description (`
+      let embed = new Discord.MessageEmbed()
+      .setTitle('**__How does It work?__**')
+      .setColor(colors.orange)
+      .description (`
 
       * Decide any of our available package you want.
       * Type and send the bot you currently messaging with right now _\`how does recovery work\`_.
@@ -226,9 +226,9 @@ message.react('699823912862744606')
       * Select Payment Method & Pay.
       * That’s it, now your order will be completed within 24-48 hours.
       `)
-      uEmbed3.setTimestamp()
-      uEmbed3.setFooter('Live chat bot | At your service', 'https://cdn.discordapp.com/attachments/696241284352049193/698835003718762576/livechat.gif')
-      message.author.send({embed: uEmbed3})
+      .setTimestamp()
+      .setFooter('Live chat bot | At your service', 'https://cdn.discordapp.com/attachments/696241284352049193/698835003718762576/livechat.gif')
+      message.author.send({embed: embed})
       .then(sentMessage => sentMessage.delete({ timeout: 7200000 })
  .catch(error => {
     }));
