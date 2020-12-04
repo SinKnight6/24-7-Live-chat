@@ -645,7 +645,6 @@ if (message.content.toLowerCase() === 'credit or debit'){
             .setColor(colors.blue)
             .setTitle(`Please go to the page to choose which Recovery Pack you want and you can pay afterwards by pressing on the "BUY NOW" Blue button `)
             .setThumbnail('https://cdn.discordapp.com/attachments/704209584071508079/784519798007529472/JD-11-512.png')
-            .setAuthor(`${message.guild.name} Live Chat Beta`, message.guild.iconURL)
             .setDescription(`https://knight-shop.webnode.com/`)
             .setTimestamp()
             .setFooter(`Live chat bot | At your service ${message.author.username}`, 'https://cdn.discordapp.com/attachments/696241284352049193/698835003718762576/livechat.gif')
