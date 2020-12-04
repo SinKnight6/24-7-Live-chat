@@ -239,7 +239,7 @@ message.react('🤔')
 
 // Break
 
-if (message.content.toLowerCase() === 'buy recovery' && message.channel.id === '784215389583573003'){
+if (message.content.toLowerCase() === 'buy recovery'){
   if (message.author.bot) return;
   if(message.channel.type === 'dm'){
     if (!openTickets.has(message.author.id)) {
