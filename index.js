@@ -586,6 +586,33 @@ function getAttachmentLinks(attachments) {
 
 // New
 
+if (message.content.toLowerCase() === 'paypal'){
+  if(message.channel.type === 'dm'){
+    message.author.send('Bot is typing <a:typing:705296058900545567>')
+      .then(sentMessage => sentMessage.delete({ timeout: 3000 })
+     .catch(error => {
+      // Hnadler
+    }))
+    message.react('🤔')
+    .then(() => {
+      message.channel.awaitMessages(response => response.content === '', {
+        max: 1,
+        time: 3000,
+        errors: ['time'],
+      })
+      .then((collected) => {
+          message.channel.send(`The collected message was: ${collected.first().content}`);
+        })
+        .catch(() => {
+          message.author.send('https://paypal.me/KnightShopTeam?locale.x=en_US')
+          .then(sentMessage => sentMessage.delete({ timeout: 7200000 })
+     .catch(error => {
+        }));
+      });
+    });
+      }
+    };
+
 // Break
 
 if (message.content.toLowerCase() === 'purchase') {
