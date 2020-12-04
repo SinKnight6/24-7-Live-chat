@@ -217,7 +217,7 @@ message.react('🤔')
       let embed = new Discord.MessageEmbed()
       .setTitle('**__How does It work?__**')
       .setColor(colors.orange)
-      .description (`
+      .setDescription (`
 
       * Decide any of our available package you want.
       * Type and send the bot you currently messaging with right now _\`how does recovery work\`_.
