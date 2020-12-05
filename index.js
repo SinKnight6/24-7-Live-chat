@@ -176,7 +176,7 @@ if (message.content.toLowerCase() === 'purchase a recovery' && message.channel.i
       .catch(() => {
         let uEmbed1 = new Discord.MessageEmbed()
           .setColor(colors.blue)
-          .setTitle(`Hello! ${message.author} Please fallow the instructions bellow`)
+          .setTitle(`Hello there! Please fallow the instructions bellow`)
           .setThumbnail('https://cdn.discordapp.com/attachments/696241284352049193/698828564191117312/knight.gif')
           .setAuthor(`${message.guild.name} Live Chat Beta`, message.guild.iconURL)
           .setDescription(`
@@ -220,7 +220,7 @@ message.react('🤔')
       .setDescription (`
 
       * Decide any of our available package you want.
-      * Type and send the bot you currently messaging with right now _\`how does recovery work\`_.
+      * Type and send the bot you currently messaging with right now _\`Buy recovery now\`_.
       * Wait for Admin or Staff Member to recive and accept your message.
       * You will be given option to pay with.
       * Select Payment Method & Pay.
@@ -239,7 +239,7 @@ message.react('🤔')
 
 // Break
 
-if (message.content.toLowerCase() === 'buy recovery'){
+if (message.content.toLowerCase() === 'buy recovery now'){
   if (message.author.bot) return;
   if(message.channel.type === 'dm'){
     if (!openTickets.has(message.author.id)) {
@@ -586,7 +586,7 @@ function getAttachmentLinks(attachments) {
 
 // New
 
-if (message.content.toLowerCase() === 'paypal'){
+if (message.content.toLowerCase() === 'paypal method'){
   if(message.channel.type === 'dm'){
     message.author.send('Bot is typing <a:typing:705296058900545567>')
       .then(sentMessage => sentMessage.delete({ timeout: 3000 })
@@ -623,7 +623,7 @@ if (message.content.toLowerCase() === 'paypal'){
 
 // Break 
 
-if (message.content.toLowerCase() === 'credit or debit'){
+if (message.content.toLowerCase() === 'credit or debit method'){
   if(message.channel.type === 'dm'){
     message.author.send('Bot is typing <a:typing:705296058900545567>')
       .then(sentMessage => sentMessage.delete({ timeout: 3000 })
@@ -643,9 +643,9 @@ if (message.content.toLowerCase() === 'credit or debit'){
         .catch(() => {
           let uEmbed1 = new Discord.MessageEmbed()
             .setColor(colors.blue)
-            .setTitle(`Please go to the page to choose which Recovery Pack you want and you can pay afterwards by pressing on the "BUY NOW" Blue button `)
+            .setTitle(`Credit or Debit Payment`)
             .setThumbnail('https://cdn.discordapp.com/attachments/704209584071508079/784519798007529472/JD-11-512.png')
-            .setDescription(`https://knight-shop.webnode.com/`)
+            .addField(`Please go to the page to choose which Recovery Pack you want and you can pay afterwards by pressing on the "BUY NOW" Blue button`,`https://knight-shop.webnode.com/`)
             .setTimestamp()
             .setFooter(`Live chat bot | At your service ${message.author.username}`, 'https://cdn.discordapp.com/attachments/696241284352049193/698835003718762576/livechat.gif')
             message.author.send({embed: uEmbed1})
@@ -657,6 +657,41 @@ if (message.content.toLowerCase() === 'credit or debit'){
       }
     };
 
+// Break 
+
+if (message.content.toLowerCase() === 'Amazon gift card'){
+  if(message.channel.type === 'dm'){
+    message.author.send('Bot is typing <a:typing:705296058900545567>')
+      .then(sentMessage => sentMessage.delete({ timeout: 3000 })
+     .catch(error => {
+      // Hnadler
+    }))
+    message.react('784278429662576660')
+    .then(() => {
+      message.channel.awaitMessages(response => response.content === '', {
+        max: 1,
+        time: 3000,
+        errors: ['time'],
+      })
+      .then((collected) => {
+          message.channel.send(`The collected message was: ${collected.first().content}`);
+        })
+        .catch(() => {
+          let uEmbed1 = new Discord.MessageEmbed()
+            .setColor(colors.blue)
+            .setTitle(`Amzon Payment Method`)
+            .setThumbnail('https://cdn.discordapp.com/attachments/704209584071508079/784675711717867570/amazon_2.png')
+            .addField(`Please send us the gift card code is 14 or 15 characters or send us a picture of the gift card code **Please make sure that is redeemable in the US`,`.`)
+            .setTimestamp()
+            .setFooter(`Live chat bot | At your service ${message.author.username}`, 'https://cdn.discordapp.com/attachments/696241284352049193/698835003718762576/livechat.gif')
+            message.author.send({embed: uEmbed1})
+          .then(sentMessage => sentMessage.delete({ timeout: 7200000 })
+     .catch(error => {
+        }));
+      });
+    });
+      }
+    };
 
 // Break
 
