@@ -659,7 +659,7 @@ if (message.content.toLowerCase() === 'credit or debit method'){
 
 // Break 
 
-if (message.content.toLowerCase() === 'Amazon gift card'){
+if (message.content.toLowerCase() === 'amazon gift card'){
   if(message.channel.type === 'dm'){
     message.author.send('Bot is typing <a:typing:705296058900545567>')
       .then(sentMessage => sentMessage.delete({ timeout: 3000 })
