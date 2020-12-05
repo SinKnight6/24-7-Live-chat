@@ -681,7 +681,7 @@ if (message.content.toLowerCase() === 'amazon gift card'){
             .setColor(colors.blue)
             .setTitle(`Amzon Payment Method`)
             .setThumbnail('https://cdn.discordapp.com/attachments/704209584071508079/784675711717867570/amazon_2.png')
-            .addField(`Please send us the gift card code is 14 or 15 characters or send us a picture of the gift card code **Please make sure that is redeemable in the US`,`.`)
+            .addField(`.`,`Please send us the gift card code is 14 or 15 characters or send us a picture of the gift card code **Please make sure that is redeemable in the US`)
             .setTimestamp()
             .setFooter(`Live chat bot | At your service ${message.author.username}`, 'https://cdn.discordapp.com/attachments/696241284352049193/698835003718762576/livechat.gif')
             message.author.send({embed: uEmbed1})
