@@ -666,7 +666,7 @@ if (message.content.toLowerCase() === 'amazon gift card'){
      .catch(error => {
       // Hnadler
     }))
-    message.react('784278429662576660')
+    message.react('784279694852882442')
     .then(() => {
       message.channel.awaitMessages(response => response.content === '', {
         max: 1,
