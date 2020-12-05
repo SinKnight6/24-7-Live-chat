@@ -158,7 +158,7 @@ message.react('🛍️')
 if (message.channel.id === '784215389583573003')
   await message.delete();
 
-if (message.content.toLowerCase() === 'purchase a recovery' && message.channel.id === '784215389583573003'){
+if (message.content.toLowerCase() === 'help purchase a recovery' && message.channel.id === '784215389583573003'){
   message.author.send('Bot is typing <a:typing:705296058900545567>')
     .then(sentMessage => sentMessage.delete({ timeout: 8000 })
    .catch(error => {
