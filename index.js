@@ -56,7 +56,7 @@ if (talkedRecently.has(message.author.id))
 if( swearWords.some(word => message.content.includes(word)) ) {
     if(message.channel.type === 'dm'){
     message.react('😡');
-    message.author.send("``Stfu fag`` <:MiddleFinger:784693700922966026>")
+    message.author.send("``Please respect bot and watch your language <:MiddleFinger:784693700922966026>``")
     .then(sentMessage => sentMessage.delete({ timeout: 50000
     }))
     .catch(error => {
