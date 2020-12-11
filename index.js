@@ -1074,7 +1074,7 @@ if (message.content.toLowerCase() === 'paypal method'){
 
 // Break 
 
-if (message.content.toLowerCase() === 'credit or debit recovery'){
+if (message.content.toLowerCase() === 'debit or credit recovery'){
   if(message.channel.type === 'dm'){
     message.author.send('Bot is typing <a:typing:705296058900545567>')
       .then(sentMessage => sentMessage.delete({ timeout: 3000 })
