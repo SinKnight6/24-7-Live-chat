@@ -623,7 +623,7 @@ function handleCollectors(channeL, message) {
             channeL.send(embed);
         });
       guildChannelCollector.on('collect', m => {
-          if (m.content.toLowerCase() === 'endchat') {
+          if (m.content.toLowerCase() === '--stop') {
               guildChannelCollector.stop();
               dmCollector.stop();
               resoLve();
@@ -1006,7 +1006,7 @@ function handleCollectors(channeL, message) {
             channeL.send(embed);
         });
       guildChannelCollector.on('collect', m => {
-          if (m.content.toLowerCase() === 'endchat') {
+          if (m.content.toLowerCase() === '--stop') {
               guildChannelCollector.stop();
               dmCollector.stop();
               resoLve();
