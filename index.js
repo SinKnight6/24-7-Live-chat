@@ -158,7 +158,87 @@ message.react('🛍️')
 if (message.channel.id === '784215389583573003')
   await message.delete();
 
-if (message.content.toLowerCase() === 'help purchase a recovery' && message.channel.id === '784215389583573003'){
+  if (message.content.toLowerCase() === 'account' && message.channel.id === '784215389583573003'){
+    message.author.send('Bot is typing <a:typing:705296058900545567>')
+      .then(sentMessage => sentMessage.delete({ timeout: 8000 })
+     .catch(error => {
+      // Hnadler
+    }))
+    .then(() => {
+      message.channel.awaitMessages(response => response.content === '', {
+        max: 1,
+        time: 100,
+        errors: ['time'],
+      })
+      .then((collected) => {
+          message.channel.send(`The collected message was: ${collected.first().content}`);
+        })
+        .catch(() => {
+          let uEmbed1 = new Discord.MessageEmbed()
+            .setColor(colors.blue)
+            .setTitle(`Hello there! Please fallow the instructions bellow`)
+            .setThumbnail('https://cdn.discordapp.com/attachments/696241284352049193/698828564191117312/knight.gif')
+            .setAuthor(`${message.guild.name} Live Chat Beta`, message.guild.iconURL)
+            .setDescription(`
+  
+2. If you want to purchase a __Modded Account__ please type, _\`Buy Modded Account Now\`_ .
+
+3. If you want to know how the proccess works please type, _\`Modded Account Process\`_.
+
+  `)
+            .setTimestamp()
+            .setFooter(`Live chat bot | At your service ${message.author.username}`, 'https://cdn.discordapp.com/attachments/696241284352049193/698835003718762576/livechat.gif')
+            message.author.send({embed: uEmbed1});
+    });
+    });
+    };
+  
+// Break 
+
+if (message.content.toLowerCase() === 'modded account process'){
+  if(message.channel.type === 'dm'){
+message.author.send('Bot is typing <a:typing:705296058900545567>')
+  .then(sentMessage => sentMessage.delete({ timeout: 3000 })
+ .catch(error => {
+  // Hnadler
+}))
+message.react('🤔')
+.then(() => {
+  message.channel.awaitMessages(response => response.content === '', {
+    max: 1,
+    time: 3000,
+    errors: ['time'],
+  })
+  .then((collected) => {
+      message.channel.send(`The collected message was: ${collected.first().content}`);
+    })
+    .catch(() => {
+      let embed = new Discord.MessageEmbed()
+      .setTitle('**__How does It work?__**')
+      .setColor(colors.orange)
+      .setDescription (`
+
+      * Decide any of our available package you want.
+      * Type and send the bot you currently messaging with right now, _\`Buy modded account now\`_.
+      * Wait for Admin or Staff Member to recive and accept your message.
+      * You will be given options to pay with.
+      * Select Payment Method & Pay.
+      * That’s it, now your order will be completed within 24-48 hours.
+      `)
+      .setTimestamp()
+      .setFooter('Live chat bot | At your service', 'https://cdn.discordapp.com/attachments/696241284352049193/698835003718762576/livechat.gif')
+      message.author.send({embed: embed})
+      .then(sentMessage => sentMessage.delete({ timeout: 7200000 })
+ .catch(error => {
+    }));
+  });
+});
+  }
+};
+
+// Break
+
+if (message.content.toLowerCase() === 'recovery' && message.channel.id === '784215389583573003'){
   message.author.send('Bot is typing <a:typing:705296058900545567>')
     .then(sentMessage => sentMessage.delete({ timeout: 8000 })
    .catch(error => {
@@ -181,11 +261,11 @@ if (message.content.toLowerCase() === 'help purchase a recovery' && message.chan
           .setAuthor(`${message.guild.name} Live Chat Beta`, message.guild.iconURL)
           .setDescription(`
 
-          2. If you want to purchase a __**Recovery**__ please type, _\`Buy Recovery Now\`_ .
+2. If you want to purchase a __Recovery__ please type, _\`Buy Recovery Now\`_ .
 
-          3. If you want to know how the proccess works please type, _\`how does recovery work\`_.
+3. If you want to know how the proccess works please type, _\`Recovery Process\`_.
 
-          4. If you want to see our FAQ please type, _\`Recovery FAQ\`_ .`)
+`)
           .setTimestamp()
           .setFooter(`Live chat bot | At your service ${message.author.username}`, 'https://cdn.discordapp.com/attachments/696241284352049193/698835003718762576/livechat.gif')
           message.author.send({embed: uEmbed1});
@@ -196,7 +276,7 @@ if (message.content.toLowerCase() === 'help purchase a recovery' && message.chan
 
 // Break
 
-if (message.content.toLowerCase() === 'how does recovery work'){
+if (message.content.toLowerCase() === 'recovery process'){
   if(message.channel.type === 'dm'){
 message.author.send('Bot is typing <a:typing:705296058900545567>')
   .then(sentMessage => sentMessage.delete({ timeout: 3000 })
@@ -222,7 +302,7 @@ message.react('🤔')
       * Decide any of our available package you want.
       * Type and send the bot you currently messaging with right now _\`Buy recovery now\`_.
       * Wait for Admin or Staff Member to recive and accept your message.
-      * You will be given option to pay with.
+      * You will be given options to pay with.
       * Select Payment Method & Pay.
       * That’s it, now your order will be completed within 24-48 hours.
       `)
@@ -239,7 +319,378 @@ message.react('🤔')
 
 // Break
 
+if (message.content.toLowerCase() === 'buy modded account now'){
+  message.react('📌')
+  if (message.author.bot) return;
+  if(message.channel.type === 'dm'){
+    if (!openTickets.has(message.author.id)) {
+      const embed = new MessageEmbed()
+      .setDescription(`Hello! ${message.author} We have received your message, Please be patient while we get someone from our team to get to you`)
+      .setColor('#3AFF00')
+      .setTimestamp()
+      message.channel.send(embed)
+      .then(sentMessage => sentMessage.delete({ timeout: 86400000 })
+      .catch(error => {
+      }));
+      openTickets.set(message.author.id, message.guild);
+      const channel = bot.channels.cache.get(DESTINATION);
+      if (channel) {
+          const embed = new MessageEmbed()
+          .setAuthor(message.author ,message.author.displayAvatarURL())
+          .setDescription(`[${message.author}] Is looking to buy a Modded Account for GTA V`)
+          .setColor('#0070FF')
+          .setTimestamp();
+          const msg = await channel.send(embed);
+          await msg.react(ACCEPT);
+          await msg.react(REJECT);  
+          try {
+              const reactionFilter = (reaction, user) => [ACCEPT, REJECT].includes(reaction.emoji.id) && !user.bot;
+              const reactions = await msg.awaitReactions(reactionFilter, { max: 1, time: 86400000, errors: ['time'] });
+              const choice = reactions.get(ACCEPT) || reactions.get(REJECT);
+              if (choice.emoji.id === ACCEPT) {
+                message.author.send('_Staff looking for your query, please stand by_ <a:Loading:705280596217430019>')
+                .then(sentMessage => sentMessage.delete({ timeout: 5000 })
+                .catch(error => {
+                // Hnadler
+                }))
+                .then(() => {
+                message.channel.awaitMessages(response => response.content === '', {
+                max: 1,
+                time: 100,
+                errors: ['time'],
+                })
+                .then((collected) => {
+                message.channel.send(`The collected message was: ${collected.first().content}`);
+                })
+                .catch(() => {
+                const embed3 = new MessageEmbed()
+    .setDescription(`Staff has accepted your query, Please type what Modded Account you will be buying here are some otions bellow: `)
+    .addField(`GTA V Social Club Modded Account!
+    PC VERSION ONLY > Tier 1 <
+•$500 Million GTA Online Money
+•120-250 Levels
+•Everything Unlocked/ Max Stats 
+•GTA V Game Included!
+`,
+`Price: $25`)
+   .addField(`GTA V Social Club Modded Account!
+   PC VERSION ONLY > Tier 2 <
+•$1 Billion GTA Online Money
+•120-350 Levels
+•Everything Unlocked/ Max Stats 
+•GTA V Game Included!`,
+`Price: $30`)
+  .addField(`GTA V Social Club Modded Account!
+  PC VERSION ONLY > Tier 3 <
+•$1.5 Billion GTA Online Money
+•120-550 Levels
+•Everything Unlocked/ Max Stats 
+•GTA V Game Included!`,
+`Price: $35`)
+  .addField(`GTA V Social Club Modded Account!
+  PC VERSION ONLY > Tier 4 <
+•$2 Billion GTA Online Money
+•120-850 Levels
+•Everything Unlocked/ Max Stats
+•GTA V Game Included!`,
+`Price: $40`)
+  .addField(` LOOKING FOR A CUSTOM MADE ACCOUNT?
+
+  Custom LVL: 1 - 2000
+  Custom Cash: 1 Million - 2 Billion
+  Custom Unlocks: Stats<CLothes<Hair<Outfits<Tatto's`, 
+`Prices Change Depending on What You Ask For.`)
+                  .setColor('#3AFF00')
+                  .setTimestamp()
+                  message.author.send(embed3)
+                  .then(sentMessage => sentMessage.delete({ timeout: 7200000 })
+                  .catch(error => {
+                  }));
+                  });
+                  });
+                  channel.send('_Accepting Users message_ <a:Loading:705280596217430019>')
+                .then(sentMessage => sentMessage.delete({ timeout: 5000 })
+                .catch(error => {
+                // Hnadler
+                }))
+                .then(() => {
+                message.channel.awaitMessages(response => response.content === '', {
+                max: 1,
+                time: 100,
+                errors: ['time'],
+                })
+                .then((collected) => {
+                message.channel.send(`The collected message was: ${collected.first().content}`);
+                })
+                .catch(() => {
+                  const embed4 = new MessageEmbed()
+                  .setDescription(`You have Accepted the message`)
+                  .setColor('#3AFF00')
+                  .setTimestamp()
+                  channel.send(embed4)
+                  .then(sentMessage => sentMessage.delete({ timeout: 7200000 })
+                  .catch(error => {
+                  }));
+                });
+                });
+                 await handleCollectors(channel, message); 
+                 message.author.send('_Staff is Ending chat_ <a:Loading:705280596217430019>')
+                  .then(sentMessage => sentMessage.delete({ timeout: 5000 })
+                  .catch(error => {
+                  // Hnadler
+                  }))
+                  .then(() => {
+                  message.channel.awaitMessages(response => response.content === '', {
+                  max: 1,
+                  time: 100,
+                  errors: ['time'],
+                  })
+                  .then((collected) => {
+                  message.channel.send(`The collected message was: ${collected.first().content}`);
+                  })
+                  .catch(() => {
+                 const embed = new MessageEmbed()
+                  .setDescription(`Staff has ended the chat, if you have any other questions feel free to ask our staff for help.`)
+                  .setColor('#3AFF00')
+                  .setTimestamp()
+                  message.author.send(embed)
+                  .then(sentMessage => sentMessage.delete({ timeout: 7200000 })
+                  .catch(error => {
+                  }));
+                  });
+                  });                                                 
+                  channel.send('_Ending chat_ <a:Loading:705280596217430019>')
+                  .then(sentMessage => sentMessage.delete({ timeout: 5000 })
+                  .catch(error => {
+                  // Hnadler
+                  }))
+                  .then(() => {
+                  message.channel.awaitMessages(response => response.content === '', {
+                  max: 1,
+                  time: 100,
+                  errors: ['time'],
+                  })
+                  .then((collected) => {
+                  message.channel.send(`The collected message was: ${collected.first().content}`);
+                  })
+                  .catch(() => {
+                  const embed1 = new MessageEmbed()
+                  .setDescription(`_You have ended the chat with_: __${message.author.tag}__`)
+                  .setColor('#3AFF00')
+                  .setTimestamp()
+                  channel.send(embed1)
+                  .then(sentMessage => sentMessage.delete({ timeout: 7200000 })
+                  .catch(error => {
+                  }));
+                });
+              });
+                 openTickets.delete(message.author.id);
+              } else if (choice.emoji.id === REJECT) {
+                message.author.send('_Staff looking for your query, please stand by_ <a:Loading:705280596217430019>')
+                .then(sentMessage => sentMessage.delete({ timeout: 5000 })
+                .catch(error => {
+                // Hnadler
+                }))
+                .then(() => {
+                message.channel.awaitMessages(response => response.content === '', {
+                max: 1,
+                time: 100,
+                errors: ['time'],
+                })
+                .then((collected) => {
+                message.channel.send(`The collected message was: ${collected.first().content}`);
+                })
+                .catch(() => {
+                  const embed = new MessageEmbed()
+                  .setDescription(`Your message was rejected by Staff. You may try later`)
+                  .setColor('#FF0000')
+                  .setTimestamp()
+                  message.author.send(embed)
+                  .then(sentMessage => sentMessage.delete({ timeout: 7200000 })
+                  .catch(error => {
+                  }));
+                  });
+                  });
+                  channel.send('_Rejecting Users Message_ <a:Loading:705280596217430019>')
+                  .then(sentMessage => sentMessage.delete({ timeout: 5000 })
+                  .catch(error => {
+                  // Hnadler
+                  }))
+                  .then(() => {
+                  message.channel.awaitMessages(response => response.content === '', {
+                  max: 1,
+                  time: 100,
+                  errors: ['time'],
+                  })
+                  .then((collected) => {
+                  message.channel.send(`The collected message was: ${collected.first().content}`);
+                  })
+                  .catch(() => {
+                  const embed1 = new MessageEmbed()
+                  .setDescription(`You have rejected the message.`)
+                  .setColor('#FF0000')
+                  .setTimestamp()
+                  channel.send(embed1)
+                  .then(sentMessage => sentMessage.delete({ timeout: 7200000 })
+                  .catch(error => {
+                  }));
+                  });
+                  });
+                  setTimeout(() => {
+                      openTickets.delete(message.author.id);
+                  }, 30000);
+              }
+          } catch (err) {
+              console.log(err);
+              message.author.send('_Staff is taking longer than usual_ <a:Loading:705280596217430019>')
+                  .then(sentMessage => sentMessage.delete({ timeout: 5000 })
+                  .catch(error => {
+                  // Hnadler
+                  }))
+                  .then(() => {
+                  message.channel.awaitMessages(response => response.content === '', {
+                  max: 1,
+                  time: 100,
+                  errors: ['time'],
+                  })
+                  .then((collected) => {
+                  message.channel.send(`The collected message was: ${collected.first().content}`);
+                  })
+                  .catch(() => {
+              const embed = new MessageEmbed()
+              .setDescription(`No one was available to accept your query. Please try again`)
+              .setColor('#FFB900')
+              .setTimestamp()
+              message.author.send(embed)
+              .then(sentMessage => sentMessage.delete({ timeout: 7200000 })
+              .catch(error => {
+              }));
+              });
+              });
+              channel.send('_Automatically Rejecting Users Message_ <a:Loading:705280596217430019>')
+                  .then(sentMessage => sentMessage.delete({ timeout: 5000 })
+                  .catch(error => {
+                  // Hnadler
+                  }))
+                  .then(() => {
+                  message.channel.awaitMessages(response => response.content === '', {
+                  max: 1,
+                  time: 100,
+                  errors: ['time'],
+                  })
+                  .then((collected) => {
+                  message.channel.send(`The collected message was: ${collected.first().content}`);
+                  })
+                  .catch(() => {
+              const embed1 = new MessageEmbed()
+              .setDescription(`the message was automatically rejected because no one reacted to the message`)
+              .setColor('#FFB900')
+              .setTimestamp()
+              channel.send(embed1)
+              .then(sentMessage => sentMessage.delete({ timeout: 7200000 })
+              .catch(error => {
+              }));
+              });
+              });
+              openTickets.delete(message.author.id);
+          }
+      } else {
+          message.channel.send('Somethins went wrong. Please reach out to server Admin directly.');
+          openTickets.delete(message.author.id);
+      }
+  }
+}
+}
+
+function handleCollectors(channeL, message) {
+
+  const filter = m => m.author.id === message.author.id;
+  const dmCollector = message.channel.createMessageCollector(filter);
+
+  const guildCollectorFilter = m => m.channel.id === channeL.id && !m.author.bot;
+  const guildChannelCollector = channeL.createMessageCollector(guildCollectorFilter);
+
+  return new Promise((resoLve, reject) => {
+      dmCollector.on('collect', m => {
+          const files = getAttachmentLinks(m.attachments);
+          const embed = new MessageEmbed()
+            .setAuthor(`User: ${m.author.tag}, ${m.author.id}`)
+            .setDescription(`\`Users Message:\` **${m.content}** `)
+            .setColor('#0093FF')
+            .setTimestamp()
+            .setImage(`${files}`)
+            .setFooter('talking with user', message.author.displayAvatarURL());
+            channeL.send(embed);
+        });
+      guildChannelCollector.on('collect', m => {
+          if (m.content.toLowerCase() === 'endchat') {
+              guildChannelCollector.stop();
+              dmCollector.stop();
+              resoLve();
+          } else {
+              const files = getAttachmentLinks(m.attachments);
+              const embed = new MessageEmbed()
+              .setAuthor(`Staff member: ${m.author.tag}`)
+              .setDescription(`\`Staff Message:\` **${m.content}** `)
+              .setImage(`${files}`)
+              .setTimestamp()
+              .setFooter('Live chat with agent', 'https://cdn.discordapp.com/attachments/696241284352049193/698835003718762576/livechat.gif');
+              message.author.send(embed)
+              .then(sentMessage => sentMessage.delete({ timeout: 7200000 })
+              .catch(error => {
+              }));
+          }
+      })
+  });
+}
+
+function getAttachmentLinks(attachments) {
+  const valid = /^.*(gif|png|jpg|jpeg)$/g
+  return attachments.array()
+    .filter(attachment => valid.test(attachment.url))
+    .map(attachment => attachment.url);
+}
+
+// Break
+
+if (message.content.toLowerCase() === 'debit or credit account'){
+  if(message.channel.type === 'dm'){
+    message.author.send('Bot is typing <a:typing:705296058900545567>')
+      .then(sentMessage => sentMessage.delete({ timeout: 3000 })
+     .catch(error => {
+      // Hnadler
+    }))
+    message.react('784277985922514945')
+    .then(() => {
+      message.channel.awaitMessages(response => response.content === '', {
+        max: 1,
+        time: 3000,
+        errors: ['time'],
+      })
+      .then((collected) => {
+          message.channel.send(`The collected message was: ${collected.first().content}`);
+        })
+        .catch(() => {
+          let uEmbed1 = new Discord.MessageEmbed()
+            .setColor(colors.blue)
+            .setTitle(`Credit or Debit Payment`)
+            .setThumbnail('https://cdn.discordapp.com/attachments/704209584071508079/784519798007529472/JD-11-512.png')
+            .addField(`Please go to the page to choose which Modded Account Pack you want and you can pay afterwards by pressing on the "BUY NOW" Blue button`,`https://knight-shop.cms.webnode.com/modded-account-page-only/`)
+            .setTimestamp()
+            .setFooter(`Live chat bot | At your service ${message.author.username}`, 'https://cdn.discordapp.com/attachments/696241284352049193/698835003718762576/livechat.gif')
+            message.author.send({embed: uEmbed1})
+          .then(sentMessage => sentMessage.delete({ timeout: 7200000 })
+     .catch(error => {
+        }));
+      });
+    });
+      }
+    };
+
+// Break 
+
 if (message.content.toLowerCase() === 'buy recovery now'){
+  message.react('📌')
   if (message.author.bot) return;
   if(message.channel.type === 'dm'){
     if (!openTickets.has(message.author.id)) {
@@ -283,7 +734,7 @@ if (message.content.toLowerCase() === 'buy recovery now'){
                 })
                 .catch(() => {
                 const embed3 = new MessageEmbed()
-    .setDescription(`Staff has accepted your query, Please type what recovery you will be buying here are some otions bellow`)
+    .setDescription(`Staff has accepted your query, Please type what recovery you will be buying here are some otions bellow: `)
     .addField(`STARTER RECOVERY PACK
 •$300 Million GTA Online Money
 •1-120 Levels
@@ -304,7 +755,7 @@ if (message.content.toLowerCase() === 'buy recovery now'){
 •Unlock All Weapon Tints
 •Unlock All Trophies/Heists/Heist Rewards`,
 `Price: $7.50`)
-  .addField(`SILVER RECOVERY(50% OFF)
+  .addField(`SILVER RECOVERY
 •$1 Billion GTA Online Money
 •1-420 Levels
 •All Available Unlocks  (Including Ones Below)
@@ -623,7 +1074,7 @@ if (message.content.toLowerCase() === 'paypal method'){
 
 // Break 
 
-if (message.content.toLowerCase() === 'credit or debit method'){
+if (message.content.toLowerCase() === 'credit or debit recovery'){
   if(message.channel.type === 'dm'){
     message.author.send('Bot is typing <a:typing:705296058900545567>')
       .then(sentMessage => sentMessage.delete({ timeout: 3000 })
