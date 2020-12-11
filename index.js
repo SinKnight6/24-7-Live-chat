@@ -675,7 +675,7 @@ if (message.content.toLowerCase() === 'debit or credit account'){
             .setColor(colors.blue)
             .setTitle(`Credit or Debit Payment`)
             .setThumbnail('https://cdn.discordapp.com/attachments/704209584071508079/784519798007529472/JD-11-512.png')
-            .addField(`Please go to the page to choose which Modded Account Pack you want and you can pay afterwards by pressing on the "BUY NOW" Blue button`,`https://knight-shop.cms.webnode.com/modded-account-page-only/`)
+            .addField(`Please go to the page to choose which Modded Account Pack you want and you can pay afterwards by pressing on the "BUY NOW" Blue button`,`https://knight-shop.webnode.com/modded-account-page-only/`)
             .setTimestamp()
             .setFooter(`Live chat bot | At your service ${message.author.username}`, 'https://cdn.discordapp.com/attachments/696241284352049193/698835003718762576/livechat.gif')
             message.author.send({embed: uEmbed1})
