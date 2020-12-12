@@ -257,7 +257,7 @@ if(message.content.toLowerCase() === 'done'){
       const collector = message.createReactionCollector(filter, {time: 60000});
       collector.on('collect', (r, u) => {
          //Put your response to reactions here
-         message.reply("Reply with something to " + u.tag + " because they reacted with " + r.emoji.name);
+         message.channel.reply(`Reply with something to ${u.tag} because they reacted with ${r.emoji.name}`);
       });
   })
 }
