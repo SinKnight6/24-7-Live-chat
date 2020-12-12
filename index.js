@@ -249,11 +249,11 @@ if(message.content.toLowerCase() === 'done'){
   embed.setColor(colors.blue);
   embed.setDescription('Please react to Agree or Disagree');
   message.channel.send(embed).then(embedMsg => {
-      embedMsg.react('708923041928839169')
-      .then(reaction => embedMsg.react('708923028846805073'))
+      embedMsg.react('711139565569572885')
+      .then(reaction => embedMsg.react('711139517876273224'))
       .catch(err => console.error);
 
-      const filter = (r, u) => r.emoji.id == '708923041928839169' || r.emoji.id == "708923041928839169";
+      const filter = (r, u) => r.emoji.id === '711139565569572885' || r.emoji.id === "711139517876273224";
       const collector = message.createReactionCollector(filter, {time: 60000});
       collector.on('collect', (r, u) => {
          //Put your response to reactions here
