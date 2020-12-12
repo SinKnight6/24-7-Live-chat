@@ -176,7 +176,7 @@ if (message.channel.id === '784215389583573003')
         .catch(() => {
           let uEmbed1 = new Discord.MessageEmbed()
             .setColor(colors.blue)
-            .setTitle(`Hello there! Please fallow the instructions bellow`)
+            .setTitle(`Hello there! Please type one of the Options bellow`)
             .setThumbnail('https://cdn.discordapp.com/attachments/696241284352049193/698828564191117312/knight.gif')
             .setAuthor(`${message.guild.name} Live Chat Beta`, message.guild.iconURL)
             .setDescription(`
@@ -188,10 +188,13 @@ if (message.channel.id === '784215389583573003')
   `)
             .setTimestamp()
             .setFooter(`Live chat bot | At your service ${message.author.username}`, 'https://cdn.discordapp.com/attachments/696241284352049193/698835003718762576/livechat.gif')
-            message.author.send({embed: uEmbed1});
-    });
-    });
-    };
+            message.author.send({embed: uEmbed1})
+            .then(sentMessage => sentMessage.delete({ timeout: 7200000 })
+ .catch(error => {
+    }));
+  });
+});
+}
   
 // Break 
 
@@ -235,6 +238,32 @@ message.react('🤔')
 });
   }
 };
+
+// Testing matters
+
+
+if(message.content.toLowerCase() === 'done'){
+  
+  const embed = new Discord.MessageEmbed();
+  embed.setTitle('Next step')
+  embed.setColor(colors.blue);
+  embed.setDescription('Please react to Agree or Disagree');
+  message.channel.send(embed).then(embedMsg => {
+      embedMsg.react('708923041928839169')
+      .then(reaction => embedMsg.react('708923028846805073'))
+      .catch(err => console.error);
+
+      const filter = (r, u) => r.emoji.id == '708923041928839169' || r.emoji.id == "708923041928839169";
+      const collector = message.createReactionCollector(filter, {time: 60000});
+      collector.on('collect', (r, u) => {
+         //Put your response to reactions here
+         message.reply("Reply with something to " + u.tag + " because they reacted with " + r.emoji.name);
+      });
+  })
+}
+
+
+
 
 // Break
 
@@ -1096,7 +1125,7 @@ if (message.content.toLowerCase() === 'debit or credit recovery'){
             .setColor(colors.blue)
             .setTitle(`Credit or Debit Payment`)
             .setThumbnail('https://cdn.discordapp.com/attachments/704209584071508079/784519798007529472/JD-11-512.png')
-            .addField(`Please go to the page to choose which Recovery Pack you want and you can pay afterwards by pressing on the "BUY NOW" Blue button`,`https://knight-shop.webnode.com/`)
+            .addField(`Please go to the page to choose which Recovery Pack you want and you can pay afterwards by pressing on the "BUY NOW" Blue button`,`https://knight-shop.webnode.com/recovery-page-only/`)
             .setTimestamp()
             .setFooter(`Live chat bot | At your service ${message.author.username}`, 'https://cdn.discordapp.com/attachments/696241284352049193/698835003718762576/livechat.gif')
             message.author.send({embed: uEmbed1})
