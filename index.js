@@ -241,7 +241,7 @@ message.react('🤔')
 
 // Testing matters
 
-
+/*
 if(message.content.toLowerCase() === 'done'){
   
   const embed = new Discord.MessageEmbed();
@@ -261,9 +261,9 @@ if(message.content.toLowerCase() === 'done'){
       });
   })
 }
+*/
 
-
-
+// Testimg matters
 
 // Break
 
@@ -724,7 +724,7 @@ if (message.content.toLowerCase() === 'buy recovery now'){
   if(message.channel.type === 'dm'){
     if (!openTickets.has(message.author.id)) {
       const embed = new MessageEmbed()
-      .setDescription(`Hello! ${message.author} We have received your message, Please be patient while we get someone from our team to get to you`)
+      .setDescription(`Hello! ${message.author} We have received your message, Please be patient while we get someone from our team to get to you, meanwhile you can go ahead and use command _\`Recovery Pacakges\`_`)
       .setColor('#3AFF00')
       .setTimestamp()
       message.channel.send(embed)
@@ -763,55 +763,7 @@ if (message.content.toLowerCase() === 'buy recovery now'){
                 })
                 .catch(() => {
                 const embed3 = new MessageEmbed()
-    .setDescription(`Staff has accepted your query, Please type what recovery you will be buying here are some otions bellow: `)
-    .addField(`STARTER RECOVERY PACK
-•$300 Million GTA Online Money
-•1-120 Levels
-•All Available Unlocks  (Including Ones Below)
-•Unlock All Hairstyles
-•Unlock All Tattoos
-•Unlock All LSC Mods/Upgrades
-•Unlock All Weapon Tints
-•Unlock All Trophies/Heists/Heist Rewards`,
-`Price: $5.00`)
-   .addField(`BRONZE RECOVERY
-•$600 Million GTA Online Money
-•1-250 Levels
-•All Available Unlocks  (Including Ones Below)
-•Unlock All Hairstyles
-•Unlock All Tattoos
-•Unlock All LSC Mods/Upgrades
-•Unlock All Weapon Tints
-•Unlock All Trophies/Heists/Heist Rewards`,
-`Price: $7.50`)
-  .addField(`SILVER RECOVERY
-•$1 Billion GTA Online Money
-•1-420 Levels
-•All Available Unlocks  (Including Ones Below)
-•Unlock All Hairstyles
-•Unlock All Tattoos
-•Unlock All LSC Mods/Upgrades
-•Unlock All Weapon Tints
-•Unlock All Trophies/Heists/Heist Rewards`,
-`Price: $10.00`)
-  .addField(`GOLD RECOVERY
-•$1.5 Billion GTA Online Money
-•1-750 Levels
-•All Available Unlocks  (Including Ones Below)
-•Unlock All Hairstyles
-•Unlock All Tattoos
-•Unlock All LSC Mods/Upgrades
-•Unlock All Weapon Tints
-•Unlock All Trophies/Heists/Heist Rewards`,
-`Price: $12.50`)
-  .addField(`GTA 5 CASH UP (MONEY ONLY)
-
-*Need more CASH but not levels or RP?
-Get your  Cash up now!`, 
-`Price Options: 
-$5.00 USD  for 400 MILLION MEGA Cash!
-$7.50 USD  for  700 MILLION ULTRA Cash!
-$10.00 USD  for  1.2   BILLION INSANE Cash!`)
+                  .setDescription(`Staff has accepted your query, Please type what recovery you will be buying and what Payment method you would like to use.... (PayPal, Debit or Credit card, Amazon gift card).`)
                   .setColor('#3AFF00')
                   .setTimestamp()
                   message.author.send(embed3)
@@ -1100,6 +1052,94 @@ if (message.content.toLowerCase() === 'paypal method'){
       }
     };
 // New 
+
+if (message.content.toLowerCase() === 'recovery packages'){
+  if(message.channel.type === 'dm'){
+    message.author.send('Bot is typing <a:typing:705296058900545567>')
+      .then(sentMessage => sentMessage.delete({ timeout: 3000 })
+     .catch(error => {
+      // Hnadler
+    }))
+    message.react('📦')
+    .then(() => {
+      message.channel.awaitMessages(response => response.content === '', {
+        max: 1,
+        time: 3000,
+        errors: ['time'],
+      })
+      .then((collected) => {
+          message.channel.send(`The collected message was: ${collected.first().content}`);
+        })
+        .catch(() => {
+let embed = new Discord.MessageEmbed()
+.setColor(colors.blue)
+.setTitle('__**Recovery Options Available**__')
+.addField(`**STARTER RECOVERY PACK**
+
+•$300 Million GTA Online Money
+•1-120 Levels
+•All Available Unlocks  (Including Ones Below)
+•Unlock All Hairstyles
+•Unlock All Tattoos
+•Unlock All LSC Mods/Upgrades
+•Unlock All Weapon Tints
+•Unlock All Trophies/Heists/Heist Rewards`,
+`Price: $5.00`)
+
+   .addField(`**BRONZE RECOVERY**
+
+•$600 Million GTA Online Money
+•1-250 Levels
+•All Available Unlocks  (Including Ones Below)
+•Unlock All Hairstyles
+•Unlock All Tattoos
+•Unlock All LSC Mods/Upgrades
+•Unlock All Weapon Tints
+•Unlock All Trophies/Heists/Heist Rewards`,
+`Price: $7.50`)
+
+  .addField(`**SILVER RECOVERY**
+
+•$1 Billion GTA Online Money
+•1-420 Levels
+•All Available Unlocks  (Including Ones Below)
+•Unlock All Hairstyles
+•Unlock All Tattoos
+•Unlock All LSC Mods/Upgrades
+•Unlock All Weapon Tints
+•Unlock All Trophies/Heists/Heist Rewards`,
+`Price: $10.00`)
+
+  .addField(`**GOLD RECOVERY**
+
+•$1.5 Billion GTA Online Money
+•1-750 Levels
+•All Available Unlocks  (Including Ones Below)
+•Unlock All Hairstyles
+•Unlock All Tattoos
+•Unlock All LSC Mods/Upgrades
+•Unlock All Weapon Tints
+•Unlock All Trophies/Heists/Heist Rewards`,
+`Price: $12.50`)
+
+  .addField(`**GTA 5 CASH UP (MONEY ONLY)**
+
+*Need more CASH but not levels or RP?
+Get your  Cash up now!`, 
+`Price Options: 
+$5.00 USD  for 400 MILLION MEGA Cash!
+$7.50 USD  for  700 MILLION ULTRA Cash!
+$10.00 USD  for  1.2   BILLION INSANE Cash!`)
+.setFooter(`Live chat bot | At your service ${message.author.username}`, 'https://cdn.discordapp.com/attachments/696241284352049193/698835003718762576/livechat.gif')
+.setTimestamp()
+message.author.send({embed: embed})
+.then(sentMessage => sentMessage.delete({ timeout: 7200000 })
+.catch(error => {
+   }));
+ });
+});
+ }
+};
 
 // Break 
 
