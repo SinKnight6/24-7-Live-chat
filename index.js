@@ -389,7 +389,7 @@ if (message.content.toLowerCase() === 'buy modded account now'){
   if (message.author.bot) return;
   if(message.channel.type === 'dm'){
     if (!openTickets.has(message.author.id)) {
-      message.author.send('_Staff looking for your query, please stand by_ <a:Loading:705280596217430019>')
+      message.author.send('_Reaching out for Knight-Shop team members, please stand by_ <a:Loading:705280596217430019>')
       .then(sentMessage => sentMessage.delete({ timeout: 5000 })
                 .catch(error => {
                 // Hnadler
