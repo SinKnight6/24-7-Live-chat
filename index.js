@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const colors = require("./colors.json");
+const { handler } = require('./commands');
 const bot = new Discord.Client();
 const talkedRecently = new Set();
 const { MessageEmbed } = require('discord.js')
@@ -73,6 +74,27 @@ if( swearWords.some(word => message.content.includes(word)) ) {
 
 
 // Live chat end.
+
+// Commands handler start
+
+if(message.author.bot) return;
+    
+
+// Command Handler
+
+/*
+if(message.content.toLowerCase() === 'account'){
+   handler(message, 'account')
+}
+/*
+else if(message.content.toLowerCase() === 'recovery'){
+  handler(message.channel, 'recovery')
+
+}
+*/
+
+// Coammand handler end
+
 
 //   Helper Start
 
@@ -241,27 +263,40 @@ message.react('🤔')
 
 // Testing matters
 
-/*
-if(message.content.toLowerCase() === 'done'){
-  
-  const embed = new Discord.MessageEmbed();
-  embed.setTitle('Next step')
-  embed.setColor(colors.blue);
-  embed.setDescription('Please react to Agree or Disagree');
-  message.channel.send(embed).then(embedMsg => {
-      embedMsg.react('711139565569572885')
-      .then(reaction => embedMsg.react('711139517876273224'))
-      .catch(err => console.error);
 
-      const filter = (r, u) => r.emoji.id === '711139565569572885' || r.emoji.id === "711139517876273224";
-      const collector = message.createReactionCollector(filter, {time: 60000});
-      collector.on('collect', (r, u) => {
-         //Put your response to reactions here
-         message.channel.reply(`Reply with something to ${u.tag} because they reacted with ${r.emoji.name}`);
-      });
-  })
-}
-*/
+if (message.content.toLowerCase() === 'confirm account purchase') {
+        if (message.channel.type === 'dm') {
+            const embed = new Discord.MessageEmbed()
+          .setAuthor(message.author.username ,message.author.displayAvatarURL())
+          .setDescription(`Please confirm that you purchased an account`)
+          .addField('<:acceptt:711139565569572885> = ', `Confirm`)
+          .addField('<:reject:711139517876273224> = ', `Cancel`)
+          .setColor('#0070FF')
+          .setTimestamp();
+          const msg = await message.channel.send(embed);
+          await msg.react(ACCEPT);
+          await msg.react(REJECT); 
+          const reactionFilter = (reaction, user) => [ACCEPT, REJECT].includes(reaction.emoji.id) && !user.bot;
+              const reactions = await msg.awaitReactions(reactionFilter, { max: 1, time: 86400000, errors: ['time'] });
+              const choice = reactions.get(ACCEPT) || reactions.get(REJECT);
+              if (choice.emoji.id === ACCEPT) {
+                const embed3 = new Discord.MessageEmbed()
+                  .setTitle('Pleasae Fill out this form in order to recieve your order once we have done processing your account.')
+                  .setDescription(`https://forms.gle/JPYse9AiZv2LRvGA9`)
+                  .setColor('#3AFF00')
+                  .setTimestamp()
+                  message.author.send(embed3)
+        } else if (choice.emoji.id === REJECT) { 
+            const embed3 = new Discord.MessageEmbed()
+                  .setDescription(`Please tell us what is the issue`)
+                  .setColor('#3AFF00')
+                  .setTimestamp()
+                  message.author.send(embed3)
+        }
+
+     }
+
+    }
 
 // Testimg matters
 
@@ -1075,7 +1110,6 @@ let embed = new Discord.MessageEmbed()
 .setColor(colors.blue)
 .setTitle('__**Recovery Options Available**__')
 .addField(`**STARTER RECOVERY PACK**
-
 •$300 Million GTA Online Money
 •1-120 Levels
 •All Available Unlocks  (Including Ones Below)
@@ -1087,7 +1121,6 @@ let embed = new Discord.MessageEmbed()
 `Price: $5.00`)
 
    .addField(`**BRONZE RECOVERY**
-
 •$600 Million GTA Online Money
 •1-250 Levels
 •All Available Unlocks  (Including Ones Below)
@@ -1099,7 +1132,6 @@ let embed = new Discord.MessageEmbed()
 `Price: $7.50`)
 
   .addField(`**SILVER RECOVERY**
-
 •$1 Billion GTA Online Money
 •1-420 Levels
 •All Available Unlocks  (Including Ones Below)
@@ -1111,7 +1143,6 @@ let embed = new Discord.MessageEmbed()
 `Price: $10.00`)
 
   .addField(`**GOLD RECOVERY**
-
 •$1.5 Billion GTA Online Money
 •1-750 Levels
 •All Available Unlocks  (Including Ones Below)
@@ -1123,7 +1154,6 @@ let embed = new Discord.MessageEmbed()
 `Price: $12.50`)
 
   .addField(`**GTA 5 CASH UP (MONEY ONLY)**
-
 *Need more CASH but not levels or RP?
 Get your  Cash up now!`, 
 `Price Options: 
