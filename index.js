@@ -268,9 +268,10 @@ if (message.content.toLowerCase() === 'confirm account purchase') {
         if (message.channel.type === 'dm') {
             const embed = new Discord.MessageEmbed()
           .setAuthor(message.author.username ,message.author.displayAvatarURL())
-          .setDescription(`Please confirm that you purchased an account`)
-          .addField('<:acceptt:711139565569572885> = ', `Confirm`)
-          .addField('<:reject:711139517876273224> = ', `Cancel`)
+          .setTitle(`Please confirm that you purchased an account`)
+          .setDescription(`
+          <:acceptt:711139565569572885> = Confirm
+          <:reject:711139517876273224> = Cancel`)
           .setColor('#0070FF')
           .setTimestamp();
           const msg = await message.channel.send(embed);
@@ -388,14 +389,31 @@ if (message.content.toLowerCase() === 'buy modded account now'){
   if (message.author.bot) return;
   if(message.channel.type === 'dm'){
     if (!openTickets.has(message.author.id)) {
-      const embed = new MessageEmbed()
-      .setDescription(`Hello! ${message.author} We have received your message, Please be patient while we get someone from our team to get to you`)
-      .setColor('#3AFF00')
-      .setTimestamp()
-      message.channel.send(embed)
-      .then(sentMessage => sentMessage.delete({ timeout: 86400000 })
-      .catch(error => {
-      }));
+      message.author.send('_Staff looking for your query, please stand by_ <a:Loading:705280596217430019>')
+      .then(sentMessage => sentMessage.delete({ timeout: 5000 })
+                .catch(error => {
+                // Hnadler
+                }))
+                .then(() => {
+                message.channel.awaitMessages(response => response.content === '', {
+                max: 1,
+                time: 100,
+                errors: ['time'],
+                })
+                .then((collected) => {
+                message.channel.send(`The collected message was: ${collected.first().content}`);
+                })
+                .catch(() => {
+                  const embed = new MessageEmbed()
+                  .setDescription(`Hello! ${message.author} We have received your message, Please be patient while we get someone from our team to get to you`)
+                  .setColor('#3AFF00')
+                  .setTimestamp()
+                  message.channel.send(embed)
+                  .then(sentMessage => sentMessage.delete({ timeout: 7200000 })
+                  .catch(error => {
+                  }));
+                  });
+                  });
       openTickets.set(message.author.id, message.guild);
       const channel = bot.channels.cache.get(DESTINATION);
       if (channel) {
