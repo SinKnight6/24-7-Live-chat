@@ -1109,7 +1109,7 @@ if (message.content.toLowerCase() === 'recovery packages'){
 let embed = new Discord.MessageEmbed()
 .setColor(colors.blue)
 .setTitle('__**Recovery Options Available**__')
-.addField(`**STARTER RECOVERY PACK**
+.addField(`STARTER RECOVERY PACK
 •$300 Million GTA Online Money
 •1-120 Levels
 •All Available Unlocks  (Including Ones Below)
@@ -1119,7 +1119,7 @@ let embed = new Discord.MessageEmbed()
 •Unlock All Weapon Tints
 •Unlock All Trophies/Heists/Heist Rewards`,
 `Price: $5.00`)
-.addField(`**BRONZE RECOVERY**
+.addField(`BRONZE RECOVERY
 •$600 Million GTA Online Money
 •1-250 Levels
 •All Available Unlocks  (Including Ones Below)
@@ -1129,7 +1129,7 @@ let embed = new Discord.MessageEmbed()
 •Unlock All Weapon Tints
 •Unlock All Trophies/Heists/Heist Rewards`,
 `Price: $7.50`)
-.addField(`**SILVER RECOVERY**
+.addField(`SILVER RECOVERY
 •$1 Billion GTA Online Money
 •1-420 Levels
 •All Available Unlocks  (Including Ones Below)
@@ -1139,7 +1139,7 @@ let embed = new Discord.MessageEmbed()
 •Unlock All Weapon Tints
 •Unlock All Trophies/Heists/Heist Rewards`,
 `Price: $10.00`)
-.addField(`**GOLD RECOVERY**
+.addField(`GOLD RECOVERY
 •$1.5 Billion GTA Online Money
 •1-750 Levels
 •All Available Unlocks  (Including Ones Below)
@@ -1149,7 +1149,7 @@ let embed = new Discord.MessageEmbed()
 •Unlock All Weapon Tints
 •Unlock All Trophies/Heists/Heist Rewards`,
 `Price: $12.50`)
-.addField(`**GTA 5 CASH UP (MONEY ONLY)**
+.addField(`GTA 5 CASH UP (MONEY ONLY)
 *Need more CASH but not levels or RP?
 Get your  Cash up now!`, 
 `Price Options: 
