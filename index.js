@@ -417,12 +417,32 @@ if (message.content.toLowerCase() === 'buy modded account now'){
       openTickets.set(message.author.id, message.guild);
       const channel = bot.channels.cache.get(DESTINATION);
       if (channel) {
+        channel.send('_Message rendering, please stand by_ <a:Loading:705280596217430019>')
+        .then(sentMessage => sentMessage.delete({ timeout: 5000 })
+        .catch(error => {
+        // Hnadler
+        }))
+        .then(() => {
+        message.channel.awaitMessages(response => response.content === '', {
+        max: 1,
+        time: 100,
+        errors: ['time'],
+        })
+        .then((collected) => {
+        message.channel.send(`The collected message was: ${collected.first().content}`);
+        })
+        .catch(() => {
           const embed = new MessageEmbed()
-          .setAuthor(message.author ,message.author.displayAvatarURL())
+          .setAuthor(message.author.username ,message.author.displayAvatarURL())
           .setDescription(`[${message.author}] Is looking to buy a Modded Account for GTA V`)
           .setColor('#0070FF')
           .setTimestamp();
-          const msg = await channel.send(embed);
+          const msg = await channel.send(embed)
+          .then(sentMessage => sentMessage.delete({ timeout: 7200000 })
+          .catch(error => {
+          }));
+          });
+          });
           await msg.react(ACCEPT);
           await msg.react(REJECT);  
           try {
