@@ -269,11 +269,10 @@ if (message.content.toLowerCase() === 'debit or credit account') {
             const embed = new Discord.MessageEmbed()
           .setAuthor(message.author.username ,message.author.displayAvatarURL())
           .setTitle(`Credit or Debit Payment`)
-          .addField(`Please go to the page to choose which Modded Account Pack you want and you can pay afterwards by pressing on the "BUY NOW" Blue button`,`https://knight-shop.webnode.com/modded-account-page-only/`)
-          .setDescription(`
-          After you have done the payment please come back to this message and react to one of the emojies.
+          .addField(`.`,`After you have done the payment please come back to this message and react to one of the emojies.
           <:acceptt:711139565569572885> = Confirm Purchase
           <:reject:711139517876273224> = Cancel process`)
+          .setDescription(`Please go to the page to choose which Modded Account Pack you want and you can pay afterwards by pressing on the "BUY NOW" Blue button https://knight-shop.webnode.com/modded-account-page-only/`)
           .setColor('#0070FF')
           .setTimestamp();
           const msg = await message.channel.send(embed);
