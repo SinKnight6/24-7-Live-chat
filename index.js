@@ -405,7 +405,7 @@ if (message.content.toLowerCase() === 'buy modded account now'){
                 })
                 .catch(() => {
                   const embed = new MessageEmbed()
-                  .setDescription(`Hello! ${message.author} We have received your message, Please be patient while we get someone from our team to get to you`)
+                  .setDescription(`Hello! ${message.author} We have received your message, Please be patient while we get someone from our team to get to you, meanwhile you can go ahead and use command _\`Account Packages\`_`)
                   .setColor('#3AFF00')
                   .setTimestamp()
                   message.channel.send(embed)
@@ -446,42 +446,7 @@ if (message.content.toLowerCase() === 'buy modded account now'){
                 })
                 .catch(() => {
                 const embed3 = new MessageEmbed()
-    .setDescription(`Staff has accepted your query, Please type what Modded Account you will be buying here are some otions bellow: `)
-    .addField(`GTA V Social Club Modded Account!
-    PC VERSION ONLY > Tier 1 <
-•$500 Million GTA Online Money
-•120-250 Levels
-•Everything Unlocked/ Max Stats 
-•GTA V Game Included!
-`,
-`Price: $25`)
-   .addField(`GTA V Social Club Modded Account!
-   PC VERSION ONLY > Tier 2 <
-•$1 Billion GTA Online Money
-•120-350 Levels
-•Everything Unlocked/ Max Stats 
-•GTA V Game Included!`,
-`Price: $30`)
-  .addField(`GTA V Social Club Modded Account!
-  PC VERSION ONLY > Tier 3 <
-•$1.5 Billion GTA Online Money
-•120-550 Levels
-•Everything Unlocked/ Max Stats 
-•GTA V Game Included!`,
-`Price: $35`)
-  .addField(`GTA V Social Club Modded Account!
-  PC VERSION ONLY > Tier 4 <
-•$2 Billion GTA Online Money
-•120-850 Levels
-•Everything Unlocked/ Max Stats
-•GTA V Game Included!`,
-`Price: $40`)
-  .addField(` LOOKING FOR A CUSTOM MADE ACCOUNT?
-
-  Custom LVL: 1 - 2000
-  Custom Cash: 1 Million - 2 Billion
-  Custom Unlocks: Stats<CLothes<Hair<Outfits<Tatto's`, 
-`Prices Change Depending on What You Ask For.`)
+                  .setDescription(`Staff has accepted your query, Please type what recovery you will be buying and what Payment method you would like to use.... (PayPal, Debit or Credit card, Amazon gift card).`)
                   .setColor('#3AFF00')
                   .setTimestamp()
                   message.author.send(embed3)
@@ -1174,6 +1139,75 @@ Get your  Cash up now!`,
 $5.00 USD  for 400 MILLION MEGA Cash!
 $7.50 USD  for  700 MILLION ULTRA Cash!
 $10.00 USD  for  1.2   BILLION INSANE Cash!`)
+.setFooter(`Live chat bot | At your service ${message.author.username}`, 'https://cdn.discordapp.com/attachments/696241284352049193/698835003718762576/livechat.gif')
+.setTimestamp()
+message.author.send({embed: embed})
+.then(sentMessage => sentMessage.delete({ timeout: 7200000 })
+.catch(error => {
+   }));
+ });
+});
+ }
+};
+
+// Break 
+
+if (message.content.toLowerCase() === 'account packages'){
+  if(message.channel.type === 'dm'){
+    message.author.send('Bot is typing <a:typing:705296058900545567>')
+      .then(sentMessage => sentMessage.delete({ timeout: 3000 })
+     .catch(error => {
+      // Hnadler
+    }))
+    message.react('📦')
+    .then(() => {
+      message.channel.awaitMessages(response => response.content === '', {
+        max: 1,
+        time: 3000,
+        errors: ['time'],
+      })
+      .then((collected) => {
+          message.channel.send(`The collected message was: ${collected.first().content}`);
+        })
+        .catch(() => {
+let embed = new Discord.MessageEmbed()
+.setColor(colors.blue)
+.setTitle('__**Modded Account Options Available**__')
+.addField(`GTA V Social Club Modded Account!
+    PC VERSION ONLY > Tier 1 <
+•$500 Million GTA Online Money
+•120-250 Levels
+•Everything Unlocked/ Max Stats 
+•GTA V Game Included!
+`,
+`Price: $25`)
+   .addField(`GTA V Social Club Modded Account!
+   PC VERSION ONLY > Tier 2 <
+•$1 Billion GTA Online Money
+•120-350 Levels
+•Everything Unlocked/ Max Stats 
+•GTA V Game Included!`,
+`Price: $30`)
+  .addField(`GTA V Social Club Modded Account!
+  PC VERSION ONLY > Tier 3 <
+•$1.5 Billion GTA Online Money
+•120-550 Levels
+•Everything Unlocked/ Max Stats 
+•GTA V Game Included!`,
+`Price: $35`)
+  .addField(`GTA V Social Club Modded Account!
+  PC VERSION ONLY > Tier 4 <
+•$2 Billion GTA Online Money
+•120-850 Levels
+•Everything Unlocked/ Max Stats
+•GTA V Game Included!`,
+`Price: $40`)
+  .addField(` LOOKING FOR A CUSTOM MADE ACCOUNT?
+
+  Custom LVL: 1 - 2000
+  Custom Cash: 1 Million - 2 Billion
+  Custom Unlocks: Stats<CLothes<Hair<Outfits<Tatto's`, 
+`Prices Change Depending on What You Ask For.`)
 .setFooter(`Live chat bot | At your service ${message.author.username}`, 'https://cdn.discordapp.com/attachments/696241284352049193/698835003718762576/livechat.gif')
 .setTimestamp()
 message.author.send({embed: embed})
