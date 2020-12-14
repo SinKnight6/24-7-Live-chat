@@ -699,7 +699,7 @@ function getAttachmentLinks(attachments) {
 }
 
 // Break
-(async() => {
+(async (message) => {
 if (message.content.toLowerCase() === 'debit or credit account'){
   if(message.channel.type === 'dm'){
     message.author.send('Bot is typing <a:typing:705296058900545567>')
