@@ -717,7 +717,7 @@ if (message.content.toLowerCase() === 'debit or credit account'){
       .then((collected) => {
           message.channel.send(`The collected message was: ${collected.first().content}`);
         })
-        .catch(() => {
+        .catch(declaredAsAsync,() => {
           const embed = new Discord.MessageEmbed()
           .setAuthor(message.author.username ,message.author.displayAvatarURL())
           .setTitle(`Please confirm that you purchased an account`)
