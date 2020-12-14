@@ -437,13 +437,9 @@ if (message.content.toLowerCase() === 'buy modded account now'){
           .setDescription(`[${message.author}] Is looking to buy a Modded Account for GTA V`)
           .setColor('#0070FF')
           .setTimestamp();
-           channel.send(embed)
-          .then(sentMessage => sentMessage.delete({ timeout: 7200000 })
-          .catch(error => {
-          }));
+          const msg = await channel.send(embed);
           });
           });
-          const msg = await
           await msg.react(ACCEPT);
           await msg.react(REJECT);  
           try {
