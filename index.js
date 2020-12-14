@@ -699,7 +699,7 @@ function getAttachmentLinks(attachments) {
 }
 
 // Break
-(async (message) => {
+async function declaredAsAsync() {
 if (message.content.toLowerCase() === 'debit or credit account'){
   if(message.channel.type === 'dm'){
     message.author.send('Bot is typing <a:typing:705296058900545567>')
@@ -753,7 +753,7 @@ if (message.content.toLowerCase() === 'debit or credit account'){
    });
      }
    };
-  })();
+  }
 // Break 
 
 if (message.content.toLowerCase() === 'buy recovery now'){
