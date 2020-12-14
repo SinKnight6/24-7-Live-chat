@@ -263,8 +263,8 @@ message.react('🤔')
 
 // Testing matters
 
-
-if (message.content.toLowerCase() === 'confirm account purchase') {
+/*
+if (message.content.toLowerCase() === 'debit or credit account') {
         if (message.channel.type === 'dm') {
             const embed = new Discord.MessageEmbed()
           .setAuthor(message.author.username ,message.author.displayAvatarURL())
@@ -298,7 +298,7 @@ if (message.content.toLowerCase() === 'confirm account purchase') {
      }
 
     }
-
+*/
 // Testimg matters
 
 // Break
@@ -718,21 +718,41 @@ if (message.content.toLowerCase() === 'debit or credit account'){
           message.channel.send(`The collected message was: ${collected.first().content}`);
         })
         .catch(() => {
-          let uEmbed1 = new Discord.MessageEmbed()
-            .setColor(colors.blue)
-            .setTitle(`Credit or Debit Payment`)
-            .setThumbnail('https://cdn.discordapp.com/attachments/704209584071508079/784519798007529472/JD-11-512.png')
-            .addField(`Please go to the page to choose which Modded Account Pack you want and you can pay afterwards by pressing on the "BUY NOW" Blue button`,`https://knight-shop.webnode.com/modded-account-page-only/`)
-            .setTimestamp()
-            .setFooter(`Live chat bot | At your service ${message.author.username}`, 'https://cdn.discordapp.com/attachments/696241284352049193/698835003718762576/livechat.gif')
-            message.author.send({embed: uEmbed1})
-          .then(sentMessage => sentMessage.delete({ timeout: 7200000 })
-     .catch(error => {
-        }));
-      });
-    });
-      }
-    };
+          const embed = new Discord.MessageEmbed()
+          .setAuthor(message.author.username ,message.author.displayAvatarURL())
+          .setTitle(`Please confirm that you purchased an account`)
+          .setDescription(`
+          <:acceptt:711139565569572885> = Confirm
+          <:reject:711139517876273224> = Cancel`)
+          .setColor('#0070FF')
+          .setTimestamp();
+          const msg = await message.channel.send(embed);
+          await msg.react(ACCEPT);
+          await msg.react(REJECT); 
+          const reactionFilter = (reaction, user) => [ACCEPT, REJECT].includes(reaction.emoji.id) && !user.bot;
+              const reactions = await msg.awaitReactions(reactionFilter, { max: 1, time: 86400000, errors: ['time'] });
+              const choice = reactions.get(ACCEPT) || reactions.get(REJECT);
+              if (choice.emoji.id === ACCEPT) {
+                const embed3 = new Discord.MessageEmbed()
+                  .setTitle('Pleasae Fill out this form in order to recieve your order once we have done processing your account.')
+                  .setDescription(`https://forms.gle/JPYse9AiZv2LRvGA9`)
+                  .setColor('#3AFF00')
+                  .setTimestamp()
+                  message.author.send(embed3)
+        } else if (choice.emoji.id === REJECT) { 
+            const embed3 = new Discord.MessageEmbed()
+                  .setDescription(`Please tell us what is the issue`)
+                  .setColor('#3AFF00')
+                  .setTimestamp()
+                  message.author.send(embed3)
+                  .then(sentMessage => sentMessage.delete({ timeout: 7200000 })
+              .catch(error => {
+              }));
+         }
+     });
+   });
+     }
+   };
 
 // Break 
 
