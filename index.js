@@ -94,6 +94,7 @@ else if(message.content.toLowerCase() === 'account'){
 if (message.channel.id === '784215389583573003')
   await message.delete();
 
+/*
 if (message.content.toLowerCase() === 'account' && message.channel.id === '784215389583573003'){
   message.author.send('Bot is typing <a:typing:705296058900545567>')
     .then(sentMessage => sentMessage.delete({ timeout: 8000 })
@@ -1198,7 +1199,7 @@ if (message.content.toLowerCase() === 'debit or credit recovery') {
 
 }
 // Recovery commands end
-
+*/
 
 
 
