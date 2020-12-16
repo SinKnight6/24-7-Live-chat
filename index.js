@@ -13,7 +13,7 @@ const REJECT = '711139517876273224';
 
 const swearWords = ["Nigga", "nigga", "shit", "Shit", "Fuck", "fuck", "Stupid", "stupid", "Dick", "dick", "Dipship", "dipshit", "Asshole", "asshole", "STFU", "Stfu", "stfu", "Bitch", "bitch", "hoe", "Hoe", "HOE", "Dumb", "DUMB", "Dumass", "DUMASS", "Dumfuck", "DUMFUCK"];
 
-const token = 'Nzg4MTE2MzEwNDU3NzEyNjgw.X9e0gg.yfApyKW8875Ao4VFqYUsKzGSAs0';
+const token = process.env.token;
 
 const PREFIX = '!';
 // Events End
